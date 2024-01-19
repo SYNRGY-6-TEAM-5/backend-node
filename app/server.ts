@@ -6,7 +6,6 @@ dotenv.config();
 
 import HealthApi from './routes/api/healthApi';
 import CarsApi from './routes/api/carsApi';
-import AuthApi from './routes/api/authApi';
 import swaggerDocs from './utils/swagger';
 import AirportApi from './routes/api/airportApi';
 import AirlineApi from './routes/api/airlineApi';
@@ -26,7 +25,6 @@ class Server {
 
     this.app.use('/api/health', HealthApi.routes());
     this.app.use('/api/cars', CarsApi.routes());
-    this.app.use('/api/user', AuthApi.routes());
     this.app.use('/api/airport', AirportApi.routes());
     this.app.use('/api/airline', AirlineApi.routes());
 
