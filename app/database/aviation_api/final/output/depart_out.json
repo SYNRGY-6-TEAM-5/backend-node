@@ -1,0 +1,702 @@
+[
+    {
+        "airport_id": 1,
+        "terminal": "5",
+        "scheduled_time": "2024-01-06T06:05:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 2,
+        "terminal": null,
+        "scheduled_time": "2024-01-06T14:45:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 3,
+        "terminal": null,
+        "scheduled_time": "2024-01-06T10:40:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 4,
+        "terminal": "T2",
+        "scheduled_time": "2024-01-06T11:50:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 5,
+        "terminal": "1",
+        "scheduled_time": "2024-01-06T00:30:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 6,
+        "terminal": null,
+        "scheduled_time": "2024-01-06T10:50:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 7,
+        "terminal": "1",
+        "scheduled_time": "2024-01-06T07:50:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 8,
+        "terminal": null,
+        "scheduled_time": "2024-01-06T13:05:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 9,
+        "terminal": "T2",
+        "scheduled_time": "2024-01-06T11:25:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 10,
+        "terminal": "D",
+        "scheduled_time": "2024-01-06T09:15:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 11,
+        "terminal": "T1",
+        "scheduled_time": "2024-01-06T07:05:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 12,
+        "terminal": null,
+        "scheduled_time": "2024-01-06T17:00:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 13,
+        "terminal": "3",
+        "scheduled_time": "2024-01-06T12:00:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 14,
+        "terminal": "1",
+        "scheduled_time": "2024-01-06T07:50:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 15,
+        "terminal": null,
+        "scheduled_time": "2024-01-06T07:00:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 16,
+        "terminal": "1",
+        "scheduled_time": "2024-01-06T08:15:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 17,
+        "terminal": "2",
+        "scheduled_time": "2024-01-06T15:30:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 18,
+        "terminal": "1",
+        "scheduled_time": "2024-01-06T15:35:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 19,
+        "terminal": "1",
+        "scheduled_time": "2024-01-06T15:40:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 20,
+        "terminal": "2",
+        "scheduled_time": "2024-01-06T15:40:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 21,
+        "terminal": "1",
+        "scheduled_time": "2024-01-06T16:05:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 22,
+        "terminal": null,
+        "scheduled_time": "2024-01-06T07:20:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 23,
+        "terminal": null,
+        "scheduled_time": "2024-01-06T07:00:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 24,
+        "terminal": null,
+        "scheduled_time": "2024-01-06T07:00:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 25,
+        "terminal": null,
+        "scheduled_time": "2024-01-06T07:00:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 26,
+        "terminal": null,
+        "scheduled_time": "2024-01-06T07:00:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 27,
+        "terminal": null,
+        "scheduled_time": "2024-01-06T07:00:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 28,
+        "terminal": null,
+        "scheduled_time": "2024-01-06T06:55:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 29,
+        "terminal": null,
+        "scheduled_time": "2024-01-06T07:30:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 30,
+        "terminal": null,
+        "scheduled_time": "2024-01-06T07:30:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 31,
+        "terminal": null,
+        "scheduled_time": "2024-01-06T07:25:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 32,
+        "terminal": null,
+        "scheduled_time": "2024-01-06T07:25:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 33,
+        "terminal": null,
+        "scheduled_time": "2024-01-06T07:25:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 34,
+        "terminal": null,
+        "scheduled_time": "2024-01-06T07:20:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 35,
+        "terminal": "2",
+        "scheduled_time": "2024-01-06T14:15:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 36,
+        "terminal": "2",
+        "scheduled_time": "2024-01-06T14:10:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 37,
+        "terminal": "2",
+        "scheduled_time": "2024-01-06T14:10:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 38,
+        "terminal": "3",
+        "scheduled_time": "2024-01-06T09:00:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 39,
+        "terminal": "3",
+        "scheduled_time": "2024-01-06T09:00:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 40,
+        "terminal": "3",
+        "scheduled_time": "2024-01-06T09:00:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 41,
+        "terminal": "1",
+        "scheduled_time": "2024-01-06T08:55:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 42,
+        "terminal": "3",
+        "scheduled_time": "2024-01-06T08:45:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 43,
+        "terminal": null,
+        "scheduled_time": "2024-01-06T14:30:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 44,
+        "terminal": null,
+        "scheduled_time": "2024-01-06T14:25:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 45,
+        "terminal": "T3",
+        "scheduled_time": "2024-01-06T14:25:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 46,
+        "terminal": "T3",
+        "scheduled_time": "2024-01-06T14:25:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 47,
+        "terminal": "T3",
+        "scheduled_time": "2024-01-06T14:20:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 48,
+        "terminal": "T3",
+        "scheduled_time": "2024-01-06T14:15:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 49,
+        "terminal": "T3",
+        "scheduled_time": "2024-01-06T14:10:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 50,
+        "terminal": "T3",
+        "scheduled_time": "2024-01-06T14:10:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 51,
+        "terminal": null,
+        "scheduled_time": "2024-01-06T14:55:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 52,
+        "terminal": null,
+        "scheduled_time": "2024-01-06T14:55:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 53,
+        "terminal": null,
+        "scheduled_time": "2024-01-06T14:55:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 54,
+        "terminal": "1",
+        "scheduled_time": "2024-01-06T10:00:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 55,
+        "terminal": null,
+        "scheduled_time": "2024-01-06T08:50:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 56,
+        "terminal": null,
+        "scheduled_time": "2024-01-06T17:40:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 57,
+        "terminal": "T2",
+        "scheduled_time": "2024-01-06T13:50:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 58,
+        "terminal": "1",
+        "scheduled_time": "2024-01-06T14:05:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 59,
+        "terminal": null,
+        "scheduled_time": "2024-01-06T02:00:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 60,
+        "terminal": null,
+        "scheduled_time": "2024-01-06T13:15:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 61,
+        "terminal": null,
+        "scheduled_time": "2024-01-06T07:00:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 62,
+        "terminal": "2",
+        "scheduled_time": "2024-01-06T08:55:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 63,
+        "terminal": "1",
+        "scheduled_time": "2024-01-06T13:20:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 64,
+        "terminal": "3",
+        "scheduled_time": "2024-01-06T11:10:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 65,
+        "terminal": "1",
+        "scheduled_time": "2024-01-06T02:35:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 66,
+        "terminal": null,
+        "scheduled_time": "2024-01-06T08:35:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 67,
+        "terminal": "1A",
+        "scheduled_time": "2024-01-06T08:05:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 68,
+        "terminal": "1",
+        "scheduled_time": "2024-01-06T07:00:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 69,
+        "terminal": "2",
+        "scheduled_time": "2024-01-06T16:35:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 70,
+        "terminal": "2",
+        "scheduled_time": "2024-01-06T08:45:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 71,
+        "terminal": "2",
+        "scheduled_time": "2024-01-06T11:40:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 72,
+        "terminal": "3",
+        "scheduled_time": "2024-01-06T16:45:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 73,
+        "terminal": "1",
+        "scheduled_time": "2024-01-06T08:45:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 74,
+        "terminal": null,
+        "scheduled_time": "2024-01-06T08:35:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 75,
+        "terminal": "I",
+        "scheduled_time": "2024-01-06T11:35:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 76,
+        "terminal": "1",
+        "scheduled_time": "2024-01-06T01:10:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 77,
+        "terminal": "T3",
+        "scheduled_time": "2024-01-06T09:55:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 78,
+        "terminal": "D",
+        "scheduled_time": "2024-01-06T12:55:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 79,
+        "terminal": "D",
+        "scheduled_time": "2024-01-06T12:50:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 80,
+        "terminal": "T3",
+        "scheduled_time": "2024-01-06T11:55:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 81,
+        "terminal": null,
+        "scheduled_time": "2024-01-06T06:00:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 82,
+        "terminal": "1",
+        "scheduled_time": "2024-01-06T09:00:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 83,
+        "terminal": null,
+        "scheduled_time": "2024-01-06T03:50:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 84,
+        "terminal": "4",
+        "scheduled_time": "2024-01-06T07:00:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 85,
+        "terminal": null,
+        "scheduled_time": "2024-01-06T08:30:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 86,
+        "terminal": "3",
+        "scheduled_time": "2024-01-06T07:40:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 87,
+        "terminal": "4",
+        "scheduled_time": "2024-01-06T07:40:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 88,
+        "terminal": null,
+        "scheduled_time": "2024-01-06T07:40:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 89,
+        "terminal": null,
+        "scheduled_time": "2024-01-06T04:35:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 90,
+        "terminal": "3",
+        "scheduled_time": "2024-01-06T06:50:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 91,
+        "terminal": "T2",
+        "scheduled_time": "2024-01-06T09:10:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 92,
+        "terminal": "T1",
+        "scheduled_time": "2024-01-06T07:30:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 93,
+        "terminal": "2",
+        "scheduled_time": "2024-01-06T18:00:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 94,
+        "terminal": null,
+        "scheduled_time": "2024-01-06T07:55:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 95,
+        "terminal": "2",
+        "scheduled_time": "2024-01-06T10:15:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 96,
+        "terminal": "T2",
+        "scheduled_time": "2024-01-06T11:40:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 97,
+        "terminal": "2",
+        "scheduled_time": "2024-01-06T00:30:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 98,
+        "terminal": "A",
+        "scheduled_time": "2024-01-06T04:30:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 99,
+        "terminal": "2",
+        "scheduled_time": "2024-01-06T03:00:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "airport_id": 100,
+        "terminal": "3",
+        "scheduled_time": "2024-01-06T02:50:00+00:00",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    }
+]

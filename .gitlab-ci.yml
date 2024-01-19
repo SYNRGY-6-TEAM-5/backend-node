@@ -1,0 +1,63 @@
+default:
+  image: node:18.17.0
+  before_script:
+    - apt-get update -qq && apt-get install -y curl
+    - curl -L https://fly.io/install.sh | sh
+
+stages:
+  - install
+  - build
+  - test
+  - deploy
+
+variables:
+  POSTGRES_DB: "bcr_db_1"
+  POSTGRES_USER: "postgres"
+  POSTGRES_PASSWORD: "postgres"
+
+services:
+  - name: postgres:latest
+    alias: postgres
+
+install:
+  stage: install
+  script:
+    - npm prune
+    - npm install
+  cache:
+    key: ${CI_COMMIT_REF_NAME}
+    paths:
+      - node_modules/
+  artifacts:
+    paths:
+      - node_modules/
+
+build:
+  stage: build
+  script:
+    - npm ci
+    - npx tsc -p .
+    - npm ci --production
+
+lint-test:  
+  stage: test   
+  script:
+    - echo "Linting code..."
+
+unit-test:  
+  stage: test   
+  script:
+    - echo "Running unit tests..."
+    - npm run test:unit
+
+integration-test:  
+  stage: test   
+  script:
+    - echo "Running integration tests..."
+    - npm run test:integration
+
+deploy:
+  stage: deploy
+  script:
+    - echo "Deploying App"
+    - /root/.fly/bin/flyctl deploy

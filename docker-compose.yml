@@ -1,0 +1,37 @@
+version: "3.9"
+services:
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: bcr_db_1
+    ports: 
+      - '5434:5432'
+    volumes:
+      - carrentalapp-db:/var/lib/postgresql/data
+
+  carrentalapp:
+    build:
+      context: .
+    environment:
+      DATABASE_URL: postgresql://postgres:postgres@postgres:5432/bcr_db_1
+      DATABASE_URL_PROD: postgresql://postgres:postgres@postgres:5432/bcr_db_1
+      DATABASE_URL_TEST: postgresql://postgres:postgres@localhost:5432/bcr_db_1_test
+      CLOUDINARY_CLOUD_NAME: ddpriosuk
+      CLOUDINARY_API_KEY: 845128578186369
+      CLOUDINARY_API_SECRET: FEaNCR0ZORheUUSu3_ShOSDnldI
+      DB_PASSWORD: password
+      DB_USER: postgres
+      DB_NAME: min_chlg_db_new
+      DB_HOST: postgres
+      NODE_ENV: production
+    depends_on:
+      - postgres
+    ports:
+      - '8060:8060'
+    volumes:
+      - ./dist/knexfile.js:/app/knexfile.js
+
+volumes:
+  carrentalapp-db:

@@ -1,0 +1,702 @@
+[
+    {
+        "name": "American Airlines",
+        "iata": "AA",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Qatar Airways",
+        "iata": "QR",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Skymark Airlines",
+        "iata": "BC",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "China Express Air",
+        "iata": "G5",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Qantas",
+        "iata": "QF",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Tibet Airlines",
+        "iata": "TV",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Juneyao Airlines",
+        "iata": "HO",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Shenzhen Airlines",
+        "iata": "ZH",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "China Express Air",
+        "iata": "G5",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": null,
+        "iata": "X1",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "China Express Air",
+        "iata": "G5",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Air Guilin",
+        "iata": "GT",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "flynas",
+        "iata": "XY",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Cebu Pacific Air",
+        "iata": "5J",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Iberia",
+        "iata": "IB",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Cebu Pacific Air",
+        "iata": "5J",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Cebu Pacific Air",
+        "iata": "5J",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Cebu Pacific Air",
+        "iata": "5J",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Philippine Airlines",
+        "iata": "PR",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Cebu Pacific Air",
+        "iata": "5J",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "AirAsia",
+        "iata": "AK",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Singapore Airlines",
+        "iata": "SQ",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Binter Canarias",
+        "iata": "NT",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Canaryfly",
+        "iata": "PM",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Air Europa",
+        "iata": "UX",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Binter Canarias",
+        "iata": "NT",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Binter Canarias",
+        "iata": "NT",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Vueling",
+        "iata": "VY",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Singapore Airlines",
+        "iata": "SQ",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "EgyptAir",
+        "iata": "MS",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "LOT - Polish Airlines",
+        "iata": "LO",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "LOT - Polish Airlines",
+        "iata": "LO",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Air Canada",
+        "iata": "AC",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "LOT - Polish Airlines",
+        "iata": "LO",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Chengdu Airlines",
+        "iata": "EU",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Hainan Airlines",
+        "iata": "HU",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Xiamen Airlines",
+        "iata": "MF",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Malaysia Airlines",
+        "iata": "MH",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Fiji Airways",
+        "iata": "FJ",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "SA AVIANCA",
+        "iata": "AV",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Garuda Indonesia",
+        "iata": "GA",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Virgin Australia",
+        "iata": "VA",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "China Southern Airlines",
+        "iata": "CZ",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "SF Airlines",
+        "iata": "O3",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Shenzhen Airlines",
+        "iata": "ZH",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "China Southern Airlines",
+        "iata": "CZ",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Shenzhen Airlines",
+        "iata": "ZH",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Shenzhen Airlines",
+        "iata": "ZH",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Shenzhen Airlines",
+        "iata": "ZH",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Shenzhen Airlines",
+        "iata": "ZH",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Xiamen Airlines",
+        "iata": "MF",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Loong Air",
+        "iata": "GJ",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Sichuan Airlines",
+        "iata": "3U",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Pegasus",
+        "iata": "PC",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Sky Express",
+        "iata": "GQ",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "China Eastern Airlines",
+        "iata": "MU",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "China United Airlines",
+        "iata": "KN",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Air China LTD",
+        "iata": "CA",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "SF Airlines",
+        "iata": "O3",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "China Eastern Airlines",
+        "iata": "MU",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Dalian Airlines",
+        "iata": null,
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Singapore Airlines",
+        "iata": "SQ",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "China Eastern Airlines",
+        "iata": "MU",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Xiamen Airlines",
+        "iata": "MF",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Asiana Airlines",
+        "iata": "OZ",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "China Eastern Airlines",
+        "iata": "MU",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Saudia",
+        "iata": "SV",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Hawaiian Airlines",
+        "iata": "HA",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "KLM",
+        "iata": "KL",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Lufthansa",
+        "iata": "LH",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "China Southern Airlines",
+        "iata": "CZ",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Chengdu Airlines",
+        "iata": "EU",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Turkish Airlines",
+        "iata": "TK",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "China Eastern Airlines",
+        "iata": "MU",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Qatar Airways",
+        "iata": "QR",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "ANA",
+        "iata": "NH",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Sichuan Airlines",
+        "iata": "3U",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Asiana Airlines",
+        "iata": "OZ",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Jeju Air",
+        "iata": "7C",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "China Southern Airlines",
+        "iata": "CZ",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Ryanair",
+        "iata": "FR",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Scoot",
+        "iata": "TR",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "SF Airlines",
+        "iata": "O3",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "SriLankan Airlines",
+        "iata": "UL",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Jetstar",
+        "iata": "JQ",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Hainan Airlines",
+        "iata": "HU",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Sichuan Airlines",
+        "iata": "3U",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Iran Aseman Airlines",
+        "iata": "EP",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Suparna Airlines",
+        "iata": "Y8",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Loong Air",
+        "iata": "GJ",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Xiamen Airlines",
+        "iata": "MF",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Shandong Airlines",
+        "iata": "SC",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "China Eastern Airlines",
+        "iata": "MU",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Air Astana",
+        "iata": "KC",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "United Airlines",
+        "iata": "UA",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Air China LTD",
+        "iata": "CA",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Aerolineas Argentinas",
+        "iata": "AR",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "S7 Airlines",
+        "iata": "S7",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Hainan Airlines",
+        "iata": "HU",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    },
+    {
+        "name": "Air China LTD",
+        "iata": "CA",
+        "image": "https://res.cloudinary.com/ddpriosuk/image/upload/v1694179155/icon_24hrs_bmttbd.png",
+        "created_at": "2023-12-09T09:05:20.986Z",
+        "updated_at": null
+    }
+]

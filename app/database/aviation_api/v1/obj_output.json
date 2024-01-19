@@ -1,0 +1,4318 @@
+{
+    "departure": [
+        {
+            "airport": "Heathrow",
+            "timezone": "Europe/London",
+            "iata": "LHR",
+            "icao": "EGLL",
+            "terminal": "5",
+            "gate": "C57",
+            "delay": 23,
+            "scheduled": "2024-01-06T06:05:00+00:00",
+            "estimated": "2024-01-06T06:05:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Launceston",
+            "timezone": "Australia/Hobart",
+            "iata": "LST",
+            "icao": "YMLT",
+            "terminal": null,
+            "gate": "4",
+            "delay": 61,
+            "scheduled": "2024-01-06T14:45:00+00:00",
+            "estimated": "2024-01-06T14:45:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Kobe",
+            "timezone": "Asia/Tokyo",
+            "iata": "UKB",
+            "icao": "RJBE",
+            "terminal": null,
+            "gate": null,
+            "delay": null,
+            "scheduled": "2024-01-06T10:40:00+00:00",
+            "estimated": "2024-01-06T10:40:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Lanzhou Zhongchuan Airport",
+            "timezone": null,
+            "iata": "LHW",
+            "icao": "ZLLL",
+            "terminal": "T2",
+            "gate": "114",
+            "delay": 1,
+            "scheduled": "2024-01-06T11:50:00+00:00",
+            "estimated": "2024-01-06T11:50:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Singapore Changi",
+            "timezone": "Asia/Singapore",
+            "iata": "SIN",
+            "icao": "WSSS",
+            "terminal": "1",
+            "gate": "C23",
+            "delay": 19,
+            "scheduled": "2024-01-06T00:30:00+00:00",
+            "estimated": "2024-01-06T00:30:00+00:00",
+            "actual": "2024-01-06T00:49:00+00:00",
+            "estimated_runway": "2024-01-06T00:49:00+00:00",
+            "actual_runway": "2024-01-06T00:49:00+00:00"
+        },
+        {
+            "airport": "Hohhot",
+            "timezone": "Asia/Shanghai",
+            "iata": "HET",
+            "icao": "ZBHH",
+            "terminal": null,
+            "gate": "18",
+            "delay": 35,
+            "scheduled": "2024-01-06T10:50:00+00:00",
+            "estimated": "2024-01-06T10:50:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Guangzhou Baiyun International",
+            "timezone": "Asia/Shanghai",
+            "iata": "CAN",
+            "icao": "ZGGG",
+            "terminal": "1",
+            "gate": null,
+            "delay": null,
+            "scheduled": "2024-01-06T07:50:00+00:00",
+            "estimated": "2024-01-06T07:50:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Xining",
+            "timezone": "Asia/Shanghai",
+            "iata": "XNN",
+            "icao": "ZLXN",
+            "terminal": null,
+            "gate": null,
+            "delay": null,
+            "scheduled": "2024-01-06T13:05:00+00:00",
+            "estimated": "2024-01-06T13:05:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Lishe International Airport",
+            "timezone": "Asia/Shanghai",
+            "iata": "NGB",
+            "icao": "ZSNB",
+            "terminal": "T2",
+            "gate": "215",
+            "delay": 1,
+            "scheduled": "2024-01-06T11:25:00+00:00",
+            "estimated": "2024-01-06T11:25:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Hasanudin",
+            "timezone": "Asia/Makassar",
+            "iata": "UPG",
+            "icao": "WAAA",
+            "terminal": "D",
+            "gate": "6",
+            "delay": 13,
+            "scheduled": "2024-01-06T09:15:00+00:00",
+            "estimated": "2024-01-06T09:15:00+00:00",
+            "actual": "2024-01-06T09:28:00+00:00",
+            "estimated_runway": "2024-01-06T09:28:00+00:00",
+            "actual_runway": "2024-01-06T09:28:00+00:00"
+        },
+        {
+            "airport": "Yantai",
+            "timezone": "Asia/Shanghai",
+            "iata": "YNT",
+            "icao": "ZSYT",
+            "terminal": "T1",
+            "gate": "22",
+            "delay": 8,
+            "scheduled": "2024-01-06T07:05:00+00:00",
+            "estimated": "2024-01-06T07:05:00+00:00",
+            "actual": "2024-01-06T07:13:00+00:00",
+            "estimated_runway": "2024-01-06T07:13:00+00:00",
+            "actual_runway": "2024-01-06T07:13:00+00:00"
+        },
+        {
+            "airport": "Tianhe International",
+            "timezone": "Asia/Shanghai",
+            "iata": "WUH",
+            "icao": "ZHHH",
+            "terminal": null,
+            "gate": null,
+            "delay": null,
+            "scheduled": "2024-01-06T17:00:00+00:00",
+            "estimated": "2024-01-06T17:00:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "King Khaled International",
+            "timezone": "Asia/Riyadh",
+            "iata": "RUH",
+            "icao": "OERK",
+            "terminal": "3",
+            "gate": null,
+            "delay": null,
+            "scheduled": "2024-01-06T12:00:00+00:00",
+            "estimated": "2024-01-06T12:00:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Mactan-Cebu International",
+            "timezone": "Asia/Manila",
+            "iata": "CEB",
+            "icao": "RPVM",
+            "terminal": "1",
+            "gate": null,
+            "delay": 12,
+            "scheduled": "2024-01-06T07:50:00+00:00",
+            "estimated": "2024-01-06T07:50:00+00:00",
+            "actual": "2024-01-06T08:01:00+00:00",
+            "estimated_runway": "2024-01-06T08:01:00+00:00",
+            "actual_runway": "2024-01-06T08:01:00+00:00"
+        },
+        {
+            "airport": "Son Sant Joan Airport",
+            "timezone": "Europe/Madrid",
+            "iata": "PMI",
+            "icao": "LEPA",
+            "terminal": null,
+            "gate": "D82",
+            "delay": 12,
+            "scheduled": "2024-01-06T07:00:00+00:00",
+            "estimated": "2024-01-06T07:00:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Mactan-Cebu International",
+            "timezone": "Asia/Manila",
+            "iata": "CEB",
+            "icao": "RPVM",
+            "terminal": "1",
+            "gate": null,
+            "delay": 19,
+            "scheduled": "2024-01-06T08:15:00+00:00",
+            "estimated": "2024-01-06T08:15:00+00:00",
+            "actual": "2024-01-06T08:33:00+00:00",
+            "estimated_runway": "2024-01-06T08:33:00+00:00",
+            "actual_runway": "2024-01-06T08:33:00+00:00"
+        },
+        {
+            "airport": "Mactan-Cebu International",
+            "timezone": "Asia/Manila",
+            "iata": "CEB",
+            "icao": "RPVM",
+            "terminal": "2",
+            "gate": null,
+            "delay": null,
+            "scheduled": "2024-01-06T15:30:00+00:00",
+            "estimated": "2024-01-06T15:30:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Mactan-Cebu International",
+            "timezone": "Asia/Manila",
+            "iata": "CEB",
+            "icao": "RPVM",
+            "terminal": "1",
+            "gate": null,
+            "delay": null,
+            "scheduled": "2024-01-06T15:35:00+00:00",
+            "estimated": "2024-01-06T15:35:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Mactan-Cebu International",
+            "timezone": "Asia/Manila",
+            "iata": "CEB",
+            "icao": "RPVM",
+            "terminal": "1",
+            "gate": null,
+            "delay": null,
+            "scheduled": "2024-01-06T15:40:00+00:00",
+            "estimated": "2024-01-06T15:40:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Mactan-Cebu International",
+            "timezone": "Asia/Manila",
+            "iata": "CEB",
+            "icao": "RPVM",
+            "terminal": "2",
+            "gate": null,
+            "delay": null,
+            "scheduled": "2024-01-06T15:40:00+00:00",
+            "estimated": "2024-01-06T15:40:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Mactan-Cebu International",
+            "timezone": "Asia/Manila",
+            "iata": "CEB",
+            "icao": "RPVM",
+            "terminal": "1",
+            "gate": null,
+            "delay": null,
+            "scheduled": "2024-01-06T16:05:00+00:00",
+            "estimated": "2024-01-06T16:05:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Frederic Chopin",
+            "timezone": "Europe/Warsaw",
+            "iata": "WAW",
+            "icao": "EPWA",
+            "terminal": null,
+            "gate": "30",
+            "delay": null,
+            "scheduled": "2024-01-06T07:20:00+00:00",
+            "estimated": "2024-01-06T07:20:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Gran Canaria",
+            "timezone": "Atlantic/Canary",
+            "iata": "LPA",
+            "icao": "GCLP",
+            "terminal": null,
+            "gate": "101",
+            "delay": 11,
+            "scheduled": "2024-01-06T07:00:00+00:00",
+            "estimated": "2024-01-06T07:00:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Gran Canaria",
+            "timezone": "Atlantic/Canary",
+            "iata": "LPA",
+            "icao": "GCLP",
+            "terminal": null,
+            "gate": "107",
+            "delay": 11,
+            "scheduled": "2024-01-06T07:00:00+00:00",
+            "estimated": "2024-01-06T07:00:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Gran Canaria",
+            "timezone": "Atlantic/Canary",
+            "iata": "LPA",
+            "icao": "GCLP",
+            "terminal": null,
+            "gate": "107",
+            "delay": 11,
+            "scheduled": "2024-01-06T07:00:00+00:00",
+            "estimated": "2024-01-06T07:00:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Gran Canaria",
+            "timezone": "Atlantic/Canary",
+            "iata": "LPA",
+            "icao": "GCLP",
+            "terminal": null,
+            "gate": "101",
+            "delay": 11,
+            "scheduled": "2024-01-06T07:00:00+00:00",
+            "estimated": "2024-01-06T07:00:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Gran Canaria",
+            "timezone": "Atlantic/Canary",
+            "iata": "LPA",
+            "icao": "GCLP",
+            "terminal": null,
+            "gate": "101",
+            "delay": 11,
+            "scheduled": "2024-01-06T07:00:00+00:00",
+            "estimated": "2024-01-06T07:00:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Gran Canaria",
+            "timezone": "Atlantic/Canary",
+            "iata": "LPA",
+            "icao": "GCLP",
+            "terminal": null,
+            "gate": "C07",
+            "delay": null,
+            "scheduled": "2024-01-06T06:55:00+00:00",
+            "estimated": "2024-01-06T06:55:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Frederic Chopin",
+            "timezone": "Europe/Warsaw",
+            "iata": "WAW",
+            "icao": "EPWA",
+            "terminal": null,
+            "gate": "241",
+            "delay": null,
+            "scheduled": "2024-01-06T07:30:00+00:00",
+            "estimated": "2024-01-06T07:30:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Frederic Chopin",
+            "timezone": "Europe/Warsaw",
+            "iata": "WAW",
+            "icao": "EPWA",
+            "terminal": null,
+            "gate": "241",
+            "delay": null,
+            "scheduled": "2024-01-06T07:30:00+00:00",
+            "estimated": "2024-01-06T07:30:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Frederic Chopin",
+            "timezone": "Europe/Warsaw",
+            "iata": "WAW",
+            "icao": "EPWA",
+            "terminal": null,
+            "gate": "241",
+            "delay": 15,
+            "scheduled": "2024-01-06T07:25:00+00:00",
+            "estimated": "2024-01-06T07:25:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Frederic Chopin",
+            "timezone": "Europe/Warsaw",
+            "iata": "WAW",
+            "icao": "EPWA",
+            "terminal": null,
+            "gate": "37",
+            "delay": null,
+            "scheduled": "2024-01-06T07:25:00+00:00",
+            "estimated": "2024-01-06T07:25:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Frederic Chopin",
+            "timezone": "Europe/Warsaw",
+            "iata": "WAW",
+            "icao": "EPWA",
+            "terminal": null,
+            "gate": "37",
+            "delay": null,
+            "scheduled": "2024-01-06T07:25:00+00:00",
+            "estimated": "2024-01-06T07:25:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Frederic Chopin",
+            "timezone": "Europe/Warsaw",
+            "iata": "WAW",
+            "icao": "EPWA",
+            "terminal": null,
+            "gate": "30",
+            "delay": null,
+            "scheduled": "2024-01-06T07:20:00+00:00",
+            "estimated": "2024-01-06T07:20:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Zhengzhou",
+            "timezone": "Asia/Shanghai",
+            "iata": "CGO",
+            "icao": "ZHCC",
+            "terminal": "2",
+            "gate": "231",
+            "delay": null,
+            "scheduled": "2024-01-06T14:15:00+00:00",
+            "estimated": "2024-01-06T14:15:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Zhengzhou",
+            "timezone": "Asia/Shanghai",
+            "iata": "CGO",
+            "icao": "ZHCC",
+            "terminal": "2",
+            "gate": "246",
+            "delay": null,
+            "scheduled": "2024-01-06T14:10:00+00:00",
+            "estimated": "2024-01-06T14:10:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Zhengzhou",
+            "timezone": "Asia/Shanghai",
+            "iata": "CGO",
+            "icao": "ZHCC",
+            "terminal": "2",
+            "gate": null,
+            "delay": 15,
+            "scheduled": "2024-01-06T14:10:00+00:00",
+            "estimated": "2024-01-06T14:10:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Singapore Changi",
+            "timezone": "Asia/Singapore",
+            "iata": "SIN",
+            "icao": "WSSS",
+            "terminal": "3",
+            "gate": "A4",
+            "delay": 38,
+            "scheduled": "2024-01-06T09:00:00+00:00",
+            "estimated": "2024-01-06T09:00:00+00:00",
+            "actual": "2024-01-06T09:38:00+00:00",
+            "estimated_runway": "2024-01-06T09:38:00+00:00",
+            "actual_runway": "2024-01-06T09:38:00+00:00"
+        },
+        {
+            "airport": "Singapore Changi",
+            "timezone": "Asia/Singapore",
+            "iata": "SIN",
+            "icao": "WSSS",
+            "terminal": "3",
+            "gate": "A4",
+            "delay": 38,
+            "scheduled": "2024-01-06T09:00:00+00:00",
+            "estimated": "2024-01-06T09:00:00+00:00",
+            "actual": "2024-01-06T09:38:00+00:00",
+            "estimated_runway": "2024-01-06T09:38:00+00:00",
+            "actual_runway": "2024-01-06T09:38:00+00:00"
+        },
+        {
+            "airport": "Singapore Changi",
+            "timezone": "Asia/Singapore",
+            "iata": "SIN",
+            "icao": "WSSS",
+            "terminal": "3",
+            "gate": "A4",
+            "delay": 38,
+            "scheduled": "2024-01-06T09:00:00+00:00",
+            "estimated": "2024-01-06T09:00:00+00:00",
+            "actual": "2024-01-06T09:38:00+00:00",
+            "estimated_runway": "2024-01-06T09:38:00+00:00",
+            "actual_runway": "2024-01-06T09:38:00+00:00"
+        },
+        {
+            "airport": "Singapore Changi",
+            "timezone": "Asia/Singapore",
+            "iata": "SIN",
+            "icao": "WSSS",
+            "terminal": "1",
+            "gate": "D38",
+            "delay": 38,
+            "scheduled": "2024-01-06T08:55:00+00:00",
+            "estimated": "2024-01-06T08:55:00+00:00",
+            "actual": "2024-01-06T09:32:00+00:00",
+            "estimated_runway": "2024-01-06T09:32:00+00:00",
+            "actual_runway": "2024-01-06T09:32:00+00:00"
+        },
+        {
+            "airport": "Singapore Changi",
+            "timezone": "Asia/Singapore",
+            "iata": "SIN",
+            "icao": "WSSS",
+            "terminal": "3",
+            "gate": "B6",
+            "delay": 45,
+            "scheduled": "2024-01-06T08:45:00+00:00",
+            "estimated": "2024-01-06T08:45:00+00:00",
+            "actual": "2024-01-06T09:30:00+00:00",
+            "estimated_runway": "2024-01-06T09:30:00+00:00",
+            "actual_runway": "2024-01-06T09:30:00+00:00"
+        },
+        {
+            "airport": "Shenzhen",
+            "timezone": "Asia/Shanghai",
+            "iata": "SZX",
+            "icao": "ZGSZ",
+            "terminal": null,
+            "gate": null,
+            "delay": null,
+            "scheduled": "2024-01-06T14:30:00+00:00",
+            "estimated": "2024-01-06T14:30:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Shenzhen",
+            "timezone": "Asia/Shanghai",
+            "iata": "SZX",
+            "icao": "ZGSZ",
+            "terminal": null,
+            "gate": null,
+            "delay": null,
+            "scheduled": "2024-01-06T14:25:00+00:00",
+            "estimated": "2024-01-06T14:25:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Shenzhen",
+            "timezone": "Asia/Shanghai",
+            "iata": "SZX",
+            "icao": "ZGSZ",
+            "terminal": "T3",
+            "gate": null,
+            "delay": null,
+            "scheduled": "2024-01-06T14:25:00+00:00",
+            "estimated": "2024-01-06T14:25:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Shenzhen",
+            "timezone": "Asia/Shanghai",
+            "iata": "SZX",
+            "icao": "ZGSZ",
+            "terminal": "T3",
+            "gate": "A",
+            "delay": null,
+            "scheduled": "2024-01-06T14:25:00+00:00",
+            "estimated": "2024-01-06T14:25:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Shenzhen",
+            "timezone": "Asia/Shanghai",
+            "iata": "SZX",
+            "icao": "ZGSZ",
+            "terminal": "T3",
+            "gate": "502",
+            "delay": 60,
+            "scheduled": "2024-01-06T14:20:00+00:00",
+            "estimated": "2024-01-06T14:20:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Shenzhen",
+            "timezone": "Asia/Shanghai",
+            "iata": "SZX",
+            "icao": "ZGSZ",
+            "terminal": "T3",
+            "gate": null,
+            "delay": null,
+            "scheduled": "2024-01-06T14:15:00+00:00",
+            "estimated": "2024-01-06T14:15:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Shenzhen",
+            "timezone": "Asia/Shanghai",
+            "iata": "SZX",
+            "icao": "ZGSZ",
+            "terminal": "T3",
+            "gate": null,
+            "delay": null,
+            "scheduled": "2024-01-06T14:10:00+00:00",
+            "estimated": "2024-01-06T14:10:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Shenzhen",
+            "timezone": "Asia/Shanghai",
+            "iata": "SZX",
+            "icao": "ZGSZ",
+            "terminal": "T3",
+            "gate": "G,H",
+            "delay": null,
+            "scheduled": "2024-01-06T14:10:00+00:00",
+            "estimated": "2024-01-06T14:10:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Lianyungang",
+            "timezone": "Asia/Shanghai",
+            "iata": "LYG",
+            "icao": "ZSLG",
+            "terminal": null,
+            "gate": null,
+            "delay": null,
+            "scheduled": "2024-01-06T14:55:00+00:00",
+            "estimated": "2024-01-06T14:55:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Lianyungang",
+            "timezone": "Asia/Shanghai",
+            "iata": "LYG",
+            "icao": "ZSLG",
+            "terminal": null,
+            "gate": null,
+            "delay": null,
+            "scheduled": "2024-01-06T14:55:00+00:00",
+            "estimated": "2024-01-06T14:55:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Lianyungang",
+            "timezone": "Asia/Shanghai",
+            "iata": "LYG",
+            "icao": "ZSLG",
+            "terminal": null,
+            "gate": null,
+            "delay": null,
+            "scheduled": "2024-01-06T14:55:00+00:00",
+            "estimated": "2024-01-06T14:55:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Antalya",
+            "timezone": "Europe/Istanbul",
+            "iata": "AYT",
+            "icao": "LTAI",
+            "terminal": "1",
+            "gate": "341",
+            "delay": 20,
+            "scheduled": "2024-01-06T10:00:00+00:00",
+            "estimated": "2024-01-06T10:00:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Nikos Kazantzakis Airport",
+            "timezone": "Europe/Athens",
+            "iata": "HER",
+            "icao": "LGIR",
+            "terminal": null,
+            "gate": null,
+            "delay": 10,
+            "scheduled": "2024-01-06T08:50:00+00:00",
+            "estimated": "2024-01-06T08:50:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Hohhot",
+            "timezone": "Asia/Shanghai",
+            "iata": "HET",
+            "icao": "ZBHH",
+            "terminal": null,
+            "gate": null,
+            "delay": null,
+            "scheduled": "2024-01-06T17:40:00+00:00",
+            "estimated": "2024-01-06T17:40:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Daguocun",
+            "timezone": "Asia/Shanghai",
+            "iata": "SJW",
+            "icao": "ZBSJ",
+            "terminal": "T2",
+            "gate": "19",
+            "delay": null,
+            "scheduled": "2024-01-06T13:50:00+00:00",
+            "estimated": "2024-01-06T13:50:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Guangzhou Baiyun International",
+            "timezone": "Asia/Shanghai",
+            "iata": "CAN",
+            "icao": "ZGGG",
+            "terminal": "1",
+            "gate": null,
+            "delay": null,
+            "scheduled": "2024-01-06T14:05:00+00:00",
+            "estimated": "2024-01-06T14:05:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Wuxi",
+            "timezone": "Asia/Shanghai",
+            "iata": "WUX",
+            "icao": "ZSWX",
+            "terminal": null,
+            "gate": null,
+            "delay": null,
+            "scheduled": "2024-01-06T02:00:00+00:00",
+            "estimated": "2024-01-06T02:00:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Dalian",
+            "timezone": "Asia/Shanghai",
+            "iata": "DLC",
+            "icao": "ZYTL",
+            "terminal": null,
+            "gate": null,
+            "delay": null,
+            "scheduled": "2024-01-06T13:15:00+00:00",
+            "estimated": "2024-01-06T13:15:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Dalian",
+            "timezone": "Asia/Shanghai",
+            "iata": "DLC",
+            "icao": "ZYTL",
+            "terminal": null,
+            "gate": "21",
+            "delay": null,
+            "scheduled": "2024-01-06T07:00:00+00:00",
+            "estimated": "2024-01-06T07:00:00+00:00",
+            "actual": "2024-01-06T06:59:00+00:00",
+            "estimated_runway": "2024-01-06T06:59:00+00:00",
+            "actual_runway": "2024-01-06T06:59:00+00:00"
+        },
+        {
+            "airport": "Haneda Airport",
+            "timezone": "Asia/Tokyo",
+            "iata": "HND",
+            "icao": "RJTT",
+            "terminal": "2",
+            "gate": null,
+            "delay": null,
+            "scheduled": "2024-01-06T08:55:00+00:00",
+            "estimated": "2024-01-06T08:55:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Shanghai Pudong International",
+            "timezone": "Asia/Shanghai",
+            "iata": "PVG",
+            "icao": "ZSPD",
+            "terminal": "1",
+            "gate": null,
+            "delay": null,
+            "scheduled": "2024-01-06T13:20:00+00:00",
+            "estimated": "2024-01-06T13:20:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Xianyang",
+            "timezone": "Asia/Shanghai",
+            "iata": "XIY",
+            "icao": "ZLXY",
+            "terminal": "3",
+            "gate": "M",
+            "delay": 1,
+            "scheduled": "2024-01-06T11:10:00+00:00",
+            "estimated": "2024-01-06T11:10:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "King Abdulaziz International",
+            "timezone": "Asia/Riyadh",
+            "iata": "JED",
+            "icao": "OEJN",
+            "terminal": "1",
+            "gate": null,
+            "delay": 22,
+            "scheduled": "2024-01-06T02:35:00+00:00",
+            "estimated": "2024-01-06T02:35:00+00:00",
+            "actual": "2024-01-06T02:56:00+00:00",
+            "estimated_runway": "2024-01-06T02:56:00+00:00",
+            "actual_runway": "2024-01-06T02:56:00+00:00"
+        },
+        {
+            "airport": "Fuzhou",
+            "timezone": "Asia/Shanghai",
+            "iata": "FOC",
+            "icao": "ZSFZ",
+            "terminal": null,
+            "gate": null,
+            "delay": null,
+            "scheduled": "2024-01-06T08:35:00+00:00",
+            "estimated": "2024-01-06T08:35:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Jomo Kenyatta International",
+            "timezone": "Africa/Nairobi",
+            "iata": "NBO",
+            "icao": "HKJK",
+            "terminal": "1A",
+            "gate": null,
+            "delay": null,
+            "scheduled": "2024-01-06T08:05:00+00:00",
+            "estimated": "2024-01-06T08:05:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Haneda Airport",
+            "timezone": "Asia/Tokyo",
+            "iata": "HND",
+            "icao": "RJTT",
+            "terminal": "1",
+            "gate": "18",
+            "delay": 19,
+            "scheduled": "2024-01-06T07:00:00+00:00",
+            "estimated": "2024-01-06T07:00:00+00:00",
+            "actual": "2024-01-06T07:19:00+00:00",
+            "estimated_runway": "2024-01-06T07:19:00+00:00",
+            "actual_runway": "2024-01-06T07:19:00+00:00"
+        },
+        {
+            "airport": "Taiwan Taoyuan International (Chiang Kai Shek International)",
+            "timezone": "Asia/Taipei",
+            "iata": "TPE",
+            "icao": "RCTP",
+            "terminal": "2",
+            "gate": "A9",
+            "delay": null,
+            "scheduled": "2024-01-06T16:35:00+00:00",
+            "estimated": "2024-01-06T16:35:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Heathrow",
+            "timezone": "Europe/London",
+            "iata": "LHR",
+            "icao": "EGLL",
+            "terminal": "2",
+            "gate": null,
+            "delay": 20,
+            "scheduled": "2024-01-06T08:45:00+00:00",
+            "estimated": "2024-01-06T08:45:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": null,
+            "timezone": null,
+            "iata": "TFU",
+            "icao": "ZUTF",
+            "terminal": "2",
+            "gate": null,
+            "delay": 60,
+            "scheduled": "2024-01-06T11:40:00+00:00",
+            "estimated": "2024-01-06T11:40:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Tianhe International",
+            "timezone": "Asia/Shanghai",
+            "iata": "WUH",
+            "icao": "ZHHH",
+            "terminal": "3",
+            "gate": null,
+            "delay": null,
+            "scheduled": "2024-01-06T16:45:00+00:00",
+            "estimated": "2024-01-06T16:45:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Kuala Lumpur International Airport (klia)",
+            "timezone": "Asia/Kuala_Lumpur",
+            "iata": "KUL",
+            "icao": "WMKK",
+            "terminal": "1",
+            "gate": "B11",
+            "delay": 14,
+            "scheduled": "2024-01-06T08:45:00+00:00",
+            "estimated": "2024-01-06T08:45:00+00:00",
+            "actual": "2024-01-06T08:58:00+00:00",
+            "estimated_runway": "2024-01-06T08:58:00+00:00",
+            "actual_runway": "2024-01-06T08:58:00+00:00"
+        },
+        {
+            "airport": "Yantai",
+            "timezone": "Asia/Shanghai",
+            "iata": "YNT",
+            "icao": "ZSYT",
+            "terminal": null,
+            "gate": "B",
+            "delay": 5,
+            "scheduled": "2024-01-06T08:35:00+00:00",
+            "estimated": "2024-01-06T08:35:00+00:00",
+            "actual": "2024-01-06T08:30:00+00:00",
+            "estimated_runway": "2024-01-06T08:30:00+00:00",
+            "actual_runway": "2024-01-06T08:30:00+00:00"
+        },
+        {
+            "airport": "Harare",
+            "timezone": "Africa/Harare",
+            "iata": "HRE",
+            "icao": "FVRG",
+            "terminal": "I",
+            "gate": null,
+            "delay": null,
+            "scheduled": "2024-01-06T11:35:00+00:00",
+            "estimated": "2024-01-06T11:35:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Perth International",
+            "timezone": "Australia/Perth",
+            "iata": "PER",
+            "icao": "YPPH",
+            "terminal": "1",
+            "gate": null,
+            "delay": 10,
+            "scheduled": "2024-01-06T01:10:00+00:00",
+            "estimated": "2024-01-06T01:10:00+00:00",
+            "actual": "2024-01-06T01:19:00+00:00",
+            "estimated_runway": "2024-01-06T01:19:00+00:00",
+            "actual_runway": "2024-01-06T01:19:00+00:00"
+        },
+        {
+            "airport": "Gonggar/Lhasa",
+            "timezone": "Asia/Shanghai",
+            "iata": "LXA",
+            "icao": "ZULS",
+            "terminal": "T3",
+            "gate": "14",
+            "delay": 12,
+            "scheduled": "2024-01-06T09:55:00+00:00",
+            "estimated": "2024-01-06T09:55:00+00:00",
+            "actual": "2024-01-06T10:07:00+00:00",
+            "estimated_runway": "2024-01-06T10:07:00+00:00",
+            "actual_runway": "2024-01-06T10:07:00+00:00"
+        },
+        {
+            "airport": "Gimpo Airport",
+            "timezone": "Asia/Seoul",
+            "iata": "GMP",
+            "icao": "RKSS",
+            "terminal": "D",
+            "gate": "16",
+            "delay": null,
+            "scheduled": "2024-01-06T12:55:00+00:00",
+            "estimated": "2024-01-06T12:55:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Gimpo Airport",
+            "timezone": "Asia/Seoul",
+            "iata": "GMP",
+            "icao": "RKSS",
+            "terminal": "D",
+            "gate": "11",
+            "delay": null,
+            "scheduled": "2024-01-06T12:50:00+00:00",
+            "estimated": "2024-01-06T12:50:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Gonggar/Lhasa",
+            "timezone": "Asia/Shanghai",
+            "iata": "LXA",
+            "icao": "ZULS",
+            "terminal": "T3",
+            "gate": "6",
+            "delay": 8,
+            "scheduled": "2024-01-06T11:55:00+00:00",
+            "estimated": "2024-01-06T11:55:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Lamezia Terme",
+            "timezone": "Europe/Rome",
+            "iata": "SUF",
+            "icao": "LICA",
+            "terminal": null,
+            "gate": null,
+            "delay": 70,
+            "scheduled": "2024-01-06T06:00:00+00:00",
+            "estimated": "2024-01-06T06:00:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Narita International Airport",
+            "timezone": "Asia/Tokyo",
+            "iata": "NRT",
+            "icao": "RJAA",
+            "terminal": "1",
+            "gate": "36",
+            "delay": 32,
+            "scheduled": "2024-01-06T09:00:00+00:00",
+            "estimated": "2024-01-06T09:00:00+00:00",
+            "actual": "2024-01-06T09:31:00+00:00",
+            "estimated_runway": "2024-01-06T09:31:00+00:00",
+            "actual_runway": "2024-01-06T09:31:00+00:00"
+        },
+        {
+            "airport": "Tianhe International",
+            "timezone": "Asia/Shanghai",
+            "iata": "WUH",
+            "icao": "ZHHH",
+            "terminal": null,
+            "gate": null,
+            "delay": null,
+            "scheduled": "2024-01-06T03:50:00+00:00",
+            "estimated": "2024-01-06T03:50:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Singapore Changi",
+            "timezone": "Asia/Singapore",
+            "iata": "SIN",
+            "icao": "WSSS",
+            "terminal": "4",
+            "gate": "G6",
+            "delay": 15,
+            "scheduled": "2024-01-06T07:00:00+00:00",
+            "estimated": "2024-01-06T07:00:00+00:00",
+            "actual": "2024-01-06T07:14:00+00:00",
+            "estimated_runway": "2024-01-06T07:14:00+00:00",
+            "actual_runway": "2024-01-06T07:14:00+00:00"
+        },
+        {
+            "airport": "Maroochydore",
+            "timezone": "Australia/Brisbane",
+            "iata": "MCY",
+            "icao": "YBSU",
+            "terminal": null,
+            "gate": "3",
+            "delay": 75,
+            "scheduled": "2024-01-06T08:30:00+00:00",
+            "estimated": "2024-01-06T08:30:00+00:00",
+            "actual": "2024-01-06T09:45:00+00:00",
+            "estimated_runway": "2024-01-06T09:45:00+00:00",
+            "actual_runway": "2024-01-06T09:45:00+00:00"
+        },
+        {
+            "airport": "Hangzhou",
+            "timezone": "Asia/Shanghai",
+            "iata": "HGH",
+            "icao": "ZSHC",
+            "terminal": "3",
+            "gate": "B90",
+            "delay": 8,
+            "scheduled": "2024-01-06T07:40:00+00:00",
+            "estimated": "2024-01-06T07:40:00+00:00",
+            "actual": "2024-01-06T07:48:00+00:00",
+            "estimated_runway": "2024-01-06T07:48:00+00:00",
+            "actual_runway": "2024-01-06T07:48:00+00:00"
+        },
+        {
+            "airport": "Hangzhou",
+            "timezone": "Asia/Shanghai",
+            "iata": "HGH",
+            "icao": "ZSHC",
+            "terminal": "4",
+            "gate": "418",
+            "delay": 17,
+            "scheduled": "2024-01-06T07:40:00+00:00",
+            "estimated": "2024-01-06T07:40:00+00:00",
+            "actual": "2024-01-06T07:57:00+00:00",
+            "estimated_runway": "2024-01-06T07:57:00+00:00",
+            "actual_runway": "2024-01-06T07:57:00+00:00"
+        },
+        {
+            "airport": "Shahre-kord",
+            "timezone": "Asia/Tehran",
+            "iata": "CQD",
+            "icao": "OIFS",
+            "terminal": null,
+            "gate": null,
+            "delay": null,
+            "scheduled": "2024-01-06T07:40:00+00:00",
+            "estimated": "2024-01-06T07:40:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Lishe International Airport",
+            "timezone": "Asia/Shanghai",
+            "iata": "NGB",
+            "icao": "ZSNB",
+            "terminal": null,
+            "gate": null,
+            "delay": null,
+            "scheduled": "2024-01-06T04:35:00+00:00",
+            "estimated": "2024-01-06T04:35:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Hangzhou",
+            "timezone": "Asia/Shanghai",
+            "iata": "HGH",
+            "icao": "ZSHC",
+            "terminal": "3",
+            "gate": "B97",
+            "delay": 10,
+            "scheduled": "2024-01-06T06:50:00+00:00",
+            "estimated": "2024-01-06T06:50:00+00:00",
+            "actual": "2024-01-06T06:59:00+00:00",
+            "estimated_runway": "2024-01-06T06:59:00+00:00",
+            "actual_runway": "2024-01-06T06:59:00+00:00"
+        },
+        {
+            "airport": "Harbin",
+            "timezone": "Asia/Shanghai",
+            "iata": "HRB",
+            "icao": "ZYHB",
+            "terminal": "T2",
+            "gate": "18",
+            "delay": 34,
+            "scheduled": "2024-01-06T09:10:00+00:00",
+            "estimated": "2024-01-06T09:10:00+00:00",
+            "actual": "2024-01-06T09:44:00+00:00",
+            "estimated_runway": "2024-01-06T09:44:00+00:00",
+            "actual_runway": "2024-01-06T09:44:00+00:00"
+        },
+        {
+            "airport": "Yantai",
+            "timezone": "Asia/Shanghai",
+            "iata": "YNT",
+            "icao": "ZSYT",
+            "terminal": "T1",
+            "gate": null,
+            "delay": 1,
+            "scheduled": "2024-01-06T07:30:00+00:00",
+            "estimated": "2024-01-06T07:30:00+00:00",
+            "actual": "2024-01-06T07:24:00+00:00",
+            "estimated_runway": "2024-01-06T07:24:00+00:00",
+            "actual_runway": "2024-01-06T07:24:00+00:00"
+        },
+        {
+            "airport": "Beijing Capital International",
+            "timezone": "Asia/Shanghai",
+            "iata": "PEK",
+            "icao": "ZBAA",
+            "terminal": "2",
+            "gate": null,
+            "delay": null,
+            "scheduled": "2024-01-06T18:00:00+00:00",
+            "estimated": "2024-01-06T18:00:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Almaty",
+            "timezone": "Asia/Almaty",
+            "iata": "ALA",
+            "icao": "UAAA",
+            "terminal": null,
+            "gate": "GT6D",
+            "delay": 40,
+            "scheduled": "2024-01-06T07:55:00+00:00",
+            "estimated": "2024-01-06T07:55:00+00:00",
+            "actual": "2024-01-06T08:35:00+00:00",
+            "estimated_runway": "2024-01-06T08:35:00+00:00",
+            "actual_runway": "2024-01-06T08:35:00+00:00"
+        },
+        {
+            "airport": "Juanda",
+            "timezone": "Asia/Jakarta",
+            "iata": "SUB",
+            "icao": "WARR",
+            "terminal": "2",
+            "gate": null,
+            "delay": null,
+            "scheduled": "2024-01-06T10:15:00+00:00",
+            "estimated": "2024-01-06T10:15:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Lanzhou Zhongchuan Airport",
+            "timezone": null,
+            "iata": "LHW",
+            "icao": "ZLLL",
+            "terminal": "T2",
+            "gate": "116",
+            "delay": null,
+            "scheduled": "2024-01-06T11:40:00+00:00",
+            "estimated": "2024-01-06T11:40:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Aeroporto Internacional Guarulhos",
+            "timezone": "America/Sao_Paulo",
+            "iata": "GRU",
+            "icao": "SBGR",
+            "terminal": "2",
+            "gate": "227",
+            "delay": 20,
+            "scheduled": "2024-01-06T00:30:00+00:00",
+            "estimated": "2024-01-06T00:30:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Tolmachevo",
+            "timezone": "Asia/Novosibirsk",
+            "iata": "OVB",
+            "icao": "UNNT",
+            "terminal": "A",
+            "gate": null,
+            "delay": null,
+            "scheduled": "2024-01-06T04:30:00+00:00",
+            "estimated": "2024-01-06T04:30:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Beijing Capital International",
+            "timezone": "Asia/Shanghai",
+            "iata": "PEK",
+            "icao": "ZBAA",
+            "terminal": "2",
+            "gate": "C11",
+            "delay": 4,
+            "scheduled": "2024-01-06T03:00:00+00:00",
+            "estimated": "2024-01-06T03:00:00+00:00",
+            "actual": "2024-01-06T03:03:00+00:00",
+            "estimated_runway": "2024-01-06T03:03:00+00:00",
+            "actual_runway": "2024-01-06T03:03:00+00:00"
+        },
+        {
+            "airport": "Beijing Capital International",
+            "timezone": "Asia/Shanghai",
+            "iata": "PEK",
+            "icao": "ZBAA",
+            "terminal": "3",
+            "gate": "H24",
+            "delay": 22,
+            "scheduled": "2024-01-06T02:50:00+00:00",
+            "estimated": "2024-01-06T02:50:00+00:00",
+            "actual": "2024-01-06T03:11:00+00:00",
+            "estimated_runway": "2024-01-06T03:11:00+00:00",
+            "actual_runway": "2024-01-06T03:11:00+00:00"
+        }
+    ],
+    "arrival": [
+        {
+            "airport": "El Prat De Llobregat",
+            "timezone": "Europe/Madrid",
+            "iata": "BCN",
+            "icao": "LEBL",
+            "terminal": "1",
+            "gate": null,
+            "baggage": "09",
+            "delay": null,
+            "scheduled": "2024-01-06T09:10:00+00:00",
+            "estimated": "2024-01-06T09:10:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Adelaide International Airport",
+            "timezone": "Australia/Adelaide",
+            "iata": "ADL",
+            "icao": "YPAD",
+            "terminal": "1",
+            "gate": "14",
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T16:05:00+00:00",
+            "estimated": "2024-01-06T16:05:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Shimojishima",
+            "timezone": "Asia/Tokyo",
+            "iata": "SHI",
+            "icao": "RORS",
+            "terminal": null,
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T13:15:00+00:00",
+            "estimated": "2024-01-06T13:15:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": null,
+            "timezone": null,
+            "iata": "TFU",
+            "icao": "ZUTF",
+            "terminal": "2",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T13:40:00+00:00",
+            "estimated": "2024-01-06T13:40:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Dubai",
+            "timezone": "Asia/Dubai",
+            "iata": "DXB",
+            "icao": "OMDB",
+            "terminal": "3",
+            "gate": null,
+            "baggage": "01",
+            "delay": null,
+            "scheduled": "2024-01-06T04:10:00+00:00",
+            "estimated": "2024-01-06T04:10:00+00:00",
+            "actual": "2024-01-06T03:47:00+00:00",
+            "estimated_runway": "2024-01-06T03:47:00+00:00",
+            "actual_runway": "2024-01-06T03:47:00+00:00"
+        },
+        {
+            "airport": "Ulanhot",
+            "timezone": "Asia/Shanghai",
+            "iata": "HLH",
+            "icao": "ZBUL",
+            "terminal": null,
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T12:35:00+00:00",
+            "estimated": "2024-01-06T12:35:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Nanjing Lukou International Airport",
+            "timezone": "Asia/Shanghai",
+            "iata": "NKG",
+            "icao": "ZSNJ",
+            "terminal": "2",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T10:05:00+00:00",
+            "estimated": "2024-01-06T10:05:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Yinchuan",
+            "timezone": "Asia/Shanghai",
+            "iata": "INC",
+            "icao": "ZLIC",
+            "terminal": "T3",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T14:10:00+00:00",
+            "estimated": "2024-01-06T14:10:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Haikou",
+            "timezone": "Asia/Shanghai",
+            "iata": "HAK",
+            "icao": "ZJHK",
+            "terminal": "1",
+            "gate": null,
+            "baggage": "5",
+            "delay": null,
+            "scheduled": "2024-01-06T14:20:00+00:00",
+            "estimated": "2024-01-06T14:20:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Yogyakarta International Airport",
+            "timezone": null,
+            "iata": "YIA",
+            "icao": "WAHI",
+            "terminal": null,
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T10:20:00+00:00",
+            "estimated": "2024-01-06T10:20:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Guangzhou Baiyun International",
+            "timezone": "Asia/Shanghai",
+            "iata": "CAN",
+            "icao": "ZGGG",
+            "terminal": "1",
+            "gate": null,
+            "baggage": "2",
+            "delay": null,
+            "scheduled": "2024-01-06T10:50:00+00:00",
+            "estimated": "2024-01-06T10:50:00+00:00",
+            "actual": "2024-01-06T10:48:00+00:00",
+            "estimated_runway": "2024-01-06T10:48:00+00:00",
+            "actual_runway": "2024-01-06T10:48:00+00:00"
+        },
+        {
+            "airport": "Liuzhou",
+            "timezone": "Asia/Shanghai",
+            "iata": "LZH",
+            "icao": "ZGZH",
+            "terminal": null,
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T18:50:00+00:00",
+            "estimated": "2024-01-06T18:50:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Cairo International Airport",
+            "timezone": "Africa/Cairo",
+            "iata": "CAI",
+            "icao": "HECA",
+            "terminal": "1",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T14:20:00+00:00",
+            "estimated": "2024-01-06T14:20:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Malay",
+            "timezone": "Asia/Manila",
+            "iata": "MPH",
+            "icao": "RPVE",
+            "terminal": "3",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T08:55:00+00:00",
+            "estimated": "2024-01-06T08:55:00+00:00",
+            "actual": "2024-01-06T08:40:00+00:00",
+            "estimated_runway": "2024-01-06T08:40:00+00:00",
+            "actual_runway": "2024-01-06T08:40:00+00:00"
+        },
+        {
+            "airport": "El Prat De Llobregat",
+            "timezone": "Europe/Madrid",
+            "iata": "BCN",
+            "icao": "LEBL",
+            "terminal": "1",
+            "gate": null,
+            "baggage": "03",
+            "delay": null,
+            "scheduled": "2024-01-06T07:55:00+00:00",
+            "estimated": "2024-01-06T07:55:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Bacolod",
+            "timezone": "Asia/Manila",
+            "iata": "BCD",
+            "icao": "RPVB",
+            "terminal": "3",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T09:20:00+00:00",
+            "estimated": "2024-01-06T09:20:00+00:00",
+            "actual": "2024-01-06T09:09:00+00:00",
+            "estimated_runway": "2024-01-06T09:09:00+00:00",
+            "actual_runway": "2024-01-06T09:09:00+00:00"
+        },
+        {
+            "airport": "Hong Kong International",
+            "timezone": "Asia/Hong_Kong",
+            "iata": "HKG",
+            "icao": "VHHH",
+            "terminal": "1",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T18:25:00+00:00",
+            "estimated": "2024-01-06T18:25:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Butuan",
+            "timezone": "Asia/Manila",
+            "iata": "BXU",
+            "icao": "RPME",
+            "terminal": "2",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T16:45:00+00:00",
+            "estimated": "2024-01-06T16:45:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Sayak Airport",
+            "timezone": "Asia/Manila",
+            "iata": "IAO",
+            "icao": "RPNS",
+            "terminal": "1",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T16:40:00+00:00",
+            "estimated": "2024-01-06T16:40:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Seoul (Incheon)",
+            "timezone": "Asia/Seoul",
+            "iata": "ICN",
+            "icao": "RKSI",
+            "terminal": "1",
+            "gate": "113",
+            "baggage": "10",
+            "delay": null,
+            "scheduled": "2024-01-06T21:20:00+00:00",
+            "estimated": "2024-01-06T21:20:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Francisco Bangoy International",
+            "timezone": "Asia/Manila",
+            "iata": "DVO",
+            "icao": "RPMD",
+            "terminal": "1",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T17:10:00+00:00",
+            "estimated": "2024-01-06T17:10:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Franz Josef Strauss",
+            "timezone": "Europe/Berlin",
+            "iata": "MUC",
+            "icao": "EDDM",
+            "terminal": "2",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T09:05:00+00:00",
+            "estimated": "2024-01-06T09:05:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Norte Los Rodeos",
+            "timezone": "Atlantic/Canary",
+            "iata": "TFN",
+            "icao": "GCXO",
+            "terminal": "4",
+            "gate": null,
+            "baggage": "3",
+            "delay": null,
+            "scheduled": "2024-01-06T07:30:00+00:00",
+            "estimated": "2024-01-06T07:30:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Lanzarote",
+            "timezone": "Atlantic/Canary",
+            "iata": "ACE",
+            "icao": "GCRR",
+            "terminal": "2",
+            "gate": null,
+            "baggage": "C1",
+            "delay": null,
+            "scheduled": "2024-01-06T07:45:00+00:00",
+            "estimated": "2024-01-06T07:45:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Lanzarote",
+            "timezone": "Atlantic/Canary",
+            "iata": "ACE",
+            "icao": "GCRR",
+            "terminal": "2",
+            "gate": null,
+            "baggage": "C1",
+            "delay": null,
+            "scheduled": "2024-01-06T07:45:00+00:00",
+            "estimated": "2024-01-06T07:45:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Lanzarote",
+            "timezone": "Atlantic/Canary",
+            "iata": "ACE",
+            "icao": "GCRR",
+            "terminal": "2",
+            "gate": null,
+            "baggage": "C2",
+            "delay": null,
+            "scheduled": "2024-01-06T07:45:00+00:00",
+            "estimated": "2024-01-06T07:45:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Fuerteventura",
+            "timezone": "Atlantic/Canary",
+            "iata": "FUE",
+            "icao": "GCFV",
+            "terminal": "T1",
+            "gate": null,
+            "baggage": "14",
+            "delay": null,
+            "scheduled": "2024-01-06T07:40:00+00:00",
+            "estimated": "2024-01-06T07:40:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "El Prat De Llobregat",
+            "timezone": "Europe/Madrid",
+            "iata": "BCN",
+            "icao": "LEBL",
+            "terminal": "1",
+            "gate": null,
+            "baggage": "13",
+            "delay": null,
+            "scheduled": "2024-01-06T11:15:00+00:00",
+            "estimated": "2024-01-06T11:15:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Milano Malpensa",
+            "timezone": "Europe/Rome",
+            "iata": "MXP",
+            "icao": "LIMC",
+            "terminal": "1",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T09:45:00+00:00",
+            "estimated": "2024-01-06T09:45:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Milano Malpensa",
+            "timezone": "Europe/Rome",
+            "iata": "MXP",
+            "icao": "LIMC",
+            "terminal": "1",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T09:45:00+00:00",
+            "estimated": "2024-01-06T09:45:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "El Prat De Llobregat",
+            "timezone": "Europe/Madrid",
+            "iata": "BCN",
+            "icao": "LEBL",
+            "terminal": "1",
+            "gate": null,
+            "baggage": "08",
+            "delay": null,
+            "scheduled": "2024-01-06T10:40:00+00:00",
+            "estimated": "2024-01-06T10:40:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Charles De Gaulle",
+            "timezone": "Europe/Paris",
+            "iata": "CDG",
+            "icao": "LFPG",
+            "terminal": "1",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T10:00:00+00:00",
+            "estimated": "2024-01-06T10:00:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Charles De Gaulle",
+            "timezone": "Europe/Paris",
+            "iata": "CDG",
+            "icao": "LFPG",
+            "terminal": "1",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T10:00:00+00:00",
+            "estimated": "2024-01-06T10:00:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Franz Josef Strauss",
+            "timezone": "Europe/Berlin",
+            "iata": "MUC",
+            "icao": "EDDM",
+            "terminal": "2",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T09:05:00+00:00",
+            "estimated": "2024-01-06T09:05:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Gonggar/Lhasa",
+            "timezone": "Asia/Shanghai",
+            "iata": "LXA",
+            "icao": "ZULS",
+            "terminal": "T3",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T18:30:00+00:00",
+            "estimated": "2024-01-06T18:30:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Lishe International Airport",
+            "timezone": "Asia/Shanghai",
+            "iata": "NGB",
+            "icao": "ZSNB",
+            "terminal": "T1",
+            "gate": null,
+            "baggage": "B1",
+            "delay": null,
+            "scheduled": "2024-01-06T16:10:00+00:00",
+            "estimated": "2024-01-06T16:10:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Fuzhou",
+            "timezone": "Asia/Shanghai",
+            "iata": "FOC",
+            "icao": "ZSFZ",
+            "terminal": "3",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T16:20:00+00:00",
+            "estimated": "2024-01-06T16:20:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Heathrow",
+            "timezone": "Europe/London",
+            "iata": "LHR",
+            "icao": "EGLL",
+            "terminal": "2",
+            "gate": null,
+            "baggage": null,
+            "delay": 21,
+            "scheduled": "2024-01-06T15:20:00+00:00",
+            "estimated": "2024-01-06T15:20:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Heathrow",
+            "timezone": "Europe/London",
+            "iata": "LHR",
+            "icao": "EGLL",
+            "terminal": "2",
+            "gate": null,
+            "baggage": null,
+            "delay": 21,
+            "scheduled": "2024-01-06T15:20:00+00:00",
+            "estimated": "2024-01-06T15:20:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Heathrow",
+            "timezone": "Europe/London",
+            "iata": "LHR",
+            "icao": "EGLL",
+            "terminal": "2",
+            "gate": null,
+            "baggage": null,
+            "delay": 21,
+            "scheduled": "2024-01-06T15:20:00+00:00",
+            "estimated": "2024-01-06T15:20:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Xiamen",
+            "timezone": "Asia/Shanghai",
+            "iata": "XMN",
+            "icao": "ZSAM",
+            "terminal": "3",
+            "gate": "10",
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T13:45:00+00:00",
+            "estimated": "2024-01-06T13:45:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Beijing Capital International",
+            "timezone": "Asia/Shanghai",
+            "iata": "PEK",
+            "icao": "ZBAA",
+            "terminal": "3",
+            "gate": "B",
+            "baggage": "39",
+            "delay": 10,
+            "scheduled": "2024-01-06T14:50:00+00:00",
+            "estimated": "2024-01-06T14:50:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Shanghai Hongqiao International",
+            "timezone": "Asia/Shanghai",
+            "iata": "SHA",
+            "icao": "ZSSS",
+            "terminal": "2",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T16:40:00+00:00",
+            "estimated": "2024-01-06T16:40:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Wuxi",
+            "timezone": "Asia/Shanghai",
+            "iata": "WUX",
+            "icao": "ZSWX",
+            "terminal": "T1",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T16:35:00+00:00",
+            "estimated": "2024-01-06T16:35:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Hangzhou",
+            "timezone": "Asia/Shanghai",
+            "iata": "HGH",
+            "icao": "ZSHC",
+            "terminal": "3",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T16:30:00+00:00",
+            "estimated": "2024-01-06T16:30:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Hangzhou",
+            "timezone": "Asia/Shanghai",
+            "iata": "HGH",
+            "icao": "ZSHC",
+            "terminal": "4",
+            "gate": null,
+            "baggage": "16",
+            "delay": null,
+            "scheduled": "2024-01-06T16:25:00+00:00",
+            "estimated": "2024-01-06T16:25:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Yinchuan",
+            "timezone": "Asia/Shanghai",
+            "iata": "INC",
+            "icao": "ZLIC",
+            "terminal": "3",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T17:45:00+00:00",
+            "estimated": "2024-01-06T17:45:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Xianyang",
+            "timezone": "Asia/Shanghai",
+            "iata": "XIY",
+            "icao": "ZLXY",
+            "terminal": "2",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T16:50:00+00:00",
+            "estimated": "2024-01-06T16:50:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Shanghai Hongqiao International",
+            "timezone": "Asia/Shanghai",
+            "iata": "SHA",
+            "icao": "ZSSS",
+            "terminal": "2",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T16:15:00+00:00",
+            "estimated": "2024-01-06T16:15:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Baotou",
+            "timezone": "Asia/Shanghai",
+            "iata": "BAV",
+            "icao": "ZBOW",
+            "terminal": "3",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T17:25:00+00:00",
+            "estimated": "2024-01-06T17:25:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Harbin",
+            "timezone": "Asia/Shanghai",
+            "iata": "HRB",
+            "icao": "ZYHB",
+            "terminal": "T2",
+            "gate": null,
+            "baggage": "5",
+            "delay": null,
+            "scheduled": "2024-01-06T17:30:00+00:00",
+            "estimated": "2024-01-06T17:30:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Harbin",
+            "timezone": "Asia/Shanghai",
+            "iata": "HRB",
+            "icao": "ZYHB",
+            "terminal": null,
+            "gate": null,
+            "baggage": "5",
+            "delay": null,
+            "scheduled": "2024-01-06T17:30:00+00:00",
+            "estimated": "2024-01-06T17:30:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Harbin",
+            "timezone": "Asia/Shanghai",
+            "iata": "HRB",
+            "icao": "ZYHB",
+            "terminal": null,
+            "gate": null,
+            "baggage": "5",
+            "delay": null,
+            "scheduled": "2024-01-06T17:30:00+00:00",
+            "estimated": "2024-01-06T17:30:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "D\u00fcsseldorf International Airport",
+            "timezone": "Europe/Berlin",
+            "iata": "DUS",
+            "icao": "EDDL",
+            "terminal": null,
+            "gate": "C45",
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T12:00:00+00:00",
+            "estimated": "2024-01-06T12:00:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Macedonia International",
+            "timezone": "Europe/Athens",
+            "iata": "SKG",
+            "icao": "LGTS",
+            "terminal": "3",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T10:05:00+00:00",
+            "estimated": "2024-01-06T10:05:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Changchun",
+            "timezone": "Asia/Shanghai",
+            "iata": "CGQ",
+            "icao": "ZYCC",
+            "terminal": "2",
+            "gate": null,
+            "baggage": "5",
+            "delay": null,
+            "scheduled": "2024-01-06T20:00:00+00:00",
+            "estimated": "2024-01-06T20:00:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": null,
+            "timezone": null,
+            "iata": "TFU",
+            "icao": "ZUTF",
+            "terminal": "2",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T16:30:00+00:00",
+            "estimated": "2024-01-06T16:30:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Shanghai Pudong International",
+            "timezone": "Asia/Shanghai",
+            "iata": "PVG",
+            "icao": "ZSPD",
+            "terminal": "2",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T16:15:00+00:00",
+            "estimated": "2024-01-06T16:15:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Shenzhen",
+            "timezone": "Asia/Shanghai",
+            "iata": "SZX",
+            "icao": "ZGSZ",
+            "terminal": "T3",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T04:45:00+00:00",
+            "estimated": "2024-01-06T04:45:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Shanghai Pudong International",
+            "timezone": "Asia/Shanghai",
+            "iata": "PVG",
+            "icao": "ZSPD",
+            "terminal": "1",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T15:05:00+00:00",
+            "estimated": "2024-01-06T15:05:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": null,
+            "timezone": null,
+            "iata": "TFU",
+            "icao": "ZUTF",
+            "terminal": "2",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T10:40:00+00:00",
+            "estimated": "2024-01-06T10:40:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Tokushima",
+            "timezone": "Asia/Tokyo",
+            "iata": "TKS",
+            "icao": "RJOS",
+            "terminal": "1",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T10:15:00+00:00",
+            "estimated": "2024-01-06T10:15:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Los Angeles International",
+            "timezone": "America/Los_Angeles",
+            "iata": "LAX",
+            "icao": "KLAX",
+            "terminal": "TBIT",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T09:05:00+00:00",
+            "estimated": "2024-01-06T09:05:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Kashi",
+            "timezone": "Asia/Shanghai",
+            "iata": "KHG",
+            "icao": "ZWSH",
+            "terminal": "T2",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T16:05:00+00:00",
+            "estimated": "2024-01-06T16:05:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Abu Dhabi International",
+            "timezone": "Asia/Dubai",
+            "iata": "AUH",
+            "icao": "OMAA",
+            "terminal": "A",
+            "gate": "A3",
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T06:20:00+00:00",
+            "estimated": "2024-01-06T06:20:00+00:00",
+            "actual": "2024-01-06T06:03:00+00:00",
+            "estimated_runway": "2024-01-06T06:03:00+00:00",
+            "actual_runway": "2024-01-06T06:03:00+00:00"
+        },
+        {
+            "airport": "Xianyang",
+            "timezone": "Asia/Shanghai",
+            "iata": "XIY",
+            "icao": "ZLXY",
+            "terminal": "3",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T11:35:00+00:00",
+            "estimated": "2024-01-06T11:35:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Murtala Muhammed",
+            "timezone": "Africa/Lagos",
+            "iata": "LOS",
+            "icao": "DNMM",
+            "terminal": "I",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T11:20:00+00:00",
+            "estimated": "2024-01-06T11:20:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Akita",
+            "timezone": "Asia/Tokyo",
+            "iata": "AXT",
+            "icao": "RJSK",
+            "terminal": "1",
+            "gate": null,
+            "baggage": null,
+            "delay": 2,
+            "scheduled": "2024-01-06T08:10:00+00:00",
+            "estimated": "2024-01-06T08:10:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Naha",
+            "timezone": "Asia/Tokyo",
+            "iata": "OKA",
+            "icao": "ROAH",
+            "terminal": "I",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T19:00:00+00:00",
+            "estimated": "2024-01-06T19:00:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Franz Josef Strauss",
+            "timezone": "Europe/Berlin",
+            "iata": "MUC",
+            "icao": "EDDM",
+            "terminal": "2",
+            "gate": "H30",
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T11:35:00+00:00",
+            "estimated": "2024-01-06T11:35:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Zhuhai Airport",
+            "timezone": "Asia/Shanghai",
+            "iata": "ZUH",
+            "icao": "ZGSD",
+            "terminal": "T1",
+            "gate": null,
+            "baggage": "1",
+            "delay": null,
+            "scheduled": "2024-01-06T14:10:00+00:00",
+            "estimated": "2024-01-06T14:10:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Shuangliu",
+            "timezone": "Asia/Shanghai",
+            "iata": "CTU",
+            "icao": "ZUUU",
+            "terminal": "2",
+            "gate": null,
+            "baggage": "12",
+            "delay": null,
+            "scheduled": "2024-01-06T19:05:00+00:00",
+            "estimated": "2024-01-06T19:05:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Kuching",
+            "timezone": "Asia/Kuching",
+            "iata": "KCH",
+            "icao": "WBGG",
+            "terminal": "2",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T10:40:00+00:00",
+            "estimated": "2024-01-06T10:40:00+00:00",
+            "actual": "2024-01-06T10:30:00+00:00",
+            "estimated_runway": "2024-01-06T10:30:00+00:00",
+            "actual_runway": "2024-01-06T10:30:00+00:00"
+        },
+        {
+            "airport": "Dalian",
+            "timezone": "Asia/Shanghai",
+            "iata": "DLC",
+            "icao": "ZYTL",
+            "terminal": "I",
+            "gate": null,
+            "baggage": "3",
+            "delay": null,
+            "scheduled": "2024-01-06T09:25:00+00:00",
+            "estimated": "2024-01-06T09:25:00+00:00",
+            "actual": "2024-01-06T09:07:00+00:00",
+            "estimated_runway": "2024-01-06T09:07:00+00:00",
+            "actual_runway": "2024-01-06T09:07:00+00:00"
+        },
+        {
+            "airport": "Cape Town International",
+            "timezone": "Africa/Johannesburg",
+            "iata": "CPT",
+            "icao": "FACT",
+            "terminal": null,
+            "gate": "A5",
+            "baggage": "1.2",
+            "delay": null,
+            "scheduled": "2024-01-06T14:55:00+00:00",
+            "estimated": "2024-01-06T14:55:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Singapore Changi",
+            "timezone": "Asia/Singapore",
+            "iata": "SIN",
+            "icao": "WSSS",
+            "terminal": "3",
+            "gate": null,
+            "baggage": "46",
+            "delay": null,
+            "scheduled": "2024-01-06T06:20:00+00:00",
+            "estimated": "2024-01-06T06:20:00+00:00",
+            "actual": "2024-01-06T05:49:00+00:00",
+            "estimated_runway": "2024-01-06T05:49:00+00:00",
+            "actual_runway": "2024-01-06T05:49:00+00:00"
+        },
+        {
+            "airport": "Shuangliu",
+            "timezone": "Asia/Shanghai",
+            "iata": "CTU",
+            "icao": "ZUUU",
+            "terminal": "2",
+            "gate": null,
+            "baggage": "15",
+            "delay": 8,
+            "scheduled": "2024-01-06T11:40:00+00:00",
+            "estimated": "2024-01-06T11:40:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Jeju Airport",
+            "timezone": "Asia/Seoul",
+            "iata": "CJU",
+            "icao": "RKPC",
+            "terminal": "I",
+            "gate": "5",
+            "baggage": "5",
+            "delay": null,
+            "scheduled": "2024-01-06T14:15:00+00:00",
+            "estimated": "2024-01-06T14:15:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Jeju Airport",
+            "timezone": "Asia/Seoul",
+            "iata": "CJU",
+            "icao": "RKPC",
+            "terminal": "I",
+            "gate": "2",
+            "baggage": "2",
+            "delay": null,
+            "scheduled": "2024-01-06T14:00:00+00:00",
+            "estimated": "2024-01-06T14:00:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Shuangliu",
+            "timezone": "Asia/Shanghai",
+            "iata": "CTU",
+            "icao": "ZUUU",
+            "terminal": "2",
+            "gate": null,
+            "baggage": "10",
+            "delay": null,
+            "scheduled": "2024-01-06T13:40:00+00:00",
+            "estimated": "2024-01-06T13:40:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Stansted",
+            "timezone": "Europe/London",
+            "iata": "STN",
+            "icao": "EGSS",
+            "terminal": "1",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T08:10:00+00:00",
+            "estimated": "2024-01-06T08:10:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Singapore Changi",
+            "timezone": "Asia/Singapore",
+            "iata": "SIN",
+            "icao": "WSSS",
+            "terminal": "1",
+            "gate": null,
+            "baggage": null,
+            "delay": 11,
+            "scheduled": "2024-01-06T15:30:00+00:00",
+            "estimated": "2024-01-06T15:30:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Shenzhen",
+            "timezone": "Asia/Shanghai",
+            "iata": "SZX",
+            "icao": "ZGSZ",
+            "terminal": "T3",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T05:55:00+00:00",
+            "estimated": "2024-01-06T05:55:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Suvarnabhumi International",
+            "timezone": "Asia/Bangkok",
+            "iata": "BKK",
+            "icao": "VTBS",
+            "terminal": "MAIN",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T08:40:00+00:00",
+            "estimated": "2024-01-06T08:40:00+00:00",
+            "actual": "2024-01-06T08:05:00+00:00",
+            "estimated_runway": "2024-01-06T08:05:00+00:00",
+            "actual_runway": "2024-01-06T08:05:00+00:00"
+        },
+        {
+            "airport": "Sydney Kingsford Smith Airport",
+            "timezone": "Australia/Sydney",
+            "iata": "SYD",
+            "icao": "YSSY",
+            "terminal": "2",
+            "gate": "A56",
+            "baggage": "D4",
+            "delay": 49,
+            "scheduled": "2024-01-06T11:10:00+00:00",
+            "estimated": "2024-01-06T11:10:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Zhuhai Airport",
+            "timezone": "Asia/Shanghai",
+            "iata": "ZUH",
+            "icao": "ZGSD",
+            "terminal": "T1",
+            "gate": null,
+            "baggage": "2",
+            "delay": null,
+            "scheduled": "2024-01-06T10:30:00+00:00",
+            "estimated": "2024-01-06T10:30:00+00:00",
+            "actual": "2024-01-06T09:55:00+00:00",
+            "estimated_runway": "2024-01-06T09:55:00+00:00",
+            "actual_runway": "2024-01-06T09:55:00+00:00"
+        },
+        {
+            "airport": null,
+            "timezone": null,
+            "iata": "TFU",
+            "icao": "ZUTF",
+            "terminal": "2",
+            "gate": null,
+            "baggage": null,
+            "delay": 8,
+            "scheduled": "2024-01-06T10:30:00+00:00",
+            "estimated": "2024-01-06T10:30:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Mehrabad (Qualeh Morgeh)",
+            "timezone": "Asia/Tehran",
+            "iata": "THR",
+            "icao": "OIII",
+            "terminal": "4",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T08:40:00+00:00",
+            "estimated": "2024-01-06T08:40:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Kansai International",
+            "timezone": "Asia/Tokyo",
+            "iata": "KIX",
+            "icao": "RJBB",
+            "terminal": "1",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T07:50:00+00:00",
+            "estimated": "2024-01-06T07:50:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Shenzhen",
+            "timezone": "Asia/Shanghai",
+            "iata": "SZX",
+            "icao": "ZGSZ",
+            "terminal": "T3",
+            "gate": null,
+            "baggage": "5",
+            "delay": null,
+            "scheduled": "2024-01-06T09:15:00+00:00",
+            "estimated": "2024-01-06T09:15:00+00:00",
+            "actual": "2024-01-06T09:00:00+00:00",
+            "estimated_runway": "2024-01-06T09:00:00+00:00",
+            "actual_runway": "2024-01-06T09:00:00+00:00"
+        },
+        {
+            "airport": "Hangzhou",
+            "timezone": "Asia/Shanghai",
+            "iata": "HGH",
+            "icao": "ZSHC",
+            "terminal": "3",
+            "gate": null,
+            "baggage": "B07",
+            "delay": 7,
+            "scheduled": "2024-01-06T12:30:00+00:00",
+            "estimated": "2024-01-06T12:30:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Beijing Capital International",
+            "timezone": "Asia/Shanghai",
+            "iata": "PEK",
+            "icao": "ZBAA",
+            "terminal": "3",
+            "gate": "A",
+            "baggage": "30",
+            "delay": null,
+            "scheduled": "2024-01-06T09:00:00+00:00",
+            "estimated": "2024-01-06T09:00:00+00:00",
+            "actual": "2024-01-06T08:26:00+00:00",
+            "estimated_runway": "2024-01-06T08:26:00+00:00",
+            "actual_runway": "2024-01-06T08:26:00+00:00"
+        },
+        {
+            "airport": "Shanghai Hongqiao International",
+            "timezone": "Asia/Shanghai",
+            "iata": "SHA",
+            "icao": "ZSSS",
+            "terminal": "2",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T20:15:00+00:00",
+            "estimated": "2024-01-06T20:15:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Shimkent",
+            "timezone": "Asia/Almaty",
+            "iata": "CIT",
+            "icao": "UAII",
+            "terminal": null,
+            "gate": null,
+            "baggage": null,
+            "delay": 32,
+            "scheduled": "2024-01-06T09:10:00+00:00",
+            "estimated": "2024-01-06T09:10:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Singapore Changi",
+            "timezone": "Asia/Singapore",
+            "iata": "SIN",
+            "icao": "WSSS",
+            "terminal": "3",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T13:35:00+00:00",
+            "estimated": "2024-01-06T13:35:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Jinan",
+            "timezone": "Asia/Shanghai",
+            "iata": "TNA",
+            "icao": "ZSJN",
+            "terminal": null,
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T14:00:00+00:00",
+            "estimated": "2024-01-06T14:00:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Palmas",
+            "timezone": "America/Araguaina",
+            "iata": "PMW",
+            "icao": "SBPJ",
+            "terminal": "1",
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T03:05:00+00:00",
+            "estimated": "2024-01-06T03:05:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Novokuznetsk",
+            "timezone": "Asia/Novokuznetsk",
+            "iata": "NOZ",
+            "icao": "UNWW",
+            "terminal": null,
+            "gate": null,
+            "baggage": null,
+            "delay": null,
+            "scheduled": "2024-01-06T05:25:00+00:00",
+            "estimated": "2024-01-06T05:25:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Manchester Airport",
+            "timezone": "Europe/London",
+            "iata": "MAN",
+            "icao": "EGCC",
+            "terminal": "2",
+            "gate": null,
+            "baggage": null,
+            "delay": 2,
+            "scheduled": "2024-01-06T05:50:00+00:00",
+            "estimated": "2024-01-06T05:50:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        },
+        {
+            "airport": "Franz Josef Strauss",
+            "timezone": "Europe/Berlin",
+            "iata": "MUC",
+            "icao": "EDDM",
+            "terminal": "2",
+            "gate": "I38",
+            "baggage": null,
+            "delay": 7,
+            "scheduled": "2024-01-06T06:00:00+00:00",
+            "estimated": "2024-01-06T06:00:00+00:00",
+            "actual": null,
+            "estimated_runway": null,
+            "actual_runway": null
+        }
+    ],
+    "airline": [
+        {
+            "name": "American Airlines",
+            "iata": "AA",
+            "icao": "AAL"
+        },
+        {
+            "name": "Qatar Airways",
+            "iata": "QR",
+            "icao": "QTR"
+        },
+        {
+            "name": "Skymark Airlines",
+            "iata": "BC",
+            "icao": "SKY"
+        },
+        {
+            "name": "China Express Air",
+            "iata": "G5",
+            "icao": "HXA"
+        },
+        {
+            "name": "Qantas",
+            "iata": "QF",
+            "icao": "QFA"
+        },
+        {
+            "name": "Tibet Airlines",
+            "iata": "TV",
+            "icao": "TBA"
+        },
+        {
+            "name": "Juneyao Airlines",
+            "iata": "HO",
+            "icao": "DKH"
+        },
+        {
+            "name": "Shenzhen Airlines",
+            "iata": "ZH",
+            "icao": "CSZ"
+        },
+        {
+            "name": "China Express Air",
+            "iata": "G5",
+            "icao": "HXA"
+        },
+        {
+            "name": null,
+            "iata": "X1",
+            "icao": "X1"
+        },
+        {
+            "name": "China Express Air",
+            "iata": "G5",
+            "icao": "HXA"
+        },
+        {
+            "name": "Air Guilin",
+            "iata": "GT",
+            "icao": "CGH"
+        },
+        {
+            "name": "flynas",
+            "iata": "XY",
+            "icao": "KNE"
+        },
+        {
+            "name": "Cebu Pacific Air",
+            "iata": "5J",
+            "icao": "CEB"
+        },
+        {
+            "name": "Iberia",
+            "iata": "IB",
+            "icao": "IBE"
+        },
+        {
+            "name": "Cebu Pacific Air",
+            "iata": "5J",
+            "icao": "CEB"
+        },
+        {
+            "name": "Cebu Pacific Air",
+            "iata": "5J",
+            "icao": "CEB"
+        },
+        {
+            "name": "Cebu Pacific Air",
+            "iata": "5J",
+            "icao": "CEB"
+        },
+        {
+            "name": "Philippine Airlines",
+            "iata": "PR",
+            "icao": "PAL"
+        },
+        {
+            "name": "Cebu Pacific Air",
+            "iata": "5J",
+            "icao": "CEB"
+        },
+        {
+            "name": "AirAsia",
+            "iata": "AK",
+            "icao": "AXM"
+        },
+        {
+            "name": "Singapore Airlines",
+            "iata": "SQ",
+            "icao": "SIA"
+        },
+        {
+            "name": "Binter Canarias",
+            "iata": "NT",
+            "icao": "IBB"
+        },
+        {
+            "name": "Canaryfly",
+            "iata": "PM",
+            "icao": "CNF"
+        },
+        {
+            "name": "Air Europa",
+            "iata": "UX",
+            "icao": "AEA"
+        },
+        {
+            "name": "Binter Canarias",
+            "iata": "NT",
+            "icao": "IBB"
+        },
+        {
+            "name": "Binter Canarias",
+            "iata": "NT",
+            "icao": "IBB"
+        },
+        {
+            "name": "Vueling",
+            "iata": "VY",
+            "icao": "VLG"
+        },
+        {
+            "name": "Singapore Airlines",
+            "iata": "SQ",
+            "icao": "SIA"
+        },
+        {
+            "name": "EgyptAir",
+            "iata": "MS",
+            "icao": "MSR"
+        },
+        {
+            "name": "LOT - Polish Airlines",
+            "iata": "LO",
+            "icao": "LOT"
+        },
+        {
+            "name": "LOT - Polish Airlines",
+            "iata": "LO",
+            "icao": "LOT"
+        },
+        {
+            "name": "Air Canada",
+            "iata": "AC",
+            "icao": "ACA"
+        },
+        {
+            "name": "LOT - Polish Airlines",
+            "iata": "LO",
+            "icao": "LOT"
+        },
+        {
+            "name": "Chengdu Airlines",
+            "iata": "EU",
+            "icao": "UEA"
+        },
+        {
+            "name": "Hainan Airlines",
+            "iata": "HU",
+            "icao": "CHH"
+        },
+        {
+            "name": "Xiamen Airlines",
+            "iata": "MF",
+            "icao": "CXA"
+        },
+        {
+            "name": "Malaysia Airlines",
+            "iata": "MH",
+            "icao": "MAS"
+        },
+        {
+            "name": "Fiji Airways",
+            "iata": "FJ",
+            "icao": "FJI"
+        },
+        {
+            "name": "SA AVIANCA",
+            "iata": "AV",
+            "icao": "AVA"
+        },
+        {
+            "name": "Garuda Indonesia",
+            "iata": "GA",
+            "icao": "GIA"
+        },
+        {
+            "name": "Virgin Australia",
+            "iata": "VA",
+            "icao": "VOZ"
+        },
+        {
+            "name": "China Southern Airlines",
+            "iata": "CZ",
+            "icao": "CSN"
+        },
+        {
+            "name": "SF Airlines",
+            "iata": "O3",
+            "icao": "CSS"
+        },
+        {
+            "name": "Shenzhen Airlines",
+            "iata": "ZH",
+            "icao": "CSZ"
+        },
+        {
+            "name": "China Southern Airlines",
+            "iata": "CZ",
+            "icao": "CSN"
+        },
+        {
+            "name": "Shenzhen Airlines",
+            "iata": "ZH",
+            "icao": "CSZ"
+        },
+        {
+            "name": "Shenzhen Airlines",
+            "iata": "ZH",
+            "icao": "CSZ"
+        },
+        {
+            "name": "Shenzhen Airlines",
+            "iata": "ZH",
+            "icao": "CSZ"
+        },
+        {
+            "name": "Shenzhen Airlines",
+            "iata": "ZH",
+            "icao": "CSZ"
+        },
+        {
+            "name": "Xiamen Airlines",
+            "iata": "MF",
+            "icao": "CXA"
+        },
+        {
+            "name": "Loong Air",
+            "iata": "GJ",
+            "icao": "CDC"
+        },
+        {
+            "name": "Sichuan Airlines",
+            "iata": "3U",
+            "icao": "CSC"
+        },
+        {
+            "name": "Pegasus",
+            "iata": "PC",
+            "icao": "PGT"
+        },
+        {
+            "name": "Sky Express",
+            "iata": "GQ",
+            "icao": "SEH"
+        },
+        {
+            "name": "China Eastern Airlines",
+            "iata": "MU",
+            "icao": "CES"
+        },
+        {
+            "name": "China United Airlines",
+            "iata": "KN",
+            "icao": "CUA"
+        },
+        {
+            "name": "Air China LTD",
+            "iata": "CA",
+            "icao": "CCA"
+        },
+        {
+            "name": "SF Airlines",
+            "iata": "O3",
+            "icao": "CSS"
+        },
+        {
+            "name": "China Eastern Airlines",
+            "iata": "MU",
+            "icao": "CES"
+        },
+        {
+            "name": "Dalian Airlines",
+            "iata": null,
+            "icao": "CCD"
+        },
+        {
+            "name": "Singapore Airlines",
+            "iata": "SQ",
+            "icao": "SIA"
+        },
+        {
+            "name": "China Eastern Airlines",
+            "iata": "MU",
+            "icao": "CES"
+        },
+        {
+            "name": "Xiamen Airlines",
+            "iata": "MF",
+            "icao": "CXA"
+        },
+        {
+            "name": "Asiana Airlines",
+            "iata": "OZ",
+            "icao": "AAR"
+        },
+        {
+            "name": "China Eastern Airlines",
+            "iata": "MU",
+            "icao": "CES"
+        },
+        {
+            "name": "Saudia",
+            "iata": "SV",
+            "icao": "SVA"
+        },
+        {
+            "name": "Hawaiian Airlines",
+            "iata": "HA",
+            "icao": "HAL"
+        },
+        {
+            "name": "KLM",
+            "iata": "KL",
+            "icao": "KLM"
+        },
+        {
+            "name": "Lufthansa",
+            "iata": "LH",
+            "icao": "DLH"
+        },
+        {
+            "name": "China Southern Airlines",
+            "iata": "CZ",
+            "icao": "CSN"
+        },
+        {
+            "name": "Chengdu Airlines",
+            "iata": "EU",
+            "icao": "UEA"
+        },
+        {
+            "name": "Turkish Airlines",
+            "iata": "TK",
+            "icao": "THY"
+        },
+        {
+            "name": "China Eastern Airlines",
+            "iata": "MU",
+            "icao": "CES"
+        },
+        {
+            "name": "Qatar Airways",
+            "iata": "QR",
+            "icao": "QTR"
+        },
+        {
+            "name": "ANA",
+            "iata": "NH",
+            "icao": "ANA"
+        },
+        {
+            "name": "Sichuan Airlines",
+            "iata": "3U",
+            "icao": "CSC"
+        },
+        {
+            "name": "Asiana Airlines",
+            "iata": "OZ",
+            "icao": "AAR"
+        },
+        {
+            "name": "Jeju Air",
+            "iata": "7C",
+            "icao": "JJA"
+        },
+        {
+            "name": "China Southern Airlines",
+            "iata": "CZ",
+            "icao": "CSN"
+        },
+        {
+            "name": "Ryanair",
+            "iata": "FR",
+            "icao": "RYR"
+        },
+        {
+            "name": "Scoot",
+            "iata": "TR",
+            "icao": "TGW"
+        },
+        {
+            "name": "SF Airlines",
+            "iata": "O3",
+            "icao": "CSS"
+        },
+        {
+            "name": "SriLankan Airlines",
+            "iata": "UL",
+            "icao": "ALK"
+        },
+        {
+            "name": "Jetstar",
+            "iata": "JQ",
+            "icao": "JST"
+        },
+        {
+            "name": "Hainan Airlines",
+            "iata": "HU",
+            "icao": "CHH"
+        },
+        {
+            "name": "Sichuan Airlines",
+            "iata": "3U",
+            "icao": "CSC"
+        },
+        {
+            "name": "Iran Aseman Airlines",
+            "iata": "EP",
+            "icao": "IRC"
+        },
+        {
+            "name": "Suparna Airlines",
+            "iata": "Y8",
+            "icao": "YZR"
+        },
+        {
+            "name": "Loong Air",
+            "iata": "GJ",
+            "icao": "CDC"
+        },
+        {
+            "name": "Xiamen Airlines",
+            "iata": "MF",
+            "icao": "CXA"
+        },
+        {
+            "name": "Shandong Airlines",
+            "iata": "SC",
+            "icao": "CDG"
+        },
+        {
+            "name": "China Eastern Airlines",
+            "iata": "MU",
+            "icao": "CES"
+        },
+        {
+            "name": "Air Astana",
+            "iata": "KC",
+            "icao": "KZR"
+        },
+        {
+            "name": "United Airlines",
+            "iata": "UA",
+            "icao": "UAL"
+        },
+        {
+            "name": "Air China LTD",
+            "iata": "CA",
+            "icao": "CCA"
+        },
+        {
+            "name": "Aerolineas Argentinas",
+            "iata": "AR",
+            "icao": "ARG"
+        },
+        {
+            "name": "S7 Airlines",
+            "iata": "S7",
+            "icao": "SBI"
+        },
+        {
+            "name": "Hainan Airlines",
+            "iata": "HU",
+            "icao": "CHH"
+        },
+        {
+            "name": "Air China LTD",
+            "iata": "CA",
+            "icao": "CCA"
+        }
+    ],
+    "flight": [
+        {
+            "number": "6811",
+            "iata": "AA6811",
+            "icao": "AAL6811",
+            "codeshared": {
+                "airline_name": "british airways",
+                "airline_iata": "ba",
+                "airline_icao": "baw",
+                "flight_number": "472",
+                "flight_iata": "ba472",
+                "flight_icao": "baw472"
+            }
+        },
+        {
+            "number": "4248",
+            "iata": "QR4248",
+            "icao": "QTR4248",
+            "codeshared": {
+                "airline_name": "virgin australia",
+                "airline_iata": "va",
+                "airline_icao": "voz",
+                "flight_number": "1547",
+                "flight_iata": "va1547",
+                "flight_icao": "voz1547"
+            }
+        },
+        {
+            "number": "163",
+            "iata": "BC163",
+            "icao": "SKY163",
+            "codeshared": null
+        },
+        {
+            "number": "8700",
+            "iata": "G58700",
+            "icao": "HXA8700",
+            "codeshared": {
+                "airline_name": "sichuan airlines",
+                "airline_iata": "3u",
+                "airline_icao": "csc",
+                "flight_number": "6336",
+                "flight_iata": "3u6336",
+                "flight_icao": "csc6336"
+            }
+        },
+        {
+            "number": "8353",
+            "iata": "QF8353",
+            "icao": "QFA8353",
+            "codeshared": {
+                "airline_name": "emirates",
+                "airline_iata": "ek",
+                "airline_icao": "uae",
+                "flight_number": "353",
+                "flight_iata": "ek353",
+                "flight_icao": "uae353"
+            }
+        },
+        {
+            "number": "5080",
+            "iata": "TV5080",
+            "icao": "TBA5080",
+            "codeshared": {
+                "airline_name": "chengdu airlines",
+                "airline_iata": "eu",
+                "airline_icao": "uea",
+                "flight_number": "1938",
+                "flight_iata": "eu1938",
+                "flight_icao": "uea1938"
+            }
+        },
+        {
+            "number": "5268",
+            "iata": "HO5268",
+            "icao": "DKH5268",
+            "codeshared": {
+                "airline_name": "shenzhen airlines",
+                "airline_iata": "zh",
+                "airline_icao": "csz",
+                "flight_number": "9857",
+                "flight_iata": "zh9857",
+                "flight_icao": "csz9857"
+            }
+        },
+        {
+            "number": "2774",
+            "iata": "ZH2774",
+            "icao": "CSZ2774",
+            "codeshared": {
+                "airline_name": "shandong airlines",
+                "airline_iata": "sc",
+                "airline_icao": "cdg",
+                "flight_number": "4988",
+                "flight_iata": "sc4988",
+                "flight_icao": "cdg4988"
+            }
+        },
+        {
+            "number": "8387",
+            "iata": "G58387",
+            "icao": "HXA8387",
+            "codeshared": {
+                "airline_name": "shandong airlines",
+                "airline_iata": "sc",
+                "airline_icao": "cdg",
+                "flight_number": "4883",
+                "flight_iata": "sc4883",
+                "flight_icao": "cdg4883"
+            }
+        },
+        {
+            "number": "6300",
+            "iata": "X16300",
+            "icao": "X16300",
+            "codeshared": {
+                "airline_name": "lion air",
+                "airline_iata": "jt",
+                "airline_icao": "lni",
+                "flight_number": "641",
+                "flight_iata": "jt641",
+                "flight_icao": "lni641"
+            }
+        },
+        {
+            "number": "8425",
+            "iata": "G58425",
+            "icao": "HXA8425",
+            "codeshared": {
+                "airline_name": "shandong airlines",
+                "airline_iata": "sc",
+                "airline_icao": "cdg",
+                "flight_number": "7621",
+                "flight_iata": "sc7621",
+                "flight_icao": "cdg7621"
+            }
+        },
+        {
+            "number": "1062",
+            "iata": "GT1062",
+            "icao": "CGH1062",
+            "codeshared": null
+        },
+        {
+            "number": "267",
+            "iata": "XY267",
+            "icao": "KNE267",
+            "codeshared": null
+        },
+        {
+            "number": "132",
+            "iata": "5J132",
+            "icao": "CEB132",
+            "codeshared": null
+        },
+        {
+            "number": "5346",
+            "iata": "IB5346",
+            "icao": "IBE5346",
+            "codeshared": {
+                "airline_name": "vueling",
+                "airline_iata": "vy",
+                "airline_icao": "vlg",
+                "flight_number": "3925",
+                "flight_iata": "vy3925",
+                "flight_icao": "vlg3925"
+            }
+        },
+        {
+            "number": "6468",
+            "iata": "5J6468",
+            "icao": "CEB6468",
+            "codeshared": null
+        },
+        {
+            "number": "236",
+            "iata": "5J236",
+            "icao": "CEB236",
+            "codeshared": null
+        },
+        {
+            "number": "6923",
+            "iata": "5J6923",
+            "icao": "CEB6923",
+            "codeshared": null
+        },
+        {
+            "number": "2382",
+            "iata": "PR2382",
+            "icao": "PAL2382",
+            "codeshared": null
+        },
+        {
+            "number": "128",
+            "iata": "5J128",
+            "icao": "CEB128",
+            "codeshared": null
+        },
+        {
+            "number": "8527",
+            "iata": "AK8527",
+            "icao": "AXM8527",
+            "codeshared": null
+        },
+        {
+            "number": "2351",
+            "iata": "SQ2351",
+            "icao": "SIA2351",
+            "codeshared": {
+                "airline_name": "lot - polish airlines",
+                "airline_iata": "lo",
+                "airline_icao": "lot",
+                "flight_number": "351",
+                "flight_iata": "lo351",
+                "flight_icao": "lot351"
+            }
+        },
+        {
+            "number": "101",
+            "iata": "NT101",
+            "icao": "IBB101",
+            "codeshared": null
+        },
+        {
+            "number": "703",
+            "iata": "PM703",
+            "icao": "CNF703",
+            "codeshared": null
+        },
+        {
+            "number": "2145",
+            "iata": "UX2145",
+            "icao": "AEA2145",
+            "codeshared": {
+                "airline_name": "canaryfly",
+                "airline_iata": "pm",
+                "airline_icao": "cnf",
+                "flight_number": "703",
+                "flight_iata": "pm703",
+                "flight_icao": "cnf703"
+            }
+        },
+        {
+            "number": "500",
+            "iata": "NT500",
+            "icao": "IBB500",
+            "codeshared": null
+        },
+        {
+            "number": "200",
+            "iata": "NT200",
+            "icao": "IBB200",
+            "codeshared": null
+        },
+        {
+            "number": "3001",
+            "iata": "VY3001",
+            "icao": "VLG3001",
+            "codeshared": null
+        },
+        {
+            "number": "2317",
+            "iata": "SQ2317",
+            "icao": "SIA2317",
+            "codeshared": {
+                "airline_name": "lot - polish airlines",
+                "airline_iata": "lo",
+                "airline_icao": "lot",
+                "flight_number": "317",
+                "flight_iata": "lo317",
+                "flight_icao": "lot317"
+            }
+        },
+        {
+            "number": "9519",
+            "iata": "MS9519",
+            "icao": "MSR9519",
+            "codeshared": {
+                "airline_name": "lot - polish airlines",
+                "airline_iata": "lo",
+                "airline_icao": "lot",
+                "flight_number": "317",
+                "flight_iata": "lo317",
+                "flight_icao": "lot317"
+            }
+        },
+        {
+            "number": "437",
+            "iata": "LO437",
+            "icao": "LOT437",
+            "codeshared": null
+        },
+        {
+            "number": "331",
+            "iata": "LO331",
+            "icao": "LOT331",
+            "codeshared": null
+        },
+        {
+            "number": "6749",
+            "iata": "AC6749",
+            "icao": "ACA6749",
+            "codeshared": {
+                "airline_name": "lot - polish airlines",
+                "airline_iata": "lo",
+                "airline_icao": "lot",
+                "flight_number": "331",
+                "flight_iata": "lo331",
+                "flight_icao": "lot331"
+            }
+        },
+        {
+            "number": "351",
+            "iata": "LO351",
+            "icao": "LOT351",
+            "codeshared": null
+        },
+        {
+            "number": "2762",
+            "iata": "EU2762",
+            "icao": "UEA2762",
+            "codeshared": null
+        },
+        {
+            "number": "7859",
+            "iata": "HU7859",
+            "icao": "CHH7859",
+            "codeshared": null
+        },
+        {
+            "number": "8280",
+            "iata": "MF8280",
+            "icao": "CXA8280",
+            "codeshared": null
+        },
+        {
+            "number": "5758",
+            "iata": "MH5758",
+            "icao": "MAS5758",
+            "codeshared": {
+                "airline_name": "singapore airlines",
+                "airline_iata": "sq",
+                "airline_icao": "sia",
+                "flight_number": "308",
+                "flight_iata": "sq308",
+                "flight_icao": "sia308"
+            }
+        },
+        {
+            "number": "5955",
+            "iata": "FJ5955",
+            "icao": "FJI5955",
+            "codeshared": {
+                "airline_name": "singapore airlines",
+                "airline_iata": "sq",
+                "airline_icao": "sia",
+                "flight_number": "308",
+                "flight_iata": "sq308",
+                "flight_icao": "sia308"
+            }
+        },
+        {
+            "number": "6551",
+            "iata": "AV6551",
+            "icao": "AVA6551",
+            "codeshared": {
+                "airline_name": "singapore airlines",
+                "airline_iata": "sq",
+                "airline_icao": "sia",
+                "flight_number": "308",
+                "flight_iata": "sq308",
+                "flight_icao": "sia308"
+            }
+        },
+        {
+            "number": "8821",
+            "iata": "GA8821",
+            "icao": "GIA8821",
+            "codeshared": {
+                "airline_name": "xiamen airlines",
+                "airline_iata": "mf",
+                "airline_icao": "cxa",
+                "flight_number": "886",
+                "flight_iata": "mf886",
+                "flight_icao": "cxa886"
+            }
+        },
+        {
+            "number": "5742",
+            "iata": "VA5742",
+            "icao": "VOZ5742",
+            "codeshared": {
+                "airline_name": "singapore airlines",
+                "airline_iata": "sq",
+                "airline_icao": "sia",
+                "flight_number": "802",
+                "flight_iata": "sq802",
+                "flight_icao": "sia802"
+            }
+        },
+        {
+            "number": "3557",
+            "iata": "CZ3557",
+            "icao": "CSN3557",
+            "codeshared": null
+        },
+        {
+            "number": "6867",
+            "iata": "O36867",
+            "icao": "CSS6867",
+            "codeshared": null
+        },
+        {
+            "number": "9883",
+            "iata": "ZH9883",
+            "icao": "CSZ9883",
+            "codeshared": null
+        },
+        {
+            "number": "6479",
+            "iata": "CZ6479",
+            "icao": "CSN6479",
+            "codeshared": null
+        },
+        {
+            "number": "9231",
+            "iata": "ZH9231",
+            "icao": "CSZ9231",
+            "codeshared": null
+        },
+        {
+            "number": "9211",
+            "iata": "ZH9211",
+            "icao": "CSZ9211",
+            "codeshared": null
+        },
+        {
+            "number": "9535",
+            "iata": "ZH9535",
+            "icao": "CSZ9535",
+            "codeshared": null
+        },
+        {
+            "number": "8985",
+            "iata": "ZH8985",
+            "icao": "CSZ8985",
+            "codeshared": null
+        },
+        {
+            "number": "8051",
+            "iata": "MF8051",
+            "icao": "CXA8051",
+            "codeshared": null
+        },
+        {
+            "number": "3229",
+            "iata": "GJ3229",
+            "icao": "CDC3229",
+            "codeshared": {
+                "airline_name": "xiamen airlines",
+                "airline_iata": "mf",
+                "airline_icao": "cxa",
+                "flight_number": "8051",
+                "flight_iata": "mf8051",
+                "flight_icao": "cxa8051"
+            }
+        },
+        {
+            "number": "2029",
+            "iata": "3U2029",
+            "icao": "CSC2029",
+            "codeshared": {
+                "airline_name": "xiamen airlines",
+                "airline_iata": "mf",
+                "airline_icao": "cxa",
+                "flight_number": "8051",
+                "flight_iata": "mf8051",
+                "flight_icao": "cxa8051"
+            }
+        },
+        {
+            "number": "5011",
+            "iata": "PC5011",
+            "icao": "PGT5011",
+            "codeshared": null
+        },
+        {
+            "number": "561",
+            "iata": "GQ561",
+            "icao": "SEH561",
+            "codeshared": null
+        },
+        {
+            "number": "2347",
+            "iata": "MU2347",
+            "icao": "CES2347",
+            "codeshared": null
+        },
+        {
+            "number": "2668",
+            "iata": "KN2668",
+            "icao": "CUA2668",
+            "codeshared": null
+        },
+        {
+            "number": "8568",
+            "iata": "CA8568",
+            "icao": "CCA8568",
+            "codeshared": null
+        },
+        {
+            "number": "7327",
+            "iata": "O37327",
+            "icao": "CSS7327",
+            "codeshared": null
+        },
+        {
+            "number": "8326",
+            "iata": "MU8326",
+            "icao": "CES8326",
+            "codeshared": {
+                "airline_name": "shanghai airlines",
+                "airline_iata": "fm",
+                "airline_icao": "csh",
+                "flight_number": "9092",
+                "flight_iata": "fm9092",
+                "flight_icao": "csh9092"
+            }
+        },
+        {
+            "number": "8925",
+            "iata": null,
+            "icao": "CCD8925",
+            "codeshared": null
+        },
+        {
+            "number": "5923",
+            "iata": "SQ5923",
+            "icao": "SIA5923",
+            "codeshared": {
+                "airline_name": "ana",
+                "airline_iata": "nh",
+                "airline_icao": "ana",
+                "flight_number": "281",
+                "flight_iata": "nh281",
+                "flight_icao": "ana281"
+            }
+        },
+        {
+            "number": "583",
+            "iata": "MU583",
+            "icao": "CES583",
+            "codeshared": null
+        },
+        {
+            "number": "5753",
+            "iata": "MF5753",
+            "icao": "CXA5753",
+            "codeshared": {
+                "airline_name": "loong air",
+                "airline_iata": "gj",
+                "airline_icao": "cdc",
+                "flight_number": "8153",
+                "flight_iata": "gj8153",
+                "flight_icao": "cdc8153"
+            }
+        },
+        {
+            "number": "6972",
+            "iata": "OZ6972",
+            "icao": "AAR6972",
+            "codeshared": {
+                "airline_name": "etihad airways",
+                "airline_iata": "ey",
+                "airline_icao": "etd",
+                "flight_number": "330",
+                "flight_iata": "ey330",
+                "flight_icao": "etd330"
+            }
+        },
+        {
+            "number": "2316",
+            "iata": "MU2316",
+            "icao": "CES2316",
+            "codeshared": null
+        },
+        {
+            "number": "6945",
+            "iata": "SV6945",
+            "icao": "SVA6945",
+            "codeshared": {
+                "airline_name": "kenya airways",
+                "airline_iata": "kq",
+                "airline_icao": "kqa",
+                "flight_number": "532",
+                "flight_iata": "kq532",
+                "flight_icao": "kqa532"
+            }
+        },
+        {
+            "number": "5058",
+            "iata": "HA5058",
+            "icao": "HAL5058",
+            "codeshared": {
+                "airline_name": "jal",
+                "airline_iata": "jl",
+                "airline_icao": "jal",
+                "flight_number": "161",
+                "flight_iata": "jl161",
+                "flight_icao": "jal161"
+            }
+        },
+        {
+            "number": "4980",
+            "iata": "KL4980",
+            "icao": "KLM4980",
+            "codeshared": {
+                "airline_name": "china airlines",
+                "airline_iata": "ci",
+                "airline_icao": "cal",
+                "flight_number": "122",
+                "flight_iata": "ci122",
+                "flight_icao": "cal122"
+            }
+        },
+        {
+            "number": "2471",
+            "iata": "LH2471",
+            "icao": "DLH2471",
+            "codeshared": null
+        },
+        {
+            "number": "9276",
+            "iata": "CZ9276",
+            "icao": "CSN9276",
+            "codeshared": {
+                "airline_name": "sichuan airlines",
+                "airline_iata": "3u",
+                "airline_icao": "csc",
+                "flight_number": "6785",
+                "flight_iata": "3u6785",
+                "flight_icao": "csc6785"
+            }
+        },
+        {
+            "number": "7126",
+            "iata": "EU7126",
+            "icao": "UEA7126",
+            "codeshared": {
+                "airline_name": "sichuan airlines",
+                "airline_iata": "3u",
+                "airline_icao": "csc",
+                "flight_number": "8790",
+                "flight_iata": "3u8790",
+                "flight_icao": "csc8790"
+            }
+        },
+        {
+            "number": "8188",
+            "iata": "TK8188",
+            "icao": "THY8188",
+            "codeshared": {
+                "airline_name": "batik air",
+                "airline_iata": "id",
+                "airline_icao": "btk",
+                "flight_number": "1632",
+                "flight_iata": "id1632",
+                "flight_icao": "btk1632"
+            }
+        },
+        {
+            "number": "6521",
+            "iata": "MU6521",
+            "icao": "CES6521",
+            "codeshared": null
+        },
+        {
+            "number": "6399",
+            "iata": "QR6399",
+            "icao": "QTR6399",
+            "codeshared": {
+                "airline_name": "rwandair",
+                "airline_iata": "wb",
+                "airline_icao": "rwd",
+                "flight_number": "110",
+                "flight_iata": "wb110",
+                "flight_icao": "rwd110"
+            }
+        },
+        {
+            "number": "5371",
+            "iata": "NH5371",
+            "icao": "ANA5371",
+            "codeshared": {
+                "airline_name": "singapore airlines",
+                "airline_iata": "sq",
+                "airline_icao": "sia",
+                "flight_number": "216",
+                "flight_iata": "sq216",
+                "flight_icao": "sia216"
+            }
+        },
+        {
+            "number": "4244",
+            "iata": "3U4244",
+            "icao": "CSC4244",
+            "codeshared": {
+                "airline_name": "chengdu airlines",
+                "airline_iata": "eu",
+                "airline_icao": "uea",
+                "flight_number": "1948",
+                "flight_iata": "eu1948",
+                "flight_icao": "uea1948"
+            }
+        },
+        {
+            "number": "8043",
+            "iata": "OZ8043",
+            "icao": "AAR8043",
+            "codeshared": {
+                "airline_name": "air busan",
+                "airline_iata": "bx",
+                "airline_icao": "abl",
+                "flight_number": "8043",
+                "flight_iata": "bx8043",
+                "flight_icao": "abl8043"
+            }
+        },
+        {
+            "number": "117",
+            "iata": "7C117",
+            "icao": "JJA117",
+            "codeshared": null
+        },
+        {
+            "number": "9511",
+            "iata": "CZ9511",
+            "icao": "CSN9511",
+            "codeshared": {
+                "airline_name": "sichuan airlines",
+                "airline_iata": "3u",
+                "airline_icao": "csc",
+                "flight_number": "8694",
+                "flight_iata": "3u8694",
+                "flight_icao": "csc8694"
+            }
+        },
+        {
+            "number": "2729",
+            "iata": "FR2729",
+            "icao": "RYR2729",
+            "codeshared": null
+        },
+        {
+            "number": "809",
+            "iata": "TR809",
+            "icao": "TGW809",
+            "codeshared": null
+        },
+        {
+            "number": "7360",
+            "iata": "O37360",
+            "icao": "CSS7360",
+            "codeshared": null
+        },
+        {
+            "number": "3291",
+            "iata": "UL3291",
+            "icao": "ALK3291",
+            "codeshared": {
+                "airline_name": "jetstar",
+                "airline_iata": "jq",
+                "airline_icao": "jst",
+                "flight_number": "511",
+                "flight_iata": "jq511",
+                "flight_icao": "jst511"
+            }
+        },
+        {
+            "number": "787",
+            "iata": "JQ787",
+            "icao": "JST787",
+            "codeshared": null
+        },
+        {
+            "number": "7407",
+            "iata": "HU7407",
+            "icao": "CHH7407",
+            "codeshared": null
+        },
+        {
+            "number": "6940",
+            "iata": "3U6940",
+            "icao": "CSC6940",
+            "codeshared": null
+        },
+        {
+            "number": "3715",
+            "iata": "EP3715",
+            "icao": "IRC3715",
+            "codeshared": null
+        },
+        {
+            "number": "7955",
+            "iata": "Y87955",
+            "icao": "YZR7955",
+            "codeshared": null
+        },
+        {
+            "number": "3529",
+            "iata": "GJ3529",
+            "icao": "CDC3529",
+            "codeshared": {
+                "airline_name": "xiamen airlines",
+                "airline_iata": "mf",
+                "airline_icao": "cxa",
+                "flight_number": "8383",
+                "flight_iata": "mf8383",
+                "flight_icao": "cxa8383"
+            }
+        },
+        {
+            "number": "5771",
+            "iata": "MF5771",
+            "icao": "CXA5771",
+            "codeshared": {
+                "airline_name": "loong air",
+                "airline_iata": "gj",
+                "airline_icao": "cdc",
+                "flight_number": "8255",
+                "flight_iata": "gj8255",
+                "flight_icao": "cdc8255"
+            }
+        },
+        {
+            "number": "7601",
+            "iata": "SC7601",
+            "icao": "CDG7601",
+            "codeshared": null
+        },
+        {
+            "number": "5122",
+            "iata": "MU5122",
+            "icao": "CES5122",
+            "codeshared": null
+        },
+        {
+            "number": "971",
+            "iata": "KC971",
+            "icao": "KZR971",
+            "codeshared": null
+        },
+        {
+            "number": "7673",
+            "iata": "UA7673",
+            "icao": "UAL7673",
+            "codeshared": {
+                "airline_name": "singapore airlines",
+                "airline_iata": "sq",
+                "airline_icao": "sia",
+                "flight_number": "923",
+                "flight_iata": "sq923",
+                "flight_icao": "sia923"
+            }
+        },
+        {
+            "number": "4996",
+            "iata": "CA4996",
+            "icao": "CCA4996",
+            "codeshared": {
+                "airline_name": "shandong airlines",
+                "airline_iata": "sc",
+                "airline_icao": "cdg",
+                "flight_number": "8710",
+                "flight_iata": "sc8710",
+                "flight_icao": "cdg8710"
+            }
+        },
+        {
+            "number": "7664",
+            "iata": "AR7664",
+            "icao": "ARG7664",
+            "codeshared": {
+                "airline_name": "gol",
+                "airline_iata": "g3",
+                "airline_icao": "glo",
+                "flight_number": "1664",
+                "flight_iata": "g31664",
+                "flight_icao": "glo1664"
+            }
+        },
+        {
+            "number": "5367",
+            "iata": "S75367",
+            "icao": "SBI5367",
+            "codeshared": null
+        },
+        {
+            "number": "753",
+            "iata": "HU753",
+            "icao": "CHH753",
+            "codeshared": null
+        },
+        {
+            "number": "961",
+            "iata": "CA961",
+            "icao": "CCA961",
+            "codeshared": null
+        }
+    ]
+}
