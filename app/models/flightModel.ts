@@ -12,13 +12,14 @@ export interface IFlight {
   departure_id: number;
   arrival_id: number;
   airline_id: number;
-  flight_status: number;
-  flight_date: Date;
+
+  transit: number;
+  first_seat: number;
+  business_seat: number;
+  economy_seat: number;
+  flight_status: string;
   flight_number: string;
   iata: string;
-  icao: string;
-  created_by: number;
-  updated_by: number;
 }
 
 class Flight extends Model {
@@ -29,7 +30,6 @@ class Flight extends Model {
   static get idColumn(): string {
     return 'flight_id'; // Specify the actual primary key column name here
   }
-
 
   static get relationMappings() {
     return {
@@ -56,23 +56,7 @@ class Flight extends Model {
           from: 'flight.airline_id',
           to: 'airline.airline_id',
         },
-      },
-      aircraft: {
-        relation: Model.BelongsToOneRelation,
-        modelClass: Aircraft,
-        join: {
-          from: 'flight.aircraft_id',
-          to: 'aircraft.aircraft_id',
-        },
-      },
-      live_tracking: {
-        relation: Model.BelongsToOneRelation,
-        modelClass: LiveTracking,
-        join: {
-          from: 'flight.live_id',
-          to: 'live_tracking.live_id',
-        },
-      },
+      }
     };
   }
 
@@ -97,28 +81,27 @@ class Flight extends Model {
         'departure_id',
         'arrival_id',
         'airline_id',
-        'aircraft_id',
-        'live_id',
+        'transit',
+        'first_seat',
+        'business_seat',
+        'economy_seat',
         'flight_status',
-        'flight_date',
         'flight_number',
         'iata',
-        'icao',
       ],
       properties: {
         flight_id: { type: 'integer' },
         departure_id: { type: 'integer' },
         arrival_id: { type: 'integer' },
         airline_id: { type: 'integer' },
-        aircraft_id: { type: 'integer' },
-        live_id: { type: 'integer' },
-        flight_status: { type: 'string', minLength: 1, maxLength: 25 },
-        flight_date: { type: 'string', format: 'date-time' },
-        flight_number: { type: 'string', minLength: 1, maxLength: 25 },
-        iata: { type: 'string', minLength: 1, maxLength: 10 },
-        icao: { type: 'string', minLength: 1, maxLength: 10 },
-        created_by: { type: 'integer' },
-        updated_by: { type: 'integer' },
+        
+        transit: { type: 'integer' },
+        first_seat: { type: 'integer' },
+        business_seat: { type: 'integer' },
+        economy_seat: { type: 'integer' },
+        flight_status: { type: 'string', minLength: 1, maxLength: 10 },
+        flight_number: { type: 'string' },
+        iata: { type: 'string' },
       }
     };
   }
