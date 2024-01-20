@@ -7,16 +7,8 @@ Model.knex(database);
 export interface IArrival {
   arrival_id: number;
   airport_id: number;
-  timezone: string;
   terminal: string;
-  gate: string;
-  delay: string;
-  baggage: string;
   scheduled_time: string;
-  estimated_time: string;
-  actual_time: string;
-  created_by: number;
-  updated_by: number;
 }
 
 class Arrival extends Model {
@@ -25,7 +17,7 @@ class Arrival extends Model {
   }
 
   static get idColumn(): string {
-    return 'arrival_id';
+    return 'arrival_id'; // Specify the actual primary key column name here
   }
 
   static get relationMappings() {
@@ -36,7 +28,7 @@ class Arrival extends Model {
         join: {
           from: 'arrival.airport_id',
           to: 'airport.airport_id',
-        },
+        }
       },
     };
   }
@@ -67,30 +59,15 @@ class Arrival extends Model {
     return {
       type: 'object',
       required: [
-        'airport',
-        'timezone',
+        'airport_id',
         'terminal',
-        'gate',
-        'delay',
-        'iata',
-        'icao',
         'scheduled_time',
-        'created_by',
-        'updated_by'
       ],
       properties: {
-        Departure_id: { type: 'integer' },
-        airport_id: { type: 'number' },
-        airport: { type: 'string', minLength: 1, maxLength: 20 },
-        timezone: { type: 'string', minLength: 1, maxLength: 20 },
-        terminal: { type: 'string' },
-        gate: { type: 'string', minLength: 1, maxLength: 10 },
-        delay: { type: 'number' },
-        iata: { type: 'string', minLength: 1, maxLength: 5},
-        icao: { type: 'string', minLength: 1, maxLength: 5 },
-        scheduled_time: { type: 'string' },
-        created_by: { type: 'integer' },
-        updated_by: { type: 'integer' },
+        arrival_id: { type: 'integer' },
+        airport_id: { type: 'integer' },
+        terminal: { type: 'string', minLength: 1, maxLength: 10 },
+        scheduled_time: { type: 'string'},
       }
     };
   }

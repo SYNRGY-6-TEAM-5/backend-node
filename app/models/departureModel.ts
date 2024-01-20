@@ -7,18 +7,8 @@ Model.knex(database);
 export interface IDeparture {
   departure_id: number;
   airport_id: number;
-  airport: string;
-  timezone: string;
   terminal: string;
-  gate: string;
-  delay: number;
-  iata: string;
-  icao: string;
   scheduled_time: string;
-  estimated_time: string;
-  actual_time: string;
-  created_by: number;
-  updated_by: number;
 }
 
 class Departure extends Model {
@@ -69,30 +59,15 @@ class Departure extends Model {
     return {
       type: 'object',
       required: [
-        'airport',
-        'timezone',
+        'airport_id',
         'terminal',
-        'gate',
-        'delay',
-        'iata',
-        'icao',
         'scheduled_time',
-        'created_by',
-        'updated_by'
       ],
       properties: {
-        Departure_id: { type: 'integer' },
-        airport_id: { type: 'number' },
-        airport: { type: 'string', minLength: 1, maxLength: 20 },
-        timezone: { type: 'string', minLength: 1, maxLength: 20 },
-        terminal: { type: 'string' },
-        gate: { type: 'string', minLength: 1, maxLength: 10 },
-        delay: { type: 'number' },
-        iata: { type: 'string', minLength: 1, maxLength: 5 },
-        icao: { type: 'string', minLength: 1, maxLength: 5 },
-        scheduled_time: { type: 'string' },
-        created_by: { type: 'integer' },
-        updated_by: { type: 'integer' },
+        departure_id: { type: 'integer' },
+        airport_id: { type: 'integer' },
+        terminal: { type: 'string', minLength: 1, maxLength: 10 },
+        scheduled_time: { type: 'string'},
       }
     };
   }
