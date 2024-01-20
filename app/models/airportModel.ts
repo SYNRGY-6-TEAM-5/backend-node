@@ -1,7 +1,6 @@
 import { Model } from 'objection';
 import database from '../config/database';
 
-
 Model.knex(database);
 
 export interface IAirport {
@@ -15,7 +14,16 @@ export interface IAirport {
   country_iso_code: string;
 }
 
-class Airport extends Model {
+class Airport extends Model implements IAirport {
+  airport_id!: number;
+  airport_name!: string;
+  iata_code!: string;
+  gmt!: string;
+  city_name!: string;
+  city_iata_code!: string;
+  country_name!: string;
+  country_iso_code!: string;
+
   static get tableName(): string {
     return 'airport';
   }
@@ -23,28 +31,6 @@ class Airport extends Model {
   static get idColumn(): string {
     return 'airport_id'; // Specify the actual primary key column name here
   }
-  
-
-  // static get relationMappings() {
-  //   return {
-  //     city: {
-  //       relation: Model.BelongsToOneRelation,
-  //       modelClass: City,
-  //       join: {
-  //         from: 'airport.city_id',
-  //         to: 'city.city_id',
-  //       },
-  //     },
-  //   };
-  // }
-
-  // static get modifiers() {
-  //   return {
-  //     selectCityDetails(builder: any) {
-  //       builder.select('city_id', 'city_name', /* other fields you need */);
-  //     },
-  //   };
-  // }
 
   $beforeInsert() {
     // @ts-expect-error
