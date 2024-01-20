@@ -6,10 +6,12 @@ import Arrival from '../models/arrivalModel';
 import Airport from '../models/airportModel';
 
 interface DepartureWithAirport extends Departure {
+  scheduled_time: Date;
   airport_details: Airport;
 }
 
 interface ArrivalWithAirport extends Arrival {
+  scheduled_time: Date;
   airport_details: Airport;
 }
 

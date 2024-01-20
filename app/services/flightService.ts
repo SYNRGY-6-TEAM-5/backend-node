@@ -70,11 +70,11 @@ class FlightService {
       if (params?.departure_date) {
         const departureDate = new Date(params.departure_date);
         data = data.filter((flight: FlightWithRelations) =>
-          flight?.flight_date.getTime() === departureDate.getTime()
+          flight?.departure?.scheduled_time?.toISOString().split('T')[0] === departureDate.toISOString().split('T')[0]
         );
-        console.log('Data after departure_date filter:', data);
+        console.log(departureDate);
       }
-
+      console.log(data[0].departure?.scheduled_time.toISOString().split('T')[0]);
       console.log('Data after filter: ', typeof data[0].flight_date);
       console.log('Data params: ', typeof params?.departure_date);
 

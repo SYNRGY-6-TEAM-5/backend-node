@@ -8,10 +8,15 @@ export interface IDeparture {
   departure_id: number;
   airport_id: number;
   terminal: string;
-  scheduled_time: string;
+  scheduled_time: Date;
 }
 
-class Departure extends Model {
+class Departure extends Model implements IDeparture {
+  departure_id!: number;
+  airport_id!: number;
+  terminal!: string;
+  scheduled_time!: Date;
+
   static get tableName(): string {
     return 'departure';
   }
