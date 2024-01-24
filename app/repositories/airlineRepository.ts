@@ -11,18 +11,6 @@ class AirlineRepository {
     return Airline.query().insert(createArgs);
   }
 
-  update(departure_id: number, updateArgs: any) {
-    return Airline.query().patchAndFetchById(departure_id, updateArgs);
-  }
-
-  delete(departure_id: number) {
-    return Airline.query().deleteById(departure_id);
-  }
-
-  find(departure_id: number) {
-    return Airline.query().findById(departure_id);
-  }
-
   async findAll(params?: IParams): Promise<Array<Airline & { city: { city_name: string } }>> {
     let AirlinesQuery = Airline.query()
 
@@ -35,6 +23,18 @@ class AirlineRepository {
     const Airlines = await AirlinesQuery.orderBy('created_at', 'desc');
 
     return Airlines as Array<Airline & { city: { city_name: string } }>;
+  }
+
+  find(airline_id: number) {
+    return Airline.query().findById(airline_id);
+  }
+
+  update(airline_id: number, updateArgs: any) {
+    return Airline.query().patchAndFetchById(airline_id, updateArgs);
+  }
+
+  delete(airline_id: number) {
+    return Airline.query().deleteById(airline_id);
   }
 
   async count(params?: IParams) {

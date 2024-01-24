@@ -1,8 +1,8 @@
-import AirlineRepository, { type IParams } from '../repositories/airlineRepository';
+import BenefitRepository, { type IParams } from '../repositories/benefitRepository';
 
 import { type IUser } from '../interfaces/IAuth';
 
-class AirlineService {
+class BenefitService {
   private _user: IUser | undefined;
 
   constructor() {}
@@ -13,7 +13,7 @@ class AirlineService {
         ...requestBody
       };
 
-      return await AirlineRepository.create(payload);
+      return await BenefitRepository.create(payload);
     } catch (err) {
       console.log(err);
       throw err;
@@ -22,8 +22,8 @@ class AirlineService {
 
   async list(params?: IParams) {
     try {
-      const data = await AirlineRepository.findAll(params);
-      const count = await AirlineRepository.count(params);
+      const data = await BenefitRepository.findAll(params);
+      const count = await BenefitRepository.count(params);
 
       return {
         data,
@@ -34,18 +34,18 @@ class AirlineService {
     }
   }
 
-  async get(airline_id: number) {
+  async get(benefit_id: number) {
     try {
-      if (!airline_id) {
-        throw new Error('Invalid airline id');
+      if (!benefit_id) {
+        throw new Error('Invalid benefit id');
       }
-      return await AirlineRepository.find(airline_id);
+      return await BenefitRepository.find(benefit_id);
     } catch (err) {
       throw err;
     }
   }
 
-  async update(airline_id: number, requestBody: any) {
+  async update(benefit_id: number, requestBody: any) {
     try {
       const payload = {
         ...requestBody,
@@ -56,15 +56,15 @@ class AirlineService {
 
       console.log('Payload >>>', payload);
 
-      return await AirlineRepository.update(airline_id, payload);
+      return await BenefitRepository.update(benefit_id, payload);
     } catch (err) {
       throw err;
     }
   }
 
-  async delete(airline_id: number) {
+  async delete(benefit_id: number) {
     try {
-      return await AirlineRepository.delete(airline_id);
+      return await BenefitRepository.delete(benefit_id);
     } catch (err) {
       throw err;
     }
@@ -79,4 +79,4 @@ class AirlineService {
   }
 }
 
-export default new AirlineService();
+export default new BenefitService();

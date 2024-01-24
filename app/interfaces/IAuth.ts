@@ -27,6 +27,11 @@ export interface IUser {
   role: string;
 }
 
+export interface IUserJwt {
+  sub: string;
+  role: string;
+}
+
 export interface IAuthModel<T, PR = P_RegisterPayload, PL = P_LoginPayload> {
   login: (payload: PL) => Promise<T>;
   register: (payload: PR) => Promise<T>;

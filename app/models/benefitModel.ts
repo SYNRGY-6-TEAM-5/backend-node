@@ -4,20 +4,20 @@ import database from '../config/database';
 
 Model.knex(database);
 
-export interface IAirline {
-  airline_id: number;
+export interface IBenefit {
+  benefit_id: number;
+  flight_id: number;
   name: string;
-  iata: string;
-  image: string;
+  detail: string;
 }
 
-class Airline extends Model {
+class Benefit extends Model {
   static get tableName(): string {
-    return 'airline';
+    return 'benefit';
   }
 
   static get idColumn(): string {
-    return 'airline_id';
+    return 'benefit_id';
   }
 
   $beforeInsert() {
@@ -38,18 +38,18 @@ class Airline extends Model {
     return {
       type: 'object',
       required: [
+        'flight_id',
         'name',
-        'iata',
-        'image',
+        'detail',
       ],
       properties: {
-        airline_id: { type: 'integer' },
-        name: { type: 'string' },
-        iata: { type: 'string', minLength: 1, maxLength: 2 },
-        image: { type: 'string' }
+        benefit_id: { type: 'integer' },
+        flight_id: { type: 'integer' },
+        name: { type: 'string', minLength: 1, maxLength: 50 },
+        detail: { type: 'string' }
       }
     };
   }
 }
 
-export default Airline;
+export default Benefit;
