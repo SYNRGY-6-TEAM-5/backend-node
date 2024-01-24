@@ -1,11 +1,11 @@
 import { Router } from 'express';
 
-import AirlineController from '../../controllers/Airline/airlineController';
+import ArrivalController from '../../controllers/Arrival/arrivalController';
 import Media from '../../config/media';
 
 import AuthMiddleware from '../../middlewares/auth';
 
-class AirlineApi {
+class ArrivalApi {
   private readonly router: Router;
 
   constructor() {
@@ -13,6 +13,19 @@ class AirlineApi {
   }
 
   routes() {
+    /**
+     * @openapi
+     * /api/cars/:
+     *  get:
+     *     tags:
+     *     - CRUD - List All Cars
+     *     description: Responds if the app is up and running
+     *     responses:
+     *       200:
+     *         description: App is up and running
+     */
+    this.router.get('/', ArrivalController.list); // /api/books READ
+
     /**
      * @openapi
      * '/api/cars/':
@@ -69,26 +82,7 @@ class AirlineApi {
      *             - Remote fuel lid release
      *             - Traveler/mini trip computer
      */
-    this.router.post('/', AuthMiddleware.authorizeAdmin, AirlineController.create);
-
-    this.router.post(
-      '/upload',
-      [AuthMiddleware.authorizeAdmin, Media.upload.single('image')],
-      AirlineController.upload
-    );
-
-    /**
-     * @openapi
-     * /api/cars/:
-     *  get:
-     *     tags:
-     *     - CRUD - List All Cars
-     *     description: Responds if the app is up and running
-     *     responses:
-     *       200:
-     *         description: App is up and running
-     */
-    this.router.get('/', AirlineController.list); // /api/books READ
+    this.router.post('/', AuthMiddleware.authorizeAdmin, ArrivalController.create);
 
     /**
      * @openapi
@@ -155,18 +149,16 @@ class AirlineApi {
      *       404:
      *         description: Product not found
      */
-    this.router.get('/:airline_id', AirlineController.show); // /api/books/1 -> /api/books/:id READ
-
+    this.router.get('/:arrival_id', ArrivalController.show); // /api/books/1 -> /api/books/:id READ
     this.router.put(
-      '/:airline_id',
+      '/:arrival_id',
       [AuthMiddleware.authorizeAdmin, Media.upload.single('image')],
-      AirlineController.update
-    ); // /api/books/1 -> /api/books/:airline_id UPDATE
-    
-    this.router.delete('/:airline_id', AuthMiddleware.authorizeAdmin, AirlineController.delete); // /api/books/1 -> /api/books/:id DELETE
+      ArrivalController.update
+    ); // /api/books/1 -> /api/books/:arrival_id UPDATE
+    this.router.delete('/:arrival_id', AuthMiddleware.authorizeAdmin, ArrivalController.delete); // /api/books/1 -> /api/books/:id DELETE
 
     return this.router;
   }
 }
 
-export default new AirlineApi();
+export default new ArrivalApi();

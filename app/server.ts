@@ -5,10 +5,14 @@ import cors from 'cors';
 dotenv.config();
 
 import HealthApi from './routes/api/healthApi';
-import CarsApi from './routes/api/carsApi';
-import swaggerDocs from './utils/swagger';
+import DepartureApi from './routes/api/departureApi';
+import ArrivalApi from './routes/api/arrivalApi';
 import AirportApi from './routes/api/airportApi';
 import AirlineApi from './routes/api/airlineApi';
+import FlightApi from './routes/api/flightApi';
+import BenefitApi from './routes/api/benefitApi';
+import TicketApi from './routes/api/ticketApi';
+import swaggerDocs from './utils/swagger';
 
 const { PORT = 8060 } = process.env;
 const PUBLIC_DIR = path.join(__dirname, 'public');
@@ -24,9 +28,13 @@ class Server {
     this.app.use(cors());
 
     this.app.use('/api/health', HealthApi.routes());
-    this.app.use('/api/cars', CarsApi.routes());
+    this.app.use('/api/departure', DepartureApi.routes());
+    this.app.use('/api/arrival', ArrivalApi.routes());
     this.app.use('/api/airport', AirportApi.routes());
     this.app.use('/api/airline', AirlineApi.routes());
+    this.app.use('/api/flight', FlightApi.routes());
+    this.app.use('/api/benefit', BenefitApi.routes());
+    this.app.use('/api/ticket', TicketApi.routes());
 
     swaggerDocs(this.app, 8000);
   }

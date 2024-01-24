@@ -1,11 +1,11 @@
 import { Router } from 'express';
 
-import AirlineController from '../../controllers/Airline/airlineController';
+import TicketController from '../../controllers/Ticket/ticketController';
 import Media from '../../config/media';
 
 import AuthMiddleware from '../../middlewares/auth';
 
-class AirlineApi {
+class TicketApi {
   private readonly router: Router;
 
   constructor() {
@@ -13,6 +13,19 @@ class AirlineApi {
   }
 
   routes() {
+    /**
+     * @openapi
+     * /api/cars/:
+     *  get:
+     *     tags:
+     *     - CRUD - List All Cars
+     *     description: Responds if the app is up and running
+     *     responses:
+     *       200:
+     *         description: App is up and running
+     */
+    this.router.get('/', TicketController.list); // /api/books READ
+
     /**
      * @openapi
      * '/api/cars/':
@@ -69,36 +82,17 @@ class AirlineApi {
      *             - Remote fuel lid release
      *             - Traveler/mini trip computer
      */
-    this.router.post('/', AuthMiddleware.authorizeAdmin, AirlineController.create);
-
-    this.router.post(
-      '/upload',
-      [AuthMiddleware.authorizeAdmin, Media.upload.single('image')],
-      AirlineController.upload
-    );
+    this.router.post('/', AuthMiddleware.authorizeAdmin, TicketController.create);
 
     /**
      * @openapi
-     * /api/cars/:
-     *  get:
-     *     tags:
-     *     - CRUD - List All Cars
-     *     description: Responds if the app is up and running
-     *     responses:
-     *       200:
-     *         description: App is up and running
-     */
-    this.router.get('/', AirlineController.list); // /api/books READ
-
-    /**
-     * @openapi
-     * '/api/cars/{car_id}':
+     * '/api/cars/{flight_id}':
      *  get:
      *     tags:
      *     - Cars
-     *     summary: Get a single car by the car_id
+     *     summary: Get a single car by the flight_id
      *     parameters:
-     *      - name: car_id
+     *      - name: flight_id
      *        in: path
      *        description: The id of the car
      *        required: true
@@ -116,7 +110,7 @@ class AirlineApi {
      *     - Car
      *     summary: Update a single car
      *     parameters:
-     *      - name: car_id
+     *      - name: flight_id
      *        in: path
      *        description: The id of the car
      *        required: true
@@ -143,7 +137,7 @@ class AirlineApi {
      *     - Car
      *     summary: Delete a single car
      *     parameters:
-     *      - name: car_id
+     *      - name: flight_id
      *        in: path
      *        description: The id of the car
      *        required: true
@@ -155,18 +149,16 @@ class AirlineApi {
      *       404:
      *         description: Product not found
      */
-    this.router.get('/:airline_id', AirlineController.show); // /api/books/1 -> /api/books/:id READ
-
+    this.router.get('/:ticket_id', TicketController.show); // /api/books/1 -> /api/books/:id READ
     this.router.put(
-      '/:airline_id',
+      '/:ticket_id',
       [AuthMiddleware.authorizeAdmin, Media.upload.single('image')],
-      AirlineController.update
-    ); // /api/books/1 -> /api/books/:airline_id UPDATE
-    
-    this.router.delete('/:airline_id', AuthMiddleware.authorizeAdmin, AirlineController.delete); // /api/books/1 -> /api/books/:id DELETE
+      TicketController.update
+    ); // /api/books/1 -> /api/books/:ticket_id UPDATE
+    this.router.delete('/:ticket_id', AuthMiddleware.authorizeAdmin, TicketController.delete); // /api/books/1 -> /api/books/:id DELETE
 
     return this.router;
   }
 }
 
-export default new AirlineApi();
+export default new TicketApi();

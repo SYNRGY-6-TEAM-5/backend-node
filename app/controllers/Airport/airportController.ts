@@ -5,11 +5,8 @@ import ResponseBuilder from '../../utils/ResponseBuilder';
 
 import { type IRequestWithAuth } from '../../middlewares/auth';
 
-import media from '../../config/media';
-
 import { type IRestController } from '../../interfaces/IRest';
-import { type IUser } from '../../interfaces/IAuth';
-import { type ICar } from '../../models/carsModel';
+import { type IAirport } from '../../models/airportModel';
 
 const defaultMeta = {
   page: 1,
@@ -77,16 +74,9 @@ class AirportController implements IRestController {
 
   async create(req: IRequestWithAuth, res: Response, next: NextFunction) {
     try {
-      const userToken = req.body.userToken;
+      // AirportService.setUser = userDetails;
 
-      const bearerToken = userToken.split('Bearer');
-      const token = bearerToken[1]?.trim();
-
-      const userDetails = await authService.validateToken(token);
-
-      AirportService.setUser = userDetails;
-
-      const result = await AirportService.create(req.body as ICar);
+      const result = await AirportService.create(req.body as IAirport);
 
       const responseData = ResponseBuilder.response({
         res,
@@ -105,16 +95,8 @@ class AirportController implements IRestController {
   async update(req: IRequestWithAuth, res: Response, next: NextFunction) {
     try {
       const id = req.params?.car_id;
-      const userToken = req.body.userToken;
 
-      const bearerToken = userToken.split('Bearer');
-      const token = bearerToken[1]?.trim();
-
-      const userDetails = await authService.validateToken(token);
-
-      AirportService.setUser = userDetails;
-
-      const result = await AirportService.update(parseInt(id, 10), req.body as ICar);
+      const result = await AirportService.update(parseInt(id, 10), req.body as IAirport);
 
       return ResponseBuilder.response({
         res,
