@@ -1,13 +1,12 @@
 import { type Request, type Response, type NextFunction } from 'express';
-import AirlineService from '../../services/airlineService';
+import TicketService from '../../services/ticketService';
 import ResponseBuilder from '../../utils/ResponseBuilder';
 
 import { type IRequestWithAuth } from '../../middlewares/auth';
 
-import media from '../../config/media';
-
 import { type IRestController } from '../../interfaces/IRest';
-import { type IAirline } from '../../models/airlineModel';
+import { type IFlight } from '../../models/flightModel';
+import { ITicket } from '../../models/ticketModel';
 
 const defaultMeta = {
   page: 1,
@@ -16,55 +15,17 @@ const defaultMeta = {
   totalPages: 0
 };
 
-class AirlineController implements IRestController {
+class TicketController implements IRestController {
   constructor() { }
-  
-  async upload(req: IRequestWithAuth, res: Response) {
-    try {
-      if (req.file) {
-        const fileBase64 = req.file.buffer.toString('base64');
-        const file = `data:${req.file.mimetype};base64,${fileBase64}`;
-        const resultUpload = await media.storage.uploader.upload(file, (err, result) => {
-          if (err) {
-            return ResponseBuilder.response({
-              code: 403,
-              res,
-              data: 'failed upload to storage'
-            });
-          }
-          return result;
-        });
-
-        return ResponseBuilder.response({
-          code: 200,
-          res,
-          data: resultUpload
-        });
-      }
-
-      ResponseBuilder.response({
-        code: 404,
-        res,
-        data: 'file not found'
-      });
-    } catch (error) {
-      ResponseBuilder.response({
-        code: 500,
-        data: 'upload failed',
-        res
-      });
-    }
-  };
-
   async create(req: IRequestWithAuth, res: Response, next: NextFunction) {
     try {
-      const result = await AirlineService.create(req.body as IAirline);
+      const result = await TicketService.create(req.body as ITicket);
 
       const responseData = ResponseBuilder.response({
         res,
         code: 201,
         data: result,
-        message: 'success create a new airline'
+        message: 'success create a new ticket'
       });
 
       return responseData;
@@ -77,13 +38,13 @@ class AirlineController implements IRestController {
   async list(req: Request, res: Response) {
     try {
       const query = req.query;
-      const { data, count } = await AirlineService.list(query);
+      const { data, count } = await TicketService.list(query);
 
       const responseData = ResponseBuilder.response({
         res,
         code: 200,
         data: data,
-        message: 'success showing list of all airlines',
+        message: 'success showing list of all tickets',
         meta: { ...defaultMeta, totalData: count }
       });
 
@@ -99,14 +60,14 @@ class AirlineController implements IRestController {
 
   async show(req: Request, res: Response) {
     try {
-      const { airline_id } = req.params;
+      const { ticket_id } = req.params;
 
-      const airline = await AirlineService.get(parseInt(airline_id, 10));
+      const ticket = await TicketService.get(parseInt(ticket_id, 10));
 
-      if (!airline) {
+      if (!ticket) {
         res.status(404).json({
           status: 'FAIL',
-          message: 'airline not found'
+          message: 'ticket not found'
         });
         return;
       }
@@ -114,8 +75,8 @@ class AirlineController implements IRestController {
       const responseData = ResponseBuilder.response({
         res,
         code: 200,
-        data: airline,
-        message: 'success showing a airline',
+        data: ticket,
+        message: 'success showing a ticket',
         meta: { ...defaultMeta, totalData: 1 }
       });
 
@@ -131,15 +92,15 @@ class AirlineController implements IRestController {
 
   async update(req: IRequestWithAuth, res: Response, next: NextFunction) {
     try {
-      const id = req.params?.airline_id;
+      const id = req.params?.ticket_id;
 
-      const result = await AirlineService.update(parseInt(id, 10), req.body as IAirline);
+      const result = await TicketService.update(parseInt(id, 10), req.body as ITicket);
 
       return ResponseBuilder.response({
         res,
         code: 201,
         data: result,
-        message: 'success updating airline data'
+        message: 'success updating ticket data'
       });
     } catch (error) {
       next(error);
@@ -148,11 +109,11 @@ class AirlineController implements IRestController {
 
   async delete(req: Request, res: Response) {
     try {
-      const { airline_id } = req.params;
-      await AirlineService.delete(parseInt(airline_id, 10));
+      const { ticket_id } = req.params;
+      await TicketService.delete(parseInt(ticket_id, 10));
       res.status(200).json({
         status: 'OK',
-        message: 'Successfully deleted airline'
+        message: 'Successfully deleted ticket'
       });
     } catch (error: any) {
       res.status(422).json({
@@ -163,4 +124,4 @@ class AirlineController implements IRestController {
   }
 }
 
-export default new AirlineController();
+export default new TicketController();

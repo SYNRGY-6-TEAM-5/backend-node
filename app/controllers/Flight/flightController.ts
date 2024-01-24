@@ -5,11 +5,8 @@ import ResponseBuilder from '../../utils/ResponseBuilder';
 
 import { type IRequestWithAuth } from '../../middlewares/auth';
 
-import media from '../../config/media';
-
 import { type IRestController } from '../../interfaces/IRest';
-import { type IUser } from '../../interfaces/IAuth';
-import { type ICar } from '../../models/carsModel';
+import { type IFlight } from '../../models/flightModel';
 
 const defaultMeta = {
   page: 1,
@@ -20,6 +17,24 @@ const defaultMeta = {
 
 class FlightController implements IRestController {
   constructor() { }
+  async create(req: IRequestWithAuth, res: Response, next: NextFunction) {
+    try {
+      const result = await FlightService.create(req.body as IFlight);
+
+      const responseData = ResponseBuilder.response({
+        res,
+        code: 201,
+        data: result,
+        message: 'success create a new flight'
+      });
+
+      return responseData;
+
+    } catch (error) {
+      next(error);
+    }
+  }
+  
   async list(req: Request, res: Response) {
     try {
       const query = req.query;
@@ -29,7 +44,7 @@ class FlightController implements IRestController {
         res,
         code: 200,
         data: data,
-        message: 'success showing list of all aircrafts',
+        message: 'success showing list of all flights',
         meta: { ...defaultMeta, totalData: count }
       });
 
@@ -45,14 +60,15 @@ class FlightController implements IRestController {
 
   async show(req: Request, res: Response) {
     try {
-      const { airport_id } = req.params;
+      const { flight_id } = req.params;
+      console.log(flight_id);
 
-      const airport = await FlightService.get(parseInt(airport_id, 10));
+      const flight = await FlightService.get(parseInt(flight_id, 10));
 
-      if (!airport) {
+      if (!flight) {
         res.status(404).json({
           status: 'FAIL',
-          message: 'airport not found'
+          message: 'flight not found'
         });
         return;
       }
@@ -60,8 +76,8 @@ class FlightController implements IRestController {
       const responseData = ResponseBuilder.response({
         res,
         code: 200,
-        data: airport,
-        message: 'success showing a airport',
+        data: flight,
+        message: 'success showing a flight',
         meta: { ...defaultMeta, totalData: 1 }
       });
 
@@ -75,52 +91,17 @@ class FlightController implements IRestController {
     }
   }
 
-  async create(req: IRequestWithAuth, res: Response, next: NextFunction) {
-    try {
-      const userToken = req.body.userToken;
-
-      const bearerToken = userToken.split('Bearer');
-      const token = bearerToken[1]?.trim();
-
-      const userDetails = await authService.validateToken(token);
-
-      FlightService.setUser = userDetails;
-
-      const result = await FlightService.create(req.body as ICar);
-
-      const responseData = ResponseBuilder.response({
-        res,
-        code: 201,
-        data: result,
-        message: 'success create a new departure'
-      });
-
-      return responseData;
-
-    } catch (error) {
-      next(error);
-    }
-  }
-
   async update(req: IRequestWithAuth, res: Response, next: NextFunction) {
     try {
-      const id = req.params?.car_id;
-      const userToken = req.body.userToken;
+      const id = req.params?.flight_id;
 
-      const bearerToken = userToken.split('Bearer');
-      const token = bearerToken[1]?.trim();
-
-      const userDetails = await authService.validateToken(token);
-
-      FlightService.setUser = userDetails;
-
-      const result = await FlightService.update(parseInt(id, 10), req.body as ICar);
+      const result = await FlightService.update(parseInt(id, 10), req.body as IFlight);
 
       return ResponseBuilder.response({
         res,
         code: 201,
         data: result,
-        message: 'success updating car data'
+        message: 'success updating flight data'
       });
     } catch (error) {
       next(error);
@@ -129,11 +110,11 @@ class FlightController implements IRestController {
 
   async delete(req: Request, res: Response) {
     try {
-      const { car_id } = req.params;
-      await FlightService.delete(parseInt(car_id, 10));
+      const { flight_id } = req.params;
+      await FlightService.delete(parseInt(flight_id, 10));
       res.status(200).json({
         status: 'OK',
-        message: 'Successfully deleted car'
+        message: 'Successfully deleted flight'
       });
     } catch (error: any) {
       res.status(422).json({
