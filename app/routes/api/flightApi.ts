@@ -86,13 +86,13 @@ class FlightApi {
 
     /**
      * @openapi
-     * '/api/cars/{car_id}':
+     * '/api/cars/{flight_id}':
      *  get:
      *     tags:
      *     - Cars
-     *     summary: Get a single car by the car_id
+     *     summary: Get a single car by the flight_id
      *     parameters:
-     *      - name: car_id
+     *      - name: flight_id
      *        in: path
      *        description: The id of the car
      *        required: true
@@ -110,7 +110,7 @@ class FlightApi {
      *     - Car
      *     summary: Update a single car
      *     parameters:
-     *      - name: car_id
+     *      - name: flight_id
      *        in: path
      *        description: The id of the car
      *        required: true
@@ -137,7 +137,7 @@ class FlightApi {
      *     - Car
      *     summary: Delete a single car
      *     parameters:
-     *      - name: car_id
+     *      - name: flight_id
      *        in: path
      *        description: The id of the car
      *        required: true
@@ -149,13 +149,13 @@ class FlightApi {
      *       404:
      *         description: Product not found
      */
-    this.router.get('/:car_id', FlightController.show); // /api/books/1 -> /api/books/:id READ
+    this.router.get('/:flight_id', FlightController.show); // /api/books/1 -> /api/books/:id READ
     this.router.put(
-      '/:car_id',
+      '/:flight_id',
       [AuthMiddleware.authorizeAdmin, Media.upload.single('image')],
       FlightController.update
-    ); // /api/books/1 -> /api/books/:car_id UPDATE
-    this.router.delete('/:car_id', AuthMiddleware.authorizeAdmin, FlightController.delete); // /api/books/1 -> /api/books/:id DELETE
+    ); // /api/books/1 -> /api/books/:flight_id UPDATE
+    this.router.delete('/:flight_id', AuthMiddleware.authorizeAdmin, FlightController.delete); // /api/books/1 -> /api/books/:id DELETE
 
     return this.router;
   }

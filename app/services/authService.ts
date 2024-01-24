@@ -1,24 +1,25 @@
-import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 
-import { type IUser } from '../interfaces/IAuth';
+import { type IUserJwt } from '../interfaces/IAuth';
 
-const JWT_KEY = 'test_private_key';
+const jwtSecret: string = "357638792F423F4428472B4B6250655368566D597133743677397A2443264629"
+const decodedSecretBuffer: Buffer = Buffer.from(jwtSecret, 'base64');
 
 class AuthService {
-  constructor() {}
-
-  generateToken(user: IUser) {
-    const token = jwt.sign({ ...user }, JWT_KEY);
-    return token;
-  }
+  constructor() { }
 
   async validateToken(token: string) {
-    const decoded = jwt.verify(token, JWT_KEY);
-    return decoded as IUser;
+    if (!jwtSecret) {
+      throw new Error('jwtSecret is not defined');
+    }
+
+    const decoded = jwt.verify(token, decodedSecretBuffer, { algorithms: ['HS256'] })
+    console.log(decoded);
+    return decoded as IUserJwt;
   }
 
-  async validateRole(user: IUser, role: string) {
+  async validateRole(user: IUserJwt, role: string) {
+    // return user.role === role;
     return user.role === role;
   }
 }

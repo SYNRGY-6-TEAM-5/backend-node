@@ -21,8 +21,8 @@ class AuthMiddleware {
 
     const bearerToken = `${headers.authorization}`.split('Bearer');
     const token = bearerToken[1]?.trim();
-    const userData = await AuthService.validateToken(token);
-    const isSuperAdmin = await AuthService.validateRole(userData, 'superadmin');
+    const userJWTData = await AuthService.validateToken(token);
+    const isSuperAdmin = await AuthService.validateRole(userJWTData, 'superadmin');
 
     if (!isSuperAdmin) {
       return res.status(403).json({
@@ -38,14 +38,14 @@ class AuthMiddleware {
 
     if (!headers.authorization) {
       return res.status(403).json({
-        data: 'not authorized'
+        data: 'no auth header, not authorized'
       });
     }
 
     const bearerToken = `${headers.authorization}`.split('Bearer');
     const token = bearerToken[1]?.trim();
-    const userData = await AuthService.validateToken(token);
-    const isAdmin = await AuthService.validateRole(userData, 'admin');
+    const userJWTData = await AuthService.validateToken(token);
+    const isAdmin = await AuthService.validateRole(userJWTData, 'ADMIN');
 
     if (!isAdmin) {
       return res.status(403).json({

@@ -12,7 +12,6 @@ export interface IFlight {
   departure_id: number;
   arrival_id: number;
   airline_id: number;
-
   transit: number;
   first_seat: number;
   business_seat: number;
@@ -57,6 +56,14 @@ class Flight extends Model {
           to: 'airline.airline_id',
         },
       }
+    };
+  }
+
+  static get modifiers() {
+    return {
+      selectDepartureDetails(builder: any) {
+        builder.select('*');
+      },
     };
   }
 
