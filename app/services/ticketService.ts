@@ -84,13 +84,7 @@ class TicketService {
 
   async update(ticket_id: number, requestBody: any) {
     try {
-      const payload = {
-        ...requestBody
-      };
-
-      delete payload.departure;
-      delete payload.arrival;
-      delete payload.airline;
+      const { flight, benefits, ...payload } = requestBody;
 
       console.log('Payload >>>', payload);
 
