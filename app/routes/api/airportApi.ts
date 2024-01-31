@@ -149,13 +149,13 @@ class AirportApi {
      *       404:
      *         description: Product not found
      */
-    this.router.get('/:car_id', AirportController.show); // /api/books/1 -> /api/books/:id READ
+    this.router.get('/:airport_id', AirportController.show); // /api/books/1 -> /api/books/:id READ
     this.router.put(
-      '/:car_id',
+      '/:airport_id',
       [AuthMiddleware.authorizeAdmin, Media.upload.single('image')],
       AirportController.update
-    ); // /api/books/1 -> /api/books/:car_id UPDATE
-    this.router.delete('/:car_id', AuthMiddleware.authorizeAdmin, AirportController.delete); // /api/books/1 -> /api/books/:id DELETE
+    ); // /api/books/1 -> /api/books/:airport_id UPDATE
+    this.router.delete('/:airport_id', AuthMiddleware.authorizeAdmin, AirportController.delete); // /api/books/1 -> /api/books/:id DELETE
 
     return this.router;
   }

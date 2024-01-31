@@ -1,10 +1,12 @@
 import { type Request, type Response, type NextFunction } from 'express';
 import ArrivalService from '../../services/arrivalService';
+import AirportService from '../../services/airportService';
 import ResponseBuilder from '../../utils/ResponseBuilder';
 
 import { type IRequestWithAuth } from '../../middlewares/auth';
 import { type IRestController } from '../../interfaces/IRest';
 import { type IArrival } from '../../models/arrivalModel';
+import { ForeignKeyViolationError } from 'objection';
 
 const defaultMeta = {
   page: 1,
@@ -28,8 +30,20 @@ class ArrivalController implements IRestController {
 
       return responseData;
 
-    } catch (error) {
-      next(error);
+    } catch (error: any) {
+      if (error instanceof ForeignKeyViolationError) {
+        return res.status(422).json({
+          status: 'FAIL',
+          message: "Failed create arrival",
+          server_log: error.message
+        });
+      } else {
+        return res.status(500).json({
+          status: 'FAIL',
+          message: "Failed create arrival",
+          server_log: error.message
+        });
+      }
     }
   }
 
@@ -91,32 +105,73 @@ class ArrivalController implements IRestController {
   async update(req: IRequestWithAuth, res: Response, next: NextFunction) {
     try {
       const id = req.params?.arrival_id;
+      const { airport_id } = req.body
+      const airportWithId = await AirportService.get(parseInt(airport_id, 10));
 
-      const result = await ArrivalService.update(parseInt(id, 10), req.body as IArrival);
+      const arrivalExists = await ArrivalService.get(parseInt(id, 10));
+      if (!arrivalExists) {
+        return res.status(422).json({
+          status: 'FAIL',
+          message: `Arrival with ID ${id} not found in the database`
+        });
+      }
 
-      return ResponseBuilder.response({
-        res,
-        code: 201,
-        data: result,
-        message: 'success updating arrival data'
-      });
-    } catch (error) {
-      next(error);
+      if (airportWithId) {
+        const result = await ArrivalService.update(parseInt(id, 10), req.body as IArrival);
+
+        return ResponseBuilder.response({
+          res,
+          code: 201,
+          data: result,
+          message: 'success updating arrival data'
+        });
+      } else {
+        return res.status(422).json({
+          status: 'FAIL',
+          message: `Airport with ID ${airport_id} is not found in database`
+        });
+      }
+
+    } catch (error: any) {
+      if (error instanceof ForeignKeyViolationError) {
+        return res.status(422).json({
+          status: 'FAIL',
+          message: "Failed update arrival",
+          server_log: error.message
+        });
+      } else {
+        return res.status(500).json({
+          status: 'FAIL',
+          message: "Failed update arrival",
+          server_log: error.message
+        });
+      }
     }
   }
 
   async delete(req: Request, res: Response) {
     try {
       const { arrival_id } = req.params;
-      await ArrivalService.delete(parseInt(arrival_id, 10));
-      res.status(200).json({
-        status: 'OK',
-        message: 'Successfully deleted arrival'
-      });
+
+      const deletedArrivId = await ArrivalService.delete(parseInt(arrival_id, 10));
+
+      if (deletedArrivId !== undefined) {
+        res.status(200).json({
+          status: 'OK',
+          message: 'Successfully deleted arrival'
+        });
+      } else {
+        return res.status(404).json({
+          status: 'FAIL',
+          message: `Arrival with ID ${arrival_id} is not found in database`
+        });
+      }
+
     } catch (error: any) {
-      res.status(422).json({
+      return res.status(500).json({
         status: 'FAIL',
-        message: error.message
+        message: "Failed delete arrival",
+        server_log: error.message
       });
     }
   }

@@ -11,8 +11,6 @@ class AirportService {
     try {
       const payload = {
         ...requestBody,
-        created_by: this._user?.user_id,
-        updated_by: this._user?.user_id
       };
 
       delete payload.userToken;
@@ -28,7 +26,6 @@ class AirportService {
     try {
       const payload = {
         ...requestBody,
-        updated_by: this._user?.user_id
       };
 
       delete payload.userToken;
@@ -43,7 +40,7 @@ class AirportService {
 
   async delete(airport_id: number) {
     try {
-      return await AirportRepository.delete(airport_id);
+      return await AirportRepository.delete(airport_id).returning("airport_id");
     } catch (err) {
       throw err;
     }

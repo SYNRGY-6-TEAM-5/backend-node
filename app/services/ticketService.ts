@@ -96,7 +96,7 @@ class TicketService {
 
   async delete(ticket_id: number) {
     try {
-      return await TicketRepository.delete(ticket_id);
+      return await TicketRepository.delete(ticket_id).returning("ticket_id");
     } catch (err) {
       throw err;
     }
