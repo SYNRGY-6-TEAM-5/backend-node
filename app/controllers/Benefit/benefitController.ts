@@ -6,6 +6,8 @@ import { type IRequestWithAuth } from '../../middlewares/auth';
 
 import { type IRestController } from '../../interfaces/IRest';
 import { type IBenefit } from '../../models/benefitModel';
+import { ForeignKeyViolationError } from 'objection';
+import FlightService from '../../services/flightService';
 
 const defaultMeta = {
   page: 1,
@@ -30,8 +32,20 @@ class BenefitController implements IRestController {
 
       return responseData;
 
-    } catch (error) {
-      next(error);
+    } catch (error: any) {
+      if (error instanceof ForeignKeyViolationError) {
+        return res.status(422).json({
+          status: 'FAIL',
+          message: "Failed create benefit",
+          server_log: error.message
+        });
+      } else {
+        return res.status(500).json({
+          status: 'FAIL',
+          message: "Failed create benefit",
+          server_log: error.message
+        });
+      }
     }
   }
   
@@ -93,32 +107,73 @@ class BenefitController implements IRestController {
   async update(req: IRequestWithAuth, res: Response, next: NextFunction) {
     try {
       const id = req.params?.benefit_id;
+      const { flight_id } = req.body
+      const flightWithId = await FlightService.get(parseInt(flight_id, 10));
 
-      const result = await BenefitService.update(parseInt(id, 10), req.body as IBenefit);
+      const benefitExists = await BenefitService.get(parseInt(id, 10));
+      if (!benefitExists) {
+        return res.status(422).json({
+          status: 'FAIL',
+          message: `Benefit with ID ${id} not found in the database`
+        });
+      }
 
-      return ResponseBuilder.response({
-        res,
-        code: 201,
-        data: result,
-        message: 'success updating benefit data'
-      });
-    } catch (error) {
-      next(error);
+      if (flightWithId) {
+        const result = await BenefitService.update(parseInt(id, 10), req.body as IBenefit);
+
+        return ResponseBuilder.response({
+          res,
+          code: 201,
+          data: result,
+          message: 'success updating benefit data'
+        });
+      } else {
+        return res.status(422).json({
+          status: 'FAIL',
+          message: `Flight with ID ${flight_id} is not found in database`
+        });
+      }
+
+    } catch (error: any) {
+      if (error instanceof ForeignKeyViolationError) {
+        return res.status(422).json({
+          status: 'FAIL',
+          message: "Failed update benefit",
+          server_log: error.message
+        });
+      } else {
+        return res.status(500).json({
+          status: 'FAIL',
+          message: "Failed update benefit",
+          server_log: error.message
+        });
+      }
     }
   }
 
   async delete(req: Request, res: Response) {
     try {
       const { benefit_id } = req.params;
-      await BenefitService.delete(parseInt(benefit_id, 10));
-      res.status(200).json({
-        status: 'OK',
-        message: 'Successfully deleted benefit'
-      });
+
+      const deletedBenefitId = await BenefitService.delete(parseInt(benefit_id, 10));
+
+      if (deletedBenefitId !== undefined) {
+        res.status(200).json({
+          status: 'OK',
+          message: 'Successfully deleted benefit'
+        });
+      } else {
+        return res.status(404).json({
+          status: 'FAIL',
+          message: `Benefit with ID ${benefit_id} is not found in database`
+        });
+      }
+
     } catch (error: any) {
-      res.status(422).json({
+      return res.status(500).json({
         status: 'FAIL',
-        message: error.message
+        message: "Failed delete benefit",
+        server_log: error.message
       });
     }
   }

@@ -1,11 +1,11 @@
 import { Router } from 'express';
 
-import AirportController from '../../controllers/Airport/airportController';
+import TravelDocController from '../../controllers/TravelDoc/travelDocController';
 import Media from '../../config/media';
 
 import AuthMiddleware from '../../middlewares/auth';
 
-class AirportApi {
+class TravelDocUserApi {
   private readonly router: Router;
 
   constructor() {
@@ -13,19 +13,6 @@ class AirportApi {
   }
 
   routes() {
-    /**
-     * @openapi
-     * /api/cars/:
-     *  get:
-     *     tags:
-     *     - CRUD - List All Cars
-     *     description: Responds if the app is up and running
-     *     responses:
-     *       200:
-     *         description: App is up and running
-     */
-    this.router.get('/', AirportController.list); // /api/books READ
-
     /**
      * @openapi
      * '/api/cars/':
@@ -82,7 +69,34 @@ class AirportApi {
      *             - Remote fuel lid release
      *             - Traveler/mini trip computer
      */
-    this.router.post('/', AuthMiddleware.authorizeAdmin, AirportController.create);
+    this.router.post(
+      '/', 
+      AuthMiddleware.authorizeUser, 
+      TravelDocController.create
+    );
+
+    this.router.post(
+      '/upload',
+      [AuthMiddleware.authorizeUser, Media.upload.single('image')],
+      TravelDocController.upload
+    );
+
+    /**
+     * @openapi
+     * /api/cars/:
+     *  get:
+     *     tags:
+     *     - CRUD - List All Cars
+     *     description: Responds if the app is up and running
+     *     responses:
+     *       200:
+     *         description: App is up and running
+     */
+    this.router.get(
+      '/', 
+      AuthMiddleware.authorizeUser, 
+      TravelDocController.list
+    ); // /api/books READ
 
     /**
      * @openapi
@@ -149,16 +163,26 @@ class AirportApi {
      *       404:
      *         description: Product not found
      */
-    this.router.get('/:airport_id', AirportController.show); // /api/books/1 -> /api/books/:id READ
+    this.router.get(
+      '/:travel_doc_id', 
+      AuthMiddleware.authorizeUser, 
+      TravelDocController.show
+    ); // /api/books/1 -> /api/books/:id READ
+
     this.router.put(
-      '/:airport_id',
-      [AuthMiddleware.authorizeAdmin, Media.upload.single('image')],
-      AirportController.update
-    ); // /api/books/1 -> /api/books/:airport_id UPDATE
-    this.router.delete('/:airport_id', AuthMiddleware.authorizeAdmin, AirportController.delete); // /api/books/1 -> /api/books/:id DELETE
+      '/:travel_doc_id',
+      [AuthMiddleware.authorizeUser, Media.upload.single('image')],
+      TravelDocController.update
+    ); // /api/books/1 -> /api/books/:travel_doc_id UPDATE
+    
+    this.router.delete(
+      '/:travel_doc_id', 
+      AuthMiddleware.authorizeUser, 
+      TravelDocController.delete
+    ); // /api/books/1 -> /api/books/:id DELETE
 
     return this.router;
   }
 }
 
-export default new AirportApi();
+export default new TravelDocUserApi();

@@ -64,7 +64,7 @@ class AirlineService {
 
   async delete(airline_id: number) {
     try {
-      return await AirlineRepository.delete(airline_id);
+      return await AirlineRepository.delete(airline_id).returning("airline_id");
     } catch (err) {
       throw err;
     }

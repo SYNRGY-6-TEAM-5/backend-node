@@ -55,6 +55,29 @@ class AuthMiddleware {
 
     next();
   }
+
+  async authorizeUser(req: Request, res: Response, next: NextFunction) {
+    const headers = req.headers;
+
+    if (!headers.authorization) {
+      return res.status(403).json({
+        data: 'no auth header, not authorized'
+      });
+    }
+
+    const bearerToken = `${headers.authorization}`.split('Bearer');
+    const token = bearerToken[1]?.trim();
+    const userJWTData = await AuthService.validateToken(token);
+    const isUser = await AuthService.validateRole(userJWTData, 'USER');
+
+    if (!isUser) {
+      return res.status(403).json({
+        data: 'not authorized'
+      });
+    }
+
+    next();
+  }
 }
 
 export default new AuthMiddleware();

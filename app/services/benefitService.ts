@@ -64,7 +64,7 @@ class BenefitService {
 
   async delete(benefit_id: number) {
     try {
-      return await BenefitRepository.delete(benefit_id);
+      return await BenefitRepository.delete(benefit_id).returning("benefit_id");
     } catch (err) {
       throw err;
     }

@@ -44,9 +44,9 @@ class Airline extends Model {
       ],
       properties: {
         airline_id: { type: 'integer' },
-        name: { type: 'string' },
+        name: { type: 'string', minLength: 3, maxLength: 50 },
         iata: { type: 'string', minLength: 1, maxLength: 2 },
-        image: { type: 'string' }
+        image: { type: 'string', minLength: 5 }
       }
     };
   }

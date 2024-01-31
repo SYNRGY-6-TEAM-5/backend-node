@@ -8,6 +8,7 @@ import media from '../../config/media';
 
 import { type IRestController } from '../../interfaces/IRest';
 import { type IAirline } from '../../models/airlineModel';
+import { ForeignKeyViolationError, ValidationError } from 'objection';
 
 const defaultMeta = {
   page: 1,
@@ -18,7 +19,7 @@ const defaultMeta = {
 
 class AirlineController implements IRestController {
   constructor() { }
-  
+
   async upload(req: IRequestWithAuth, res: Response) {
     try {
       if (req.file) {
@@ -69,11 +70,23 @@ class AirlineController implements IRestController {
 
       return responseData;
 
-    } catch (error) {
-      next(error);
+    } catch (error: any) {
+      if (error instanceof ForeignKeyViolationError) {
+        return res.status(422).json({
+          status: 'FAIL',
+          message: "Failed create airline",
+          server_log: error.message
+        });
+      } else {
+        return res.status(500).json({
+          status: 'FAIL',
+          message: "Failed create airline",
+          server_log: error.message
+        });
+      }
     }
   }
-  
+
   async list(req: Request, res: Response) {
     try {
       const query = req.query;
@@ -133,31 +146,62 @@ class AirlineController implements IRestController {
     try {
       const id = req.params?.airline_id;
 
-      const result = await AirlineService.update(parseInt(id, 10), req.body as IAirline);
+      const airlineExists = await AirlineService.get(parseInt(id, 10));
+      if (!airlineExists) {
+        return res.status(422).json({
+          status: 'FAIL',
+          message: `Airline with ID ${id} not found in the database`
+        });
+      }
+        const result = await AirlineService.update(parseInt(id, 10), req.body as IAirline);
 
-      return ResponseBuilder.response({
-        res,
-        code: 201,
-        data: result,
-        message: 'success updating airline data'
-      });
-    } catch (error) {
-      next(error);
+        return ResponseBuilder.response({
+          res,
+          code: 201,
+          data: result,
+          message: 'success updating airline data'
+        });
+
+    } catch (error: any) {
+      if (error instanceof ForeignKeyViolationError) {
+        return res.status(422).json({
+          status: 'FAIL',
+          message: "Failed update airline",
+          server_log: error.message
+        });
+      } else {
+        return res.status(500).json({
+          status: 'FAIL',
+          message: "Failed update airline",
+          server_log: error.message
+        });
+      }
     }
   }
 
   async delete(req: Request, res: Response) {
     try {
       const { airline_id } = req.params;
-      await AirlineService.delete(parseInt(airline_id, 10));
-      res.status(200).json({
-        status: 'OK',
-        message: 'Successfully deleted airline'
-      });
+
+      const deletedAirlineId = await AirlineService.delete(parseInt(airline_id, 10));
+
+      if (deletedAirlineId !== undefined) {
+        res.status(200).json({
+          status: 'OK',
+          message: 'Successfully deleted airline'
+        });
+      } else {
+        return res.status(404).json({
+          status: 'FAIL',
+          message: `Airline with ID ${airline_id} is not found in database`
+        });
+      }
+
     } catch (error: any) {
-      res.status(422).json({
+      return res.status(500).json({
         status: 'FAIL',
-        message: error.message
+        message: "Failed delete airline",
+        server_log: error.message
       });
     }
   }

@@ -45,8 +45,8 @@ class Benefit extends Model {
       properties: {
         benefit_id: { type: 'integer' },
         flight_id: { type: 'integer' },
-        name: { type: 'string', minLength: 1, maxLength: 50 },
-        detail: { type: 'string' }
+        name: { type: 'string', minLength: 4, maxLength: 50 },
+        detail: { type: 'string', minLength: 4 }
       }
     };
   }
