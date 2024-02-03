@@ -1,11 +1,11 @@
 import { Knex } from 'knex';
 
-const tableName = 'passanger_details';
+const tableName = 'passenger_details';
 
 export async function up(knex: Knex): Promise<void> {
   await knex.schema.createTable(tableName, (table: Knex.TableBuilder) => {
     // Primary Key
-    table.increments('passanger_id').primary();
+    table.increments('passenger_id').primary();
 
     // Foreign Key
     table.integer('booking_id').unsigned().nullable();
