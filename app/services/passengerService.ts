@@ -61,55 +61,55 @@ class PassengerService {
   //   }
   // }
 
-  async get(passenger_id: number) {
-    try {
-      if (!passenger_id) {
-        throw new Error('Invalid passenger id');
-      }
+  // async get(passenger_id: number) {
+  //   try {
+  //     if (!passenger_id) {
+  //       throw new Error('Invalid passenger id');
+  //     }
       
-      let passengers = await PassengerRepository.find(passenger_id);
-      return await Promise.all(
-        passengers.map(async (passenger: Passenger) => {
-          // const bookingDetails = await BookingRepository.find(passenger.booking_id);
-          // const benefits = await BenefitRepository.findByFlightId(ticket.flight_id);
+  //     let passengers = await PassengerRepository.find(passenger_id);
+  //     return await Promise.all(
+  //       passengers.map(async (passenger: Passenger) => {
+  //         // const bookingDetails = await BookingRepository.find(passenger.booking_id);
+  //         // const benefits = await BenefitRepository.findByFlightId(ticket.flight_id);
   
-          return {
-            ...passenger,
-            // booking: bookingDetails[0],
-            // benefits,
-          };
-        })
-      );
-    } catch (err) {
-      throw err;
-    }
-  }
+  //         return {
+  //           ...passenger,
+  //           // booking: bookingDetails[0],
+  //           // benefits,
+  //         };
+  //       })
+  //     );
+  //   } catch (err) {
+  //     throw err;
+  //   }
+  // }
 
-  async update(passenger_id: number, requestBody: any) {
-    try {
-      const payload = {
-        ...requestBody
-      };
+  // async update(passenger_id: number, requestBody: any) {
+  //   try {
+  //     const payload = {
+  //       ...requestBody
+  //     };
 
-      // delete payload.departure;
-      // delete payload.arrival;
-      // delete payload.airline;
+  //     // delete payload.departure;
+  //     // delete payload.arrival;
+  //     // delete payload.airline;
 
-      console.log('Payload >>>', payload);
+  //     console.log('Payload >>>', payload);
 
-      return await PassengerRepository.update(passenger_id, payload);
-    } catch (err) {
-      throw err;
-    }
-  }
+  //     return await PassengerRepository.update(passenger_id, payload);
+  //   } catch (err) {
+  //     throw err;
+  //   }
+  // }
 
-  async delete(passenger_id: number) {
-    try {
-      return await PassengerRepository.delete(passenger_id);
-    } catch (err) {
-      throw err;
-    }
-  }
+  // async delete(passenger_id: number) {
+  //   try {
+  //     return await PassengerRepository.delete(passenger_id);
+  //   } catch (err) {
+  //     throw err;
+  //   }
+  // }
 
   set setUser(userData: IUser) {
     this._user = userData;

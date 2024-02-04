@@ -6,7 +6,7 @@ Model.knex(database);
 
 export interface ITravelDoc {
   travel_doc_id: number;
-  passanger_id: number;
+  passenger_id: number;
   doc_type: string;
   nationality: string;
   doc_number: string;
@@ -42,7 +42,7 @@ class TravelDoc extends Model {
     return {
       type: 'object',
       required: [
-        'passanger_id',
+        'passenger_id',
         'doc_type',
         'nationality',
         'doc_number',
@@ -51,7 +51,7 @@ class TravelDoc extends Model {
       ],
       properties: {
         travel_doc_id: { type: 'integer' },
-        passanger_id: { type: 'integer' },
+        passenger_id: { type: 'integer' },
         doc_type: { type: 'string' },
         nationality: { type: 'string' },
         doc_number: { type: 'string' },
