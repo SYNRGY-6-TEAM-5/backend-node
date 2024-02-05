@@ -11,12 +11,12 @@ import AirportApi from './routes/api/airportApi';
 import AirlineApi from './routes/api/airlineApi';
 import FlightApi from './routes/api/flightApi';
 import BenefitApi from './routes/api/benefitApi';
-// import PassengerApi from './routes/api/passengerApi';
 import TicketApi from './routes/api/ticketApi';
+import UserBookingAPI from './routes/api/userBookingApi';
+import PassengerApi from './routes/api/passengerApi';
 import TravelDocAdminApi from './routes/api/travelDocAdminApi';
 import TravelDocUserApi from './routes/api/travelDocUserApi';
 import swaggerDocs from './utils/swagger';
-import PassengerApi from './routes/api/passengerApi';
 
 const { PORT = 8060 } = process.env;
 const PUBLIC_DIR = path.join(__dirname, 'public');
@@ -38,6 +38,7 @@ class Server {
     this.app.use('/api/airline', AirlineApi.routes());
     this.app.use('/api/flight', FlightApi.routes());
     this.app.use('/api/benefit', BenefitApi.routes());
+    this.app.use('/api/user/booking', UserBookingAPI.routes());
     this.app.use('/api/passenger', PassengerApi.routes());
     this.app.use('/api/ticket', TicketApi.routes());
     this.app.use('/api/travel-docs/admin', TravelDocAdminApi.routes());

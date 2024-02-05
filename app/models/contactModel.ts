@@ -5,7 +5,7 @@ import Booking from './bookingModel';
 
 Model.knex(database);
 
-export interface IPassenger {
+export interface IContactDetails {
   passenger_id: number;
   booking_id: number;
   NIK: string;
@@ -17,14 +17,13 @@ export interface IPassenger {
   updated_at: number;
 }
 
-class Passenger extends Model {
-  passenger_id: any;
+class ContactDetails extends Model {
   static get tableName(): string {
-    return 'passenger_details';
+    return 'contact_details';
   }
 
   static get idColumn(): string {
-    return 'passenger_id';
+    return 'contact_id';
   }
 
   static get relationMappings() {
@@ -33,7 +32,7 @@ class Passenger extends Model {
         relation: Model.BelongsToOneRelation,
         modelClass: Booking,
         join: {
-          from: 'passenger_details.booking_id',
+          from: 'contact_details.booking_id',
           to: 'booking.booking_id',
         },
       },
@@ -59,19 +58,16 @@ class Passenger extends Model {
       type: 'object',
       required: [
         'booking_id',
-        'NIK',
-        'name',
-        'date_of_birth',
-        'vaccinated'
+        'fullName',
+        'email',
+        'phone'
       ],
       properties: {
-        passenger_id: { type: 'integer' },
+        contact_id: { type: 'integer' },
         booking_id: { type: 'integer' },
-        NIK: { type: 'string' },
-        name: { type: 'string' },
-        date_of_birth: { type: 'string' },
-        courtesy_title: { type: 'string' },
-        vaccinated: { type: 'boolean' },
+        fullName: { type: 'string' },
+        email: { type: 'string' },
+        phone: { type: 'string' },
         created_at: { type: 'string' },
         updated_at: { type: 'string' },
       }
@@ -79,4 +75,4 @@ class Passenger extends Model {
   }
 }
 
-export default Passenger;
+export default ContactDetails;

@@ -14,7 +14,7 @@ class AuthService {
     }
 
     const decoded = jwt.verify(token, decodedSecretBuffer, { algorithms: ['HS256'] })
-    console.log(decoded);
+    // console.log(decoded);
     return decoded as IUserJwt;
   }
 

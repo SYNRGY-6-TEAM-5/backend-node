@@ -1,7 +1,7 @@
-import Passenger from '../models/passengerModel';
+import Passenger, {IPassenger} from '../models/passengerModel';
 // import { BookingWithRelations } from './bookingRepository';
 
-export interface PassengerWithBooking extends Passenger {
+export interface PassengerWithBooking extends IPassenger {
   // booking: BookingWithRelations;
 }
 
@@ -46,27 +46,27 @@ class PassengerRepository {
   //   return passengers as Array<PassengerWithBooking>;
   // }
 
-  async find(passenger_id: number, params?: IParams): Promise<Array<PassengerWithBooking>> {
-    let passengerQuery = Passenger.query()
-      .findById(passenger_id);
-      // .joinRelated('flight(selectDepartureDetails).departure');
+  // async find(passenger_id: number, params?: IParams): Promise<Array<PassengerWithBooking>> {
+  //   let passengerQuery = Passenger.query()
+  //     .findById(passenger_id);
+  //     // .joinRelated('flight(selectDepartureDetails).departure');
 
-    const passenger = await passengerQuery;
+  //   const passenger = await passengerQuery;
 
-    if (!passenger) {
-      throw new Error(`passenger with ID ${passenger_id} not found`);
-    }
+  //   if (!passenger) {
+  //     throw new Error(`passenger with ID ${passenger_id} not found`);
+  //   }
 
-    return [passenger] as Array<PassengerWithBooking>;
-  }
+  //   return [passenger] as Array<PassengerWithBooking>;
+  // }
 
-  update(passenger_id: number, updateArgs: any) {
-    return Passenger.query().patchAndFetchById(passenger_id, updateArgs);
-  }
+  // update(passenger_id: number, updateArgs: any) {
+  //   return Passenger.query().patchAndFetchById(passenger_id, updateArgs);
+  // }
 
-  delete(passenger_id: number) {
-    return Passenger.query().deleteById(passenger_id);
-  }
+  // delete(passenger_id: number) {
+  //   return Passenger.query().deleteById(passenger_id);
+  // }
 
   // async count(params?: IParams) {
   //   let countQuery = Passenger.query().joinRelated('booking');
