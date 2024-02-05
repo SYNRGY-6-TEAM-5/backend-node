@@ -8,7 +8,7 @@ export async function up(knex: Knex): Promise<void> {
     table.increments('travel_doc_id').primary();
 
     // Foreign Key
-    table.integer('passanger_id').unsigned().nullable();
+    table.integer('passenger_id').unsigned().nullable();
 
     // Data Columns
     table.string('doc_type', 255).nullable();
@@ -23,7 +23,7 @@ export async function up(knex: Knex): Promise<void> {
     table.timestamp('updated_at').nullable();
 
     // Foreign Key Constraint
-    table.foreign('passanger_id').references('passanger_id').inTable('passanger_details');
+    table.foreign('passenger_id').references('passenger_id').inTable('passenger_details');
   });
 }
 

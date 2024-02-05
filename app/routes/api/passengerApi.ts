@@ -1,11 +1,11 @@
 import { Router } from 'express';
 
-import AirportController from '../../controllers/Airport/airportController';
+import PassengerController from '../../controllers/Passenger/passengerController';
 import Media from '../../config/media';
 
 import AuthMiddleware from '../../middlewares/auth';
 
-class AirportApi {
+class PassengerApi {
   private readonly router: Router;
 
   constructor() {
@@ -24,7 +24,7 @@ class AirportApi {
      *       200:
      *         description: App is up and running
      */
-    this.router.get('/', AirportController.list); // /api/books READ
+    // this.router.get('/', AuthMiddleware.authorizeUser, PassengerController.list); // /api/books READ
 
     /**
      * @openapi
@@ -82,17 +82,17 @@ class AirportApi {
      *             - Remote fuel lid release
      *             - Traveler/mini trip computer
      */
-    this.router.post('/', AuthMiddleware.authorizeAdmin, AirportController.create);
 
+    this.router.post('/', AuthMiddleware.authorizeUser, PassengerController.create);
     /**
      * @openapi
-     * '/api/cars/{car_id}':
+     * '/api/cars/{flight_id}':
      *  get:
      *     tags:
      *     - Cars
-     *     summary: Get a single car by the car_id
+     *     summary: Get a single car by the flight_id
      *     parameters:
-     *      - name: car_id
+     *      - name: flight_id
      *        in: path
      *        description: The id of the car
      *        required: true
@@ -110,7 +110,7 @@ class AirportApi {
      *     - Car
      *     summary: Update a single car
      *     parameters:
-     *      - name: car_id
+     *      - name: flight_id
      *        in: path
      *        description: The id of the car
      *        required: true
@@ -137,7 +137,7 @@ class AirportApi {
      *     - Car
      *     summary: Delete a single car
      *     parameters:
-     *      - name: car_id
+     *      - name: flight_id
      *        in: path
      *        description: The id of the car
      *        required: true
@@ -149,16 +149,18 @@ class AirportApi {
      *       404:
      *         description: Product not found
      */
-    this.router.get('/:airport_id', AirportController.show); // /api/books/1 -> /api/books/:id READ
-    this.router.put(
-      '/:airport_id',
-      [AuthMiddleware.authorizeAdmin, Media.upload.single('image')],
-      AirportController.update
-    ); // /api/books/1 -> /api/books/:airport_id UPDATE
-    this.router.delete('/:airport_id', AuthMiddleware.authorizeAdmin, AirportController.delete); // /api/books/1 -> /api/books/:id DELETE
+    // this.router.get('/:passenger_id', AuthMiddleware.authorizeUser, PassengerController.show); // /api/books/1 -> /api/books/:id READ
+    // this.router.put(
+    //   '/:passenger_id',
+    //   AuthMiddleware.authorizeUser,
+    //   PassengerController.update
+    // ); // /api/books/1 -> /api/books/:ticket_id UPDATE
+    // this.router.delete('/:passenger_id', 
+    // AuthMiddleware.authorizeUser, 
+    // PassengerController.delete); // /api/books/1 -> /api/books/:id DELETE
 
     return this.router;
   }
 }
 
-export default new AirportApi();
+export default new PassengerApi();

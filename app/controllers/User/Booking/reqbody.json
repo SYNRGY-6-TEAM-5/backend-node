@@ -1,0 +1,171 @@
+{
+    "ticket_details": {
+        "booked_ticket": [
+            13,
+            12
+        ],
+        "total_ticket_price": 1700000
+    },
+    "user_data": {
+        "success": true,
+        "id": "06b9d4a3-09cd-440f-ab18-2423f62fadb5",
+        "email": "saifulloh.fadli@gmail.com",
+        "imageUrl": null,
+        "fullName": null,
+        "dob": null,
+        "roleName": "USER",
+        "phoneNum": null,
+        "createdAt": 1706180739690
+    },
+    "contact_details": {
+        "fullName": "Saifulloh Fadli",
+        "email": "saifulloh.fadli@gmail.com",
+        "phone": "54562317635"
+    },
+    "passenger_details": [
+        {
+            "id": "adult-1",
+            "nik": "54562317635",
+            "fullName": "Saifulloh Fadli",
+            "dateOfBirth": "2024-01-31T17:00:00.000Z",
+            "courtesy_title": "Mr",
+            "vaccinated": "yes",
+            "travel_docs": [
+                {
+                    "doc_type": "passport",
+                    "nationality": "Indonesia",
+                    "document_number": "54562317635",
+                    "expire_date": "2024-02-04T13:56:25.362Z",
+                    "image_url": "https://res.cloudinary.com/ddpriosuk/image/upload/v1707055075/gvovj6griqcud5p8s2j5.png"
+                }
+            ],
+            "count": 1
+        },
+        {
+            "id": "adult-2",
+            "nik": "54562317635",
+            "fullName": "Ivana Wijaya",
+            "dateOfBirth": "2024-02-01T17:00:00.000Z",
+            "courtesy_title": "Ms",
+            "vaccinated": "yes",
+            "travel_docs": [
+                {
+                    "doc_type": "passport",
+                    "nationality": "Indonesia",
+                    "document_number": "54562317635",
+                    "expire_date": "2024-02-04T13:56:25.365Z",
+                    "image_url": "https://res.cloudinary.com/ddpriosuk/image/upload/v1707055107/md71jf1jpvoqvmq1jj6d.png"
+                }
+            ],
+            "count": 1
+        }
+    ],
+    "passenger_addOns": [
+        {
+            "passenger_name": "Saifulloh Fadli",
+            "departure": {
+                "meals": [
+                    {
+                        "meal_img": "https://images.pexels.com/photos/1099680/pexels-photo-1099680.jpeg?auto=compress&cs=tinysrgb&w=600",
+                        "meal_name": "Salad",
+                        "meal_price": "79000",
+                        "count": 1
+                    },
+                    {
+                        "meal_img": "https://images.pexels.com/photos/262959/pexels-photo-262959.jpeg?auto=compress&cs=tinysrgb&w=600",
+                        "meal_name": "Roasted Chicken",
+                        "meal_price": "99000",
+                        "count": 1
+                    }
+                ],
+                "baggage": {
+                    "baggage_weight": "32 KG",
+                    "baggage_price": "399000"
+                }
+            },
+            "return": {
+                "meals": [
+                    {
+                        "meal_name": "Fried Noodle",
+                        "meal_price": "49000",
+                        "meal_img": "https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=600",
+                        "count": 1
+                    }
+                ],
+                "baggage": {
+                    "baggage_weight": "16 KG",
+                    "baggage_price": "199000"
+                }
+            }
+        },
+        {
+            "passenger_name": "Ivana Wijaya",
+            "departure": {
+                "meals": [
+                    {
+                        "meal_img": "https://images.pexels.com/photos/1099680/pexels-photo-1099680.jpeg?auto=compress&cs=tinysrgb&w=600",
+                        "meal_name": "Salad",
+                        "meal_price": "79000",
+                        "count": 1
+                    },
+                    {
+                        "meal_img": "https://images.pexels.com/photos/262959/pexels-photo-262959.jpeg?auto=compress&cs=tinysrgb&w=600",
+                        "meal_name": "Roasted Chicken",
+                        "meal_price": "99000",
+                        "count": 1
+                    }
+                ],
+                "baggage": {
+                    "baggage_weight": "32 KG",
+                    "baggage_price": "399000"
+                }
+            },
+            "return": {
+                "meals": [
+                    {
+                        "meal_name": "Fried Noodle",
+                        "meal_price": "49000",
+                        "meal_img": "https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=600",
+                        "count": 1
+                    },
+                    {
+                        "meal_img": "https://images.pexels.com/photos/1099680/pexels-photo-1099680.jpeg?auto=compress&cs=tinysrgb&w=600",
+                        "meal_name": "Salad",
+                        "meal_price": "79000",
+                        "count": 1
+                    },
+                    {
+                        "meal_img": "https://images.pexels.com/photos/262959/pexels-photo-262959.jpeg?auto=compress&cs=tinysrgb&w=600",
+                        "meal_name": "Roasted Chicken",
+                        "meal_price": "99000",
+                        "count": 1
+                    },
+                    {
+                        "meal_img": "https://images.pexels.com/photos/1603901/pexels-photo-1603901.jpeg?auto=compress&cs=tinysrgb&w=600",
+                        "meal_name": "Hamburger",
+                        "meal_price": "119000",
+                        "count": 1
+                    }
+                ],
+                "baggage": {
+                    "baggage_weight": "16 KG",
+                    "baggage_price": "199000"
+                }
+            }
+        }
+    ],
+    "trip_insurance": {
+        "full_insurance": {
+            "type": "Full Protection",
+            "price": 95000
+        },
+        "baggage_insurance": {
+            "type": "Baggage Insurance",
+            "price": 16000
+        },
+        "flight_delay_insurance": {
+            "type": "",
+            "price": 0
+        }
+    }
+}

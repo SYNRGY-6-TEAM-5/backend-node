@@ -84,13 +84,7 @@ class TicketService {
 
   async update(ticket_id: number, requestBody: any) {
     try {
-      const payload = {
-        ...requestBody
-      };
-
-      delete payload.departure;
-      delete payload.arrival;
-      delete payload.airline;
+      const { flight, benefits, ...payload } = requestBody;
 
       console.log('Payload >>>', payload);
 
@@ -102,7 +96,7 @@ class TicketService {
 
   async delete(ticket_id: number) {
     try {
-      return await TicketRepository.delete(ticket_id);
+      return await TicketRepository.delete(ticket_id).returning("ticket_id");
     } catch (err) {
       throw err;
     }

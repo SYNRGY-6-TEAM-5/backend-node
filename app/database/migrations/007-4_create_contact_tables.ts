@@ -1,20 +1,19 @@
 import { Knex } from 'knex';
 
-const tableName = 'passenger_details';
+const tableName = 'contact_details';
 
 export async function up(knex: Knex): Promise<void> {
   await knex.schema.createTable(tableName, (table: Knex.TableBuilder) => {
     // Primary Key
-    table.increments('passenger_id').primary();
+    table.increments('contact_id').primary();
 
     // Foreign Key
-    table.integer('booking_id').unsigned().nullable();
+    table.integer('booking_id').unsigned().notNullable();
 
     // Data Columns
-    table.string('NIK').nullable();
-    table.string('name').nullable();
-    table.datetime('date_of_birth').nullable();
-    table.boolean('vaccinated').nullable();
+    table.string('fullName').notNullable();
+    table.string('email').notNullable();
+    table.string('phone').notNullable();
 
     // Timestamps
     table.timestamp('created_at').notNullable().defaultTo(knex.fn.now());

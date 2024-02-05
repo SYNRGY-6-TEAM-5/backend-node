@@ -59,7 +59,7 @@ class ArrivalService {
 
   async delete(arrival_id: number) {
     try {
-      return await ArrivalRepository.delete(arrival_id);
+      return await ArrivalRepository.delete(arrival_id).returning("arrival_id");
     } catch (err) {
       throw err;
     }

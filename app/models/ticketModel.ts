@@ -65,10 +65,10 @@ class Ticket extends Model {
       properties: {
         ticket_id: { type: 'integer' },
         flight_id: { type: 'integer' },
-        ticket_type: { type: 'string' },
-        ticket_amount: { type: 'integer' },
-        fare_amount: { type: 'string' },
-        valid_until: { type: 'string' }
+        ticket_type: { type: 'string', minLength: 4, maxLength: 50 },
+        ticket_amount: { type: 'integer', minLength: 4, maxLength: 50 },
+        fare_amount: { type: 'string', minLength: 4, maxLength: 50 },
+        valid_until: { type: 'string', minLength: 4, maxLength: 50 }
       }
     };
   }
