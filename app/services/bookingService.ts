@@ -1,15 +1,17 @@
-import FlightRepository, { type IParams } from '../repositories/flightRepository';
-import BenefitRepository from '../repositories/benefitRepository';
-
 import axios, { AxiosResponse } from 'axios';
 import ContactDetailsService from './contactService';
 
 import { type IUser } from '../interfaces/IAuth';
-import TicketRepository, { TicketWithFlight } from '../repositories/ticketRepository';
-import Ticket from '../models/ticketModel';
 import { ICompleteBooking } from '../types/Booking';
 import PassengerService from './passengerService';
 import TravleDocService from './travleDocService';
+import MapTicketService from './mapTicketService';
+import AddOnsService from './addOnsService';
+import { ITravelDoc } from '../models/travelDocModel';
+import { IPassenger } from '../models/passengerModel';
+import { IPassengerAddon } from '../models/addOnsModel';
+import BookingRepository from '../repositories/bookingRepository';
+import { IParams } from '../repositories/airportRepository';
 
 interface TripInsurance {
   [key: string]: {
@@ -18,7 +20,14 @@ interface TripInsurance {
   };
 }
 
-async function sendPassengerData(passenger: any) {
+interface IResultData {
+  passenger: IPassenger;
+  travelDocs: ITravelDoc[];
+  departureAddOns: IPassengerAddon[];
+  returnAddOns: IPassengerAddon[];
+}
+
+async function sendPassengerData(passenger: any, booking_id: number) {
   try {
     const {
       nik,
@@ -28,9 +37,26 @@ async function sendPassengerData(passenger: any) {
       vaccinated
     } = passenger;
 
-    // Construct the payload
+    const resultData: IResultData = {
+      passenger: {
+        passenger_id: 0,
+        booking_id: 0,
+        NIK: "",
+        name: "",
+        date_of_birth: new Date(),
+        courtesy_title: "",
+        vaccinated: false,
+        created_at: 0,
+        updated_at: 0
+      },
+      travelDocs: [],
+      departureAddOns: [],
+      returnAddOns: []
+    };
+
+
     const payload = {
-      booking_id: 1,
+      booking_id: booking_id,
       NIK: nik,
       name: fullName,
       date_of_birth: dateOfBirth,
@@ -38,8 +64,8 @@ async function sendPassengerData(passenger: any) {
       vaccinated: vaccinated === "yes" ? true : false,
     };
 
-    // Send data to the service
     const passenger_result = await PassengerService.create(payload);
+    resultData.passenger = passenger_result as unknown as IPassenger;
 
     for (const doc of passenger.travel_docs) {
       const {
@@ -50,7 +76,6 @@ async function sendPassengerData(passenger: any) {
         image_url
       } = doc;
 
-      // Construct the payload for travel doc creation
       const travelPayload = {
         passenger_id: passenger_result.passenger_id,
         doc_type: doc_type,
@@ -61,11 +86,54 @@ async function sendPassengerData(passenger: any) {
         valid: false,
       };
 
-      // Send data to create travel doc
       const travelDocsResult = await TravleDocService.create(travelPayload);
 
-      console.log(`Travel document created successfully for passenger ${fullName} with ID ${passenger_result.passenger_id}. Response:`, travelDocsResult);
+      resultData.travelDocs.push(travelDocsResult as unknown as ITravelDoc);
     }
+
+    for (const mealsAddOn of passenger.add_ons.departure.meals) {
+
+
+      const departurePayload = {
+        passenger_id: passenger_result.passenger_id,
+        trip_type: 'departure',
+        meal_name: mealsAddOn.meal_name,
+        meal_price: parseFloat(mealsAddOn.meal_price),
+        meal_img: mealsAddOn.meal_img,
+        meal_count: mealsAddOn.count,
+        baggage_weight: passenger.add_ons.departure.baggage.baggage_weight,
+        baggage_price: parseFloat(passenger.add_ons.departure.baggage.baggage_price)
+      };
+
+      const departureResult = await AddOnsService.create(departurePayload);
+      resultData.departureAddOns.push(departureResult as unknown as IPassengerAddon);
+    }
+
+    for (const mealsAddOn of passenger.add_ons.return.meals) {
+
+
+      const returnPayload = {
+        passenger_id: passenger_result.passenger_id,
+        trip_type: 'return',
+        meal_name: mealsAddOn.meal_name,
+        meal_price: parseFloat(mealsAddOn.meal_price),
+        meal_img: mealsAddOn.meal_img,
+        meal_count: mealsAddOn.count,
+        baggage_weight: passenger.add_ons.return.baggage.baggage_weight,
+        baggage_price: parseFloat(passenger.add_ons.return.baggage.baggage_price)
+      };
+
+
+
+
+      const returnResult = await AddOnsService.create(returnPayload);
+      resultData.returnAddOns.push(returnResult as unknown as IPassengerAddon);
+
+
+    }
+
+    return resultData;
+
   } catch (error) {
     console.error(`Error occurred while sending data for passenger ${passenger.fullName}:`, error);
   }
@@ -80,7 +148,6 @@ class BookingService {
     try {
       const {
         ticket_details,
-        user_data,
         contact_details,
         passenger_details,
         passenger_addOns,
@@ -90,7 +157,7 @@ class BookingService {
       for (const [key, value] of Object.entries(trip_insurance)) {
         insuranceAvailability[key] = value.type !== "" && value.price !== 0;
       }
-
+      console.log(ticket_details.booked_ticket.length);
       const bookingReqBody = {
         trip_type: ticket_details.booked_ticket.length === 1 ? "one-way" : "roundtrip",
         total_passenger: passenger_details.length,
@@ -103,6 +170,8 @@ class BookingService {
         status: null
       }
 
+      console.log(bookingReqBody);
+
       const response: AxiosResponse = await axios.post('https://backend-java-production-ece2.up.railway.app/api/v1/booking', bookingReqBody,
         {
           headers: {
@@ -110,15 +179,24 @@ class BookingService {
           }
         }
       );
-      const responseData = response.data;
+      const resBookingData = response.data;
+      const resBookingId = parseInt(response.data.bookingId, 10);
 
-      console.log("Response Data: ", responseData);
+      let mapTicketResult = {};
 
-      // Map Ticket Nunggu response booking_id dari BEJ
+      for (const ticket_id of ticket_details.booked_ticket) {
+        const mapTicketPayload = {
+          booking_id: resBookingId,
+          ticket_id: ticket_id,
+        };
 
+        mapTicketResult = await MapTicketService.create(mapTicketPayload);
+
+
+      }
 
       const contactDetailsReqBody = {
-        booking_id: 1, // nanti dirubah data response data endpoint booking bej
+        booking_id: resBookingId,
         fullName: contact_details.fullName,
         email: contact_details.email,
         phone: contact_details.phone
@@ -126,22 +204,72 @@ class BookingService {
 
       const contact_result = await ContactDetailsService.create(contactDetailsReqBody);
 
-      console.log("Service contact_result >>> ", contact_result);
-
-      console.log("Service user_data >>> ", user_data);
-      
-      passenger_details.forEach(async passenger => {
-        await sendPassengerData(passenger);
+      const updatedPassengerDetails = passenger_details.map(passenger => {
+        const addOnsForPassenger = passenger_addOns.find(addOn => addOn.passenger_name === passenger.fullName);
+        if (addOnsForPassenger) {
+          return {
+            ...passenger,
+            add_ons: addOnsForPassenger
+          };
+        } else {
+          return passenger;
+        }
       });
 
-      console.log("Service passenger_details >>> ", passenger_details.length);
-      console.log("Service passenger_addOns >>> ", passenger_addOns);
-      console.log("Service trip_insurance >>> ", insuranceAvailability);
+      const passenger_details_result: IResultData[] = [];
+
+      const sendPassengerPromises = updatedPassengerDetails.map(passenger =>
+        sendPassengerData(passenger, resBookingId)
+      );
+
+      const passengerResults = await Promise.all(sendPassengerPromises);
+
+      passengerResults.forEach(passenger_result => {
+        passenger_details_result.push(
+          passenger_result
+            ? passenger_result
+            : {
+              passenger: {
+                passenger_id: 0,
+                booking_id: 0,
+                NIK: "",
+                name: "",
+                date_of_birth: new Date(),
+                courtesy_title: "",
+                vaccinated: false,
+                created_at: 0,
+                updated_at: 0
+              },
+              travelDocs: [],
+              departureAddOns: [],
+              returnAddOns: []
+            }
+        );
+      });
+
+      const result = {
+        user_data: contact_result,
+        booking_data: resBookingData,
+        map_ticket: mapTicketResult,
+        passengers_data: passenger_details_result,
+      };
+
+      return result;
 
     } catch (err) {
-      console.log(err);
       throw err;
     }
+  }
+
+  async listAllUserId(user_id: string, params?: IParams) {
+    console.log(user_id);
+    let data = await BookingRepository.findAllUserId(user_id);
+    let count = await BookingRepository.count(user_id, params);
+
+    return {
+      data,
+      count
+    };
   }
 
   set setUser(userData: IUser) {

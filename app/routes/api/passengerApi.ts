@@ -24,7 +24,7 @@ class PassengerApi {
      *       200:
      *         description: App is up and running
      */
-    this.router.get('/', AuthMiddleware.authorizeUser, PassengerController.list); // /api/books READ
+    // this.router.get('/', AuthMiddleware.authorizeUser, PassengerController.list); // /api/books READ
 
     /**
      * @openapi
@@ -149,15 +149,15 @@ class PassengerApi {
      *       404:
      *         description: Product not found
      */
-    this.router.get('/:passenger_id', AuthMiddleware.authorizeUser, PassengerController.show); // /api/books/1 -> /api/books/:id READ
-    this.router.put(
-      '/:passenger_id',
-      AuthMiddleware.authorizeUser,
-      PassengerController.update
-    ); // /api/books/1 -> /api/books/:ticket_id UPDATE
-    this.router.delete('/:passenger_id', 
-    AuthMiddleware.authorizeUser, 
-    PassengerController.delete); // /api/books/1 -> /api/books/:id DELETE
+    // this.router.get('/:passenger_id', AuthMiddleware.authorizeUser, PassengerController.show); // /api/books/1 -> /api/books/:id READ
+    // this.router.put(
+    //   '/:passenger_id',
+    //   AuthMiddleware.authorizeUser,
+    //   PassengerController.update
+    // ); // /api/books/1 -> /api/books/:ticket_id UPDATE
+    // this.router.delete('/:passenger_id', 
+    // AuthMiddleware.authorizeUser, 
+    // PassengerController.delete); // /api/books/1 -> /api/books/:id DELETE
 
     return this.router;
   }

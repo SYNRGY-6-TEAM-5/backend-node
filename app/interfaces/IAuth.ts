@@ -30,6 +30,7 @@ export interface IUser {
 export interface IUserJwt {
   sub: string;
   role: string;
+  userId: string;
 }
 
 export interface IAuthModel<T, PR = P_RegisterPayload, PL = P_LoginPayload> {

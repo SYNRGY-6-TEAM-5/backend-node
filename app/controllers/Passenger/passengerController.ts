@@ -16,7 +16,7 @@ const defaultMeta = {
   totalPages: 0
 };
 
-class PassengerController implements IRestController {
+class PassengerController {
   constructor() { }
   async create(req: IRequestWithAuth, res: Response, next: NextFunction) {
     try {
@@ -36,7 +36,7 @@ class PassengerController implements IRestController {
     }
   }
   
-  async list(req: Request, res: Response) {
+  // async list(req: Request, res: Response) {
     // try {
     //   const query = req.query;
     //   const { data, count } = await PassengerService.list(query);
@@ -57,72 +57,72 @@ class PassengerController implements IRestController {
     //     message: error.message
     //   });
     // }
-  }
+  // }
 
-  async show(req: Request, res: Response) {
-    try {
-      const { passenger_id } = req.params;
+  // async show(req: Request, res: Response) {
+  //   try {
+  //     const { passenger_id } = req.params;
 
-      const passenger = await PassengerService.get(parseInt(passenger_id, 10));
+  //     const passenger = await PassengerService.get(parseInt(passenger_id, 10));
 
-      if (!passenger) {
-        res.status(404).json({
-          status: 'FAIL',
-          message: 'passenger not found'
-        });
-        return;
-      }
+  //     if (!passenger) {
+  //       res.status(404).json({
+  //         status: 'FAIL',
+  //         message: 'passenger not found'
+  //       });
+  //       return;
+  //     }
 
-      const responseData = ResponseBuilder.response({
-        res,
-        code: 200,
-        data: passenger,
-        message: 'success showing a passenger',
-        meta: { ...defaultMeta, totalData: 1 }
-      });
+  //     const responseData = ResponseBuilder.response({
+  //       res,
+  //       code: 200,
+  //       data: passenger,
+  //       message: 'success showing a passenger',
+  //       meta: { ...defaultMeta, totalData: 1 }
+  //     });
 
-      return responseData;
+  //     return responseData;
 
-    } catch (error: any) {
-      res.status(422).json({
-        status: 'FAIL',
-        message: error.message
-      });
-    }
-  }
+  //   } catch (error: any) {
+  //     res.status(422).json({
+  //       status: 'FAIL',
+  //       message: error.message
+  //     });
+  //   }
+  // }
 
-  async update(req: IRequestWithAuth, res: Response, next: NextFunction) {
-    try {
-      const id = req.params?.passenger_id;
+  // async update(req: IRequestWithAuth, res: Response, next: NextFunction) {
+  //   try {
+  //     const id = req.params?.passenger_id;
 
-      const result = await PassengerService.update(parseInt(id, 10), req.body as IPassenger);
+  //     const result = await PassengerService.update(parseInt(id, 10), req.body as IPassenger);
 
-      return ResponseBuilder.response({
-        res,
-        code: 201,
-        data: result,
-        message: 'success updating passenger data'
-      });
-    } catch (error) {
-      next(error);
-    }
-  }
+  //     return ResponseBuilder.response({
+  //       res,
+  //       code: 201,
+  //       data: result,
+  //       message: 'success updating passenger data'
+  //     });
+  //   } catch (error) {
+  //     next(error);
+  //   }
+  // }
 
-  async delete(req: Request, res: Response) {
-    try {
-      const { passenger_id } = req.params;
-      await PassengerService.delete(parseInt(passenger_id, 10));
-      res.status(200).json({
-        status: 'OK',
-        message: 'Successfully deleted passenger'
-      });
-    } catch (error: any) {
-      res.status(422).json({
-        status: 'FAIL',
-        message: error.message
-      });
-    }
-  }
+  // async delete(req: Request, res: Response) {
+  //   try {
+  //     const { passenger_id } = req.params;
+  //     await PassengerService.delete(parseInt(passenger_id, 10));
+  //     res.status(200).json({
+  //       status: 'OK',
+  //       message: 'Successfully deleted passenger'
+  //     });
+  //   } catch (error: any) {
+  //     res.status(422).json({
+  //       status: 'FAIL',
+  //       message: error.message
+  //     });
+  //   }
+  // }
 }
 
 export default new PassengerController();
