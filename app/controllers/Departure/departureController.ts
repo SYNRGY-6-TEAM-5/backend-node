@@ -6,7 +6,7 @@ import ResponseBuilder from '../../utils/ResponseBuilder';
 import { type IRequestWithAuth } from '../../middlewares/auth';
 import { type IRestController } from '../../interfaces/IRest';
 import { type IDeparture } from '../../models/departureModel';
-import { ForeignKeyViolationError } from 'objection';
+import { DataError, ForeignKeyViolationError } from 'objection';
 
 const defaultMeta = {
   page: 1,
@@ -31,19 +31,7 @@ class DepartureController implements IRestController {
       return responseData;
 
     } catch (error: any) {
-      if (error instanceof ForeignKeyViolationError) {
-        return res.status(422).json({
-          status: 'FAIL',
-          message: "Failed create departure",
-          server_log: error.message
-        });
-      } else {
-        return res.status(500).json({
-          status: 'FAIL',
-          message: "Failed create departure",
-          server_log: error.message
-        });
-      }
+      next(error);
     }
   }
 
@@ -132,19 +120,7 @@ class DepartureController implements IRestController {
       }
 
     } catch (error: any) {
-      if (error instanceof ForeignKeyViolationError) {
-        return res.status(422).json({
-          status: 'FAIL',
-          message: "Failed update departure",
-          server_log: error.message
-        });
-      } else {
-        return res.status(500).json({
-          status: 'FAIL',
-          message: "Failed update departure",
-          server_log: error.message
-        });
-      }
+      next(error);
     }
   }
 

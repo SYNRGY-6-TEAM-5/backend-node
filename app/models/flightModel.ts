@@ -107,8 +107,8 @@ class Flight extends Model {
         business_seat: { type: 'integer' },
         economy_seat: { type: 'integer' },
         flight_status: { type: 'string', minLength: 1, maxLength: 10 },
-        flight_number: { type: 'string' },
-        iata: { type: 'string' },
+        flight_number: { type: 'string', minLength: 1, maxLength: 10 },
+        iata: { type: 'string', minLength: 1, maxLength: 10 },
       }
     };
   }

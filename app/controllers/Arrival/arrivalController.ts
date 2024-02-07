@@ -31,19 +31,7 @@ class ArrivalController implements IRestController {
       return responseData;
 
     } catch (error: any) {
-      if (error instanceof ForeignKeyViolationError) {
-        return res.status(422).json({
-          status: 'FAIL',
-          message: "Failed create arrival",
-          server_log: error.message
-        });
-      } else {
-        return res.status(500).json({
-          status: 'FAIL',
-          message: "Failed create arrival",
-          server_log: error.message
-        });
-      }
+      next(error);
     }
   }
 
@@ -133,19 +121,7 @@ class ArrivalController implements IRestController {
       }
 
     } catch (error: any) {
-      if (error instanceof ForeignKeyViolationError) {
-        return res.status(422).json({
-          status: 'FAIL',
-          message: "Failed update arrival",
-          server_log: error.message
-        });
-      } else {
-        return res.status(500).json({
-          status: 'FAIL',
-          message: "Failed update arrival",
-          server_log: error.message
-        });
-      }
+      next(error);
     }
   }
 

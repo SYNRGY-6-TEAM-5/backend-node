@@ -86,7 +86,7 @@ class FlightService {
 
   async delete(flight_id: number) {
     try {
-      return await FlightRepository.delete(flight_id);
+      return await FlightRepository.delete(flight_id).returning("flight_id");
     } catch (err) {
       throw err;
     }
