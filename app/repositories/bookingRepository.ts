@@ -1,4 +1,9 @@
+import { IPassengerAddon } from '../models/addOnsModel';
 import Booking, { IBooking } from '../models/bookingModel';
+import MapTicket, { IMapTicket } from '../models/mapTicketModel';
+import { IPassenger } from '../models/passengerModel';
+import { ITravelDoc } from '../models/travelDocModel';
+import { TicketWithFlight } from './ticketRepository';
 
 export interface IParams {
   page?: number;
@@ -9,36 +14,74 @@ export interface IParams {
   departure_date?: string;
 }
 
+interface PassengerWithRelation extends IPassenger {
+  travel_docs: ITravelDoc[];
+  add_ons: IPassengerAddon[];
+}
+
+export interface BookingWithDetails extends IBooking {
+  tickets?: any[];
+  map_ticket: IMapTicket[];
+  passengers: PassengerWithRelation[];
+}
+
 class BookingRepository {
-  async findAllUserId(user_id: string, params?: IParams): Promise<Array<IBooking>> {
-    let bookingsQuery = Booking.query().where('user_id', user_id);
+  async findAllUserId(user_id: string, params?: IParams): Promise<Array<BookingWithDetails>> {
+    let bookingsQuery = await Booking.query()
+      .select(
+        'booking.*',
+        'contact_details.fullName',
+        'contact_details.email',
+        'contact_details.phone',
+      )
+      .leftJoin('contact_details', 'booking.booking_id', 'contact_details.booking_id')
+      .where('booking.user_id', user_id)
+      .withGraphFetched(`[
+          map_ticket,
+          passengers(selectPassengerDetails).[travel_docs, add_ons],
+        ]`);
 
-    if (params?.search) {
-      bookingsQuery = bookingsQuery.where('some_column', 'like', `%${params?.search}%`);
-      // Replace 'some_column' with the column name you want to search on
-    }
-
-    const bookings = await bookingsQuery.orderBy('created_at', 'desc');
-
-    return bookings as unknown as Array<IBooking>;
+    return bookingsQuery as unknown as Array<BookingWithDetails>;
   }
 
-  async find(booking_id: number, params?: IParams): Promise<Array<IBooking>> {
+  async findOneByUserIdAndBookingId(user_id: string, booking_id: number): Promise<BookingWithDetails> {
+    const booking = await Booking.query()
+      .select(
+        'booking.*',
+        'contact_details.fullName',
+        'contact_details.email',
+        'contact_details.phone',
+      )
+      .leftJoin('contact_details', 'booking.booking_id', 'contact_details.booking_id')
+      .where('booking.user_id', user_id)
+      .andWhere('booking.booking_id', booking_id)
+      .withGraphFetched(`[
+          map_ticket,
+          passengers(selectPassengerDetails).[travel_docs, add_ons],
+        ]`)
+      .first();
+
+    return booking as unknown as BookingWithDetails;
+  }
+
+  async findOne(user_id: string, booking_id: number, params?: IParams): Promise<IBooking> {
     let bookingQuery = Booking.query()
-      .findById(booking_id)
-      .select('booking.*');
+      .where('booking.user_id', user_id)
+      .andWhere('booking.booking_id', booking_id)
+      .select('booking.*')
+      .first();
 
     const booking = await bookingQuery;
 
     if (!booking) {
-      throw new Error(`Flight with ID ${booking_id} not found`);
+      throw new Error(`Booking with ID ${booking_id} not found`);
     }
 
-    return [booking] as unknown as Array<IBooking>;
+    return booking as unknown as IBooking;
   }
 
-  update(flight_id: number, updateArgs: any) {
-    return Booking.query().patchAndFetchById(flight_id, updateArgs);
+  update(booking_id: number, updateArgs: any) {
+    return Booking.query().patchAndFetchById(booking_id, updateArgs);
   }
 
   delete(flight_id: number) {

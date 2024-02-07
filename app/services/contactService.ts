@@ -30,7 +30,7 @@ class ContactDetailsService {
       return await ContactDetailsRepository.delete(contact_id);
     } catch (err) {
       throw err;
-    }
+    } 
   }
 
   set setUser(userData: IUser) {

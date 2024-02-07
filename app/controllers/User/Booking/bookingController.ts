@@ -10,6 +10,7 @@ import { ForeignKeyViolationError } from 'objection';
 import FlightService from '../../../services/flightService';
 import { ICompleteBooking } from '../../../types/Booking';
 import AuthService from '../../../services/authService';
+import { IBooking } from '../../../models/bookingModel';
 
 const defaultMeta = {
   page: 1,
@@ -59,19 +60,19 @@ class UserBookingController {
     }
   }
 
-  async listAllUserId(req: Request, res: Response) {
+  async listAllBookingWithUserUserId(req: Request, res: Response) {
     try {
       const headers = req.headers;
 
       const bearerToken = `${headers.authorization}`.split('Bearer');
       const token = bearerToken[1]?.trim();
       const userJWTData = await AuthService.validateToken(token);
-      const { data, count } = await BookingService.listAllUserId(userJWTData.userId);
+      const { updatedData, count } = await BookingService.listAllBookingWithUserId(userJWTData.userId);
 
       const responseData = ResponseBuilder.response({
         res,
         code: 200,
-        data: data,
+        data: updatedData,
         message: `success showing list of all user ${userJWTData.userId} bookings`,
         meta: { ...defaultMeta, totalData: count }
       });
@@ -83,6 +84,51 @@ class UserBookingController {
         status: 'FAIL',
         message: error.message
       });
+    }
+  }
+  
+  async showBookingWithUserUserIdAndBookingId(req: Request, res: Response) {
+    try {
+      const { booking_id } = req.params;
+      const headers = req.headers;
+
+      const bearerToken = `${headers.authorization}`.split('Bearer');
+      const token = bearerToken[1]?.trim();
+      const userJWTData = await AuthService.validateToken(token);
+      const { updatedData, count } = await BookingService.GetBookingWithUserIdAndBookingId(userJWTData.userId, parseInt(booking_id, 10));
+
+      const responseData = ResponseBuilder.response({
+        res,
+        code: 200,
+        data: updatedData,
+        message: `success showing user ${userJWTData.userId} bookings with booking ID ${booking_id}`,
+        meta: { ...defaultMeta, totalData: count }
+      });
+
+      return responseData;
+
+    } catch (error: any) {
+      res.status(500).json({
+        status: 'FAIL',
+        message: error.message
+      });
+    }
+  }
+
+  async update(req: IRequestWithAuth, res: Response, next: NextFunction) {
+    try {
+      const id = req.params?.booking_id;
+
+      const result = await BookingService.update(parseInt(id, 10), req.body as IBooking);
+
+      return ResponseBuilder.response({
+        res,
+        code: 201,
+        data: result,
+        message: 'success updating booking data'
+      });
+    } catch (error) {
+      next(error);
     }
   }
 }

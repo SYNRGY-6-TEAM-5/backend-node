@@ -6,7 +6,7 @@ import Ticket from './ticketModel';
 
 Model.knex(database);
 
-export interface IPassenger {
+export interface IMapTicket {
   map_ticket_id: number;
   booking_id: number;
   ticket_id: number;

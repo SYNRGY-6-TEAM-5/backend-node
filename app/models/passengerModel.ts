@@ -2,13 +2,16 @@ import { Model } from 'objection';
 import database from '../config/database';
 
 import Booking from './bookingModel';
+import TravelDoc from './travelDocModel';
+import PassengerAddon from './addOnsModel';
 
 Model.knex(database);
 
 export interface IPassenger {
   passenger_id: number;
   booking_id: number;
-  NIK: string;
+  id: string;
+  nik: string;
   name: string;
   date_of_birth: Date;
   courtesy_title: string;
@@ -37,6 +40,30 @@ class Passenger extends Model {
           to: 'booking.booking_id',
         },
       },
+      travel_docs: {
+        relation: Model.HasManyRelation,
+        modelClass: TravelDoc,
+        join: {
+          from: 'passenger_details.passenger_id',
+          to: 'travel_docs.passenger_id',
+        },
+      },
+      add_ons: {
+        relation: Model.HasManyRelation,
+        modelClass: PassengerAddon,
+        join: {
+          from: 'passenger_details.passenger_id',
+          to: 'passenger_addons.passenger_id',
+        },
+      },
+    };
+  }
+
+  static get modifiers() {
+    return {
+      selectPassengerDetails(builder: any) {
+        builder.select('*');
+      },
     };
   }
 
@@ -59,7 +86,8 @@ class Passenger extends Model {
       type: 'object',
       required: [
         'booking_id',
-        'NIK',
+        'nik',
+        'id',
         'name',
         'date_of_birth',
         'vaccinated'
@@ -67,7 +95,8 @@ class Passenger extends Model {
       properties: {
         passenger_id: { type: 'integer' },
         booking_id: { type: 'integer' },
-        NIK: { type: 'string' },
+        id: { type: 'string' },
+        nik: { type: 'string' },
         name: { type: 'string' },
         date_of_birth: { type: 'string' },
         courtesy_title: { type: 'string' },

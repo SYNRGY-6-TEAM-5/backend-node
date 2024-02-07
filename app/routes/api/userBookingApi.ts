@@ -14,7 +14,11 @@ class UserBookingApi {
   routes() {
     this.router.post('/', AuthMiddleware.authorizeUser, BookingController.create);
     
-    this.router.get('/', AuthMiddleware.authorizeUser, BookingController.listAllUserId);
+    this.router.get('/', AuthMiddleware.authorizeUser, BookingController.listAllBookingWithUserUserId);
+    
+    this.router.get('/:booking_id', AuthMiddleware.authorizeUser, BookingController.showBookingWithUserUserIdAndBookingId);
+    
+    this.router.put('/:booking_id', AuthMiddleware.authorizeUser, BookingController.update);
     
     return this.router;
   }
