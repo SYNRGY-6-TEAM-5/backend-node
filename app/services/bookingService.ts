@@ -8,17 +8,15 @@ import TravleDocService from './travleDocService';
 import MapTicketService from './mapTicketService';
 import AddOnsService from './addOnsService';
 import { ITravelDoc } from '../models/travelDocModel';
-import { IPassenger } from '../models/passengerModel';
-import { IPassengerAddon } from '../models/addOnsModel';
-import BookingRepository from '../repositories/bookingRepository';
+import Passenger, { IPassenger } from '../models/passengerModel';
+import PassengerAddon, { IPassengerAddon } from '../models/addOnsModel';
+import BookingRepository, { BookingWithDetails } from '../repositories/bookingRepository';
 import { IParams } from '../repositories/airportRepository';
-
-interface TripInsurance {
-  [key: string]: {
-    type: string;
-    price: number;
-  };
-}
+import Booking, { IBooking } from '../models/bookingModel';
+import ContactDetails from '../models/contactModel';
+import passengerRepository from '../repositories/passengerRepository';
+import TicketRepository, { TicketWithFlight } from '../repositories/ticketRepository';
+import TicketService from './ticketService';
 
 interface IResultData {
   passenger: IPassenger;
@@ -31,6 +29,7 @@ async function sendPassengerData(passenger: any, booking_id: number) {
   try {
     const {
       nik,
+      id,
       fullName,
       dateOfBirth,
       courtesy_title,
@@ -41,7 +40,8 @@ async function sendPassengerData(passenger: any, booking_id: number) {
       passenger: {
         passenger_id: 0,
         booking_id: 0,
-        NIK: "",
+        id: "",
+        nik: "",
         name: "",
         date_of_birth: new Date(),
         courtesy_title: "",
@@ -57,7 +57,8 @@ async function sendPassengerData(passenger: any, booking_id: number) {
 
     const payload = {
       booking_id: booking_id,
-      NIK: nik,
+      nik: nik,
+      id: id,
       name: fullName,
       date_of_birth: dateOfBirth,
       courtesy_title: courtesy_title,
@@ -123,14 +124,9 @@ async function sendPassengerData(passenger: any, booking_id: number) {
         baggage_price: parseFloat(passenger.add_ons.return.baggage.baggage_price)
       };
 
-
-
-
       const returnResult = await AddOnsService.create(returnPayload);
       resultData.returnAddOns.push(returnResult as unknown as IPassengerAddon);
-
-
-    }
+    };
 
     return resultData;
 
@@ -157,20 +153,18 @@ class BookingService {
       for (const [key, value] of Object.entries(trip_insurance)) {
         insuranceAvailability[key] = value.type !== "" && value.price !== 0;
       }
-      console.log(ticket_details.booked_ticket.length);
+
       const bookingReqBody = {
-        trip_type: ticket_details.booked_ticket.length === 1 ? "one-way" : "roundtrip",
+        booking_code: null,
         total_passenger: passenger_details.length,
         expired_time: ticket_details.expired_time,
         total_amount: ticket_details.total_ticket_price,
         full_protection: insuranceAvailability.full_insurance,
         bag_insurance: insuranceAvailability.baggage_insurance,
         flight_delay: insuranceAvailability.flight_delay_insurance,
-        payment_method: null,
-        status: null
+        payment_method: "",
+        status: "pending"
       }
-
-      console.log(bookingReqBody);
 
       const response: AxiosResponse = await axios.post('https://backend-java-production-ece2.up.railway.app/api/v1/booking', bookingReqBody,
         {
@@ -179,8 +173,11 @@ class BookingService {
           }
         }
       );
+
       const resBookingData = response.data;
       const resBookingId = parseInt(response.data.bookingId, 10);
+
+      console.log(resBookingData);
 
       let mapTicketResult = {};
 
@@ -191,8 +188,6 @@ class BookingService {
         };
 
         mapTicketResult = await MapTicketService.create(mapTicketPayload);
-
-
       }
 
       const contactDetailsReqBody = {
@@ -232,7 +227,8 @@ class BookingService {
               passenger: {
                 passenger_id: 0,
                 booking_id: 0,
-                NIK: "",
+                nik: "",
+                id: "",
                 name: "",
                 date_of_birth: new Date(),
                 courtesy_title: "",
@@ -261,15 +257,91 @@ class BookingService {
     }
   }
 
-  async listAllUserId(user_id: string, params?: IParams) {
-    console.log(user_id);
-    let data = await BookingRepository.findAllUserId(user_id);
+  async listAllBookingWithUserId(user_id: string, params?: IParams) {
+    let data: BookingWithDetails[] = await BookingRepository.findAllUserId(user_id);
+
+    const updatedData: BookingWithDetails[] = [];
+
+    // Iterate over each booking
+    for (const booking of data) {
+      const tickets = await Promise.all(
+        booking.map_ticket.map(async (mapTicket) => {
+          try {
+            const ticket = await TicketService.get(mapTicket.ticket_id);
+            return ticket[0]; // Assuming find always returns an array
+          } catch (error) {
+            return null; // Handle error or missing ticket
+          }
+        })
+      );
+
+      // Filter out null values and ensure type safety
+      const filteredTickets = tickets.filter((ticket) => ticket !== null);
+
+      // Append fetched tickets to the booking
+      const bookingWithTickets: BookingWithDetails = {
+        ...booking,
+        tickets: filteredTickets,
+      };
+
+      // Push the updated booking to the new array
+      updatedData.push(bookingWithTickets);
+    }
+
     let count = await BookingRepository.count(user_id, params);
 
     return {
-      data,
+      updatedData,
       count
     };
+  }
+
+  async GetBookingWithUserIdAndBookingId(user_id: string, booking_id: number, params?: IParams) {
+    let data: BookingWithDetails = await BookingRepository.findOneByUserIdAndBookingId(user_id, booking_id);
+
+    const updatedData: BookingWithDetails[] = [];
+
+      const tickets = await Promise.all(
+        data.map_ticket.map(async (mapTicket) => {
+          try {
+            const ticket = await TicketService.get(mapTicket.ticket_id);
+            return ticket[0]; // Assuming find always returns an array
+          } catch (error) {
+            return null; // Handle error or missing ticket
+          }
+        })
+      );
+
+      // Filter out null values and ensure type safety
+      const filteredTickets = tickets.filter((ticket) => ticket !== null);
+
+      // Append fetched tickets to the booking
+      const bookingWithTickets: BookingWithDetails = {
+        ...data,
+        tickets: filteredTickets,
+      };
+
+      // Push the updated booking to the new array
+      updatedData.push(bookingWithTickets);
+
+    return {
+      updatedData,
+      count: 1
+    };
+  }
+  
+  async update(booking_id: number, requestBody: any) {
+    try {
+      const payload = {
+        ...requestBody
+      };
+
+      console.log('Payload >>>', payload);
+
+      // return await BookingRepository.update(booking_id, payload);
+    } catch (err) {
+      throw err;
+    }
   }
 
   set setUser(userData: IUser) {

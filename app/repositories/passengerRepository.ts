@@ -1,19 +1,9 @@
 import Passenger, {IPassenger} from '../models/passengerModel';
+import { IParams } from './flightRepository';
 // import { BookingWithRelations } from './bookingRepository';
 
 export interface PassengerWithBooking extends IPassenger {
   // booking: BookingWithRelations;
-}
-
-export interface IParams {
-  passenger_id?: number;
-  booking_id?: number;
-  NIK?: string;
-  name?: string;
-  date_of_birth?: Date;
-  vaccinated?: boolean;
-  created_at?: number;
-  updated_at?: number;
 }
 
 class PassengerRepository {
@@ -22,29 +12,17 @@ class PassengerRepository {
     return Passenger.query().insert(createArgs);
   }
 
-  // async findAll(params?: IParams): Promise<Array<PassengerWithBooking>> {
-  //   let passengersQuery = Passenger.query()
-  //     .select("passenger.*")
-  //     .joinRelated('booking')
-  //     .withGraphFetched(`[
-  //       booking.[
-  //         departure(selectAirportDetails).[airport_details],
-  //         arrival(selectAirportDetails).[airport_details],
-  //         airline
-  //       ]
-  //     ]`);
+  async findAllPassengerWithBookingId(booking_id: number, params?: IParams): Promise<Array<IPassenger>> {
+    let passsengersQuery = Passenger.query().where('booking_id', booking_id);
 
-  //   if (params?.search) {
-  //     const searchValue = `%${params.search}%`;
-  //     passengersQuery = passengersQuery
-  //       .whereILike('passenger.passenger_id', searchValue)
-  //       .orWhereILike('passenger.NIK', searchValue);
-  //   }
+    if (params?.search) {
+      passsengersQuery = passsengersQuery.where('name', 'like', `%${params?.search}%`);
+    }
 
-  //   const passengers = await passengersQuery.orderBy('passenger.created_at', 'desc');
+    const passengers = await passsengersQuery.orderBy('created_at', 'desc');
 
-  //   return passengers as Array<PassengerWithBooking>;
-  // }
+    return passengers as unknown as Array<IPassenger>;
+  }
 
   // async find(passenger_id: number, params?: IParams): Promise<Array<PassengerWithBooking>> {
   //   let passengerQuery = Passenger.query()

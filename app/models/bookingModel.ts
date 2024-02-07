@@ -2,13 +2,16 @@ import { Model } from 'objection';
 import database from '../config/database';
 
 import User from './userModel';
+import Passenger from './passengerModel';
+import ContactDetails from './contactModel';
+import MapTicket from './mapTicketModel';
 
 Model.knex(database);
 
 export interface IBooking {
   booking_id: number;
   user_id: string;
-  trip_type: string;
+  booking_code: string;
   total_passenger: number;
   expired_time: Date;
   total_amount: number;
@@ -38,6 +41,30 @@ class Booking extends Model {
           to: 'user.user_id',
         },
       },
+      passengers: {
+        relation: Model.HasManyRelation,
+        modelClass: Passenger,
+        join: {
+          from: 'booking.booking_id',
+          to: 'passenger_details.booking_id',
+        },
+      },
+      map_ticket: {
+        relation: Model.HasManyRelation,
+        modelClass: MapTicket,
+        join: {
+          from: 'booking.booking_id',
+          to: 'map_ticket.booking_id',
+        },
+      },
+    };
+  }
+
+  static get modifiers() {
+    return {
+      selectPassengerDetails(builder: any) {
+        builder.select('*');
+      },
     };
   }
 
@@ -60,7 +87,7 @@ class Booking extends Model {
       type: 'object',
       required: [
         'user_id',
-        'trip_type',
+        'booking_code',
         'total_passenger',
         'expired_time',
         'total_amount',
@@ -73,7 +100,7 @@ class Booking extends Model {
       properties: {
         booking_id: { type: 'integer' },
         user_id: { type: 'string' },
-        trip_type: { type: 'string' },
+        booking_code: { type: 'string' },
         total_passenger: { type: 'integer' },
         expired_time: { type: 'string' },
         total_amount: { type: 'integer' },
