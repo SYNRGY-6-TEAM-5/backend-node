@@ -33,19 +33,7 @@ class BenefitController implements IRestController {
       return responseData;
 
     } catch (error: any) {
-      if (error instanceof ForeignKeyViolationError) {
-        return res.status(422).json({
-          status: 'FAIL',
-          message: "Failed create benefit",
-          server_log: error.message
-        });
-      } else {
-        return res.status(500).json({
-          status: 'FAIL',
-          message: "Failed create benefit",
-          server_log: error.message
-        });
-      }
+      next(error);
     }
   }
   
@@ -135,19 +123,7 @@ class BenefitController implements IRestController {
       }
 
     } catch (error: any) {
-      if (error instanceof ForeignKeyViolationError) {
-        return res.status(422).json({
-          status: 'FAIL',
-          message: "Failed update benefit",
-          server_log: error.message
-        });
-      } else {
-        return res.status(500).json({
-          status: 'FAIL',
-          message: "Failed update benefit",
-          server_log: error.message
-        });
-      }
+      next(error);
     }
   }
 

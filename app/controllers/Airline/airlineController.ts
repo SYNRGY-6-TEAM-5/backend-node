@@ -78,11 +78,7 @@ class AirlineController implements IRestController {
           server_log: error.message
         });
       } else {
-        return res.status(500).json({
-          status: 'FAIL',
-          message: "Failed create airline",
-          server_log: error.message
-        });
+        next(error);
       }
     }
   }
@@ -163,19 +159,7 @@ class AirlineController implements IRestController {
         });
 
     } catch (error: any) {
-      if (error instanceof ForeignKeyViolationError) {
-        return res.status(422).json({
-          status: 'FAIL',
-          message: "Failed update airline",
-          server_log: error.message
-        });
-      } else {
-        return res.status(500).json({
-          status: 'FAIL',
-          message: "Failed update airline",
-          server_log: error.message
-        });
-      }
+      next(error);
     }
   }
 

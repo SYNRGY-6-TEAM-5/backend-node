@@ -95,6 +95,14 @@ class FlightController implements IRestController {
     try {
       const id = req.params?.flight_id;
 
+      const flightExists = await FlightService.get(parseInt(id, 10));
+      if (!flightExists) {
+        return res.status(422).json({
+          status: 'FAIL',
+          message: `Flight with ID ${id} not found in the database`
+        });
+      }
+
       const result = await FlightService.update(parseInt(id, 10), req.body as IFlight);
 
       return ResponseBuilder.response({
@@ -111,15 +119,26 @@ class FlightController implements IRestController {
   async delete(req: Request, res: Response) {
     try {
       const { flight_id } = req.params;
-      await FlightService.delete(parseInt(flight_id, 10));
-      res.status(200).json({
-        status: 'OK',
-        message: 'Successfully deleted flight'
-      });
+
+      const deletedFlightId = await FlightService.delete(parseInt(flight_id, 10));
+
+      if (deletedFlightId !== undefined) {
+        res.status(200).json({
+          status: 'OK',
+          message: 'Successfully deleted flight'
+        });
+      } else {
+        return res.status(404).json({
+          status: 'FAIL',
+          message: `Flight with ID ${flight_id} is not found in database`
+        });
+      }
+
     } catch (error: any) {
-      res.status(422).json({
+      return res.status(500).json({
         status: 'FAIL',
-        message: error.message
+        message: "Failed delete flight",
+        server_log: error.message
       });
     }
   }

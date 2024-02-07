@@ -1,8 +1,12 @@
-import express, { type Express } from 'express';
+import express, { NextFunction, type Express } from 'express';
 import dotenv from 'dotenv';
 import path from 'path';
 import cors from 'cors';
+import "express-async-errors";
+
 dotenv.config();
+
+import ErrorHandlerMiddleware from './middlewares/error';
 
 import HealthApi from './routes/api/healthApi';
 import DepartureApi from './routes/api/departureApi';
@@ -31,6 +35,7 @@ class Server {
     this.app.use(express.urlencoded({ extended: false }));
     this.app.use(cors());
 
+    
     this.app.use('/api/health', HealthApi.routes());
     this.app.use('/api/departure', DepartureApi.routes());
     this.app.use('/api/arrival', ArrivalApi.routes());
@@ -43,7 +48,9 @@ class Server {
     this.app.use('/api/ticket', TicketApi.routes());
     this.app.use('/api/travel-docs/admin', TravelDocAdminApi.routes());
     this.app.use('/api/travel-docs/user', TravelDocUserApi.routes());
-
+    
+    this.app.use(ErrorHandlerMiddleware.errorHandler);
+    
     swaggerDocs(this.app, 8000);
   }
 

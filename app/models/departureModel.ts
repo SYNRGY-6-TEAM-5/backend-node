@@ -72,7 +72,7 @@ class Departure extends Model implements IDeparture {
         departure_id: { type: 'integer' },
         airport_id: { type: 'integer' },
         terminal: { type: 'string', minLength: 1, maxLength: 10 },
-        scheduled_time: { type: 'string'},
+        scheduled_time: { type: 'string', minLength: 1},
       }
     };
   }
