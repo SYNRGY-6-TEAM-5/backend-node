@@ -8,15 +8,12 @@ import TravleDocService from './travleDocService';
 import MapTicketService from './mapTicketService';
 import AddOnsService from './addOnsService';
 import { ITravelDoc } from '../models/travelDocModel';
-import Passenger, { IPassenger } from '../models/passengerModel';
-import PassengerAddon, { IPassengerAddon } from '../models/addOnsModel';
+import { IPassenger } from '../models/passengerModel';
+import { IPassengerAddon } from '../models/addOnsModel';
 import BookingRepository, { BookingWithDetails } from '../repositories/bookingRepository';
 import { IParams } from '../repositories/airportRepository';
-import Booking, { IBooking } from '../models/bookingModel';
-import ContactDetails from '../models/contactModel';
-import passengerRepository from '../repositories/passengerRepository';
-import TicketRepository, { TicketWithFlight } from '../repositories/ticketRepository';
 import TicketService from './ticketService';
+import { generateBookingCode } from '../utils/generator';
 
 interface IResultData {
   passenger: IPassenger;
@@ -163,7 +160,9 @@ class BookingService {
         bag_insurance: insuranceAvailability.baggage_insurance,
         flight_delay: insuranceAvailability.flight_delay_insurance,
         payment_method: "",
-        status: "pending"
+        status: "pending",
+        external_id: "",
+        payment_id: "",
       }
 
       const response: AxiosResponse = await axios.post('https://backend-java-production-ece2.up.railway.app/api/v1/booking', bookingReqBody,
@@ -330,19 +329,21 @@ class BookingService {
     };
   }
 
-  async update(booking_id: number, requestBody: any) {
+  async update(requestBody: any) {
     try {
-      const { payment_method_types, status } = requestBody;
+      const { payment_method_types, status, metadata, id, client_secret } = requestBody;
 
+      const booking_id = parseInt(metadata.booking_id, 10);
 
       const payload = {
-        payment_method_types,
-        status
+        booking_code: generateBookingCode(metadata),
+        payment_method: payment_method_types[0],
+        status: status === "succeeded" ? "PAID" : "PENDING",
+        external_id: client_secret,
+        payment_id: id
       };
 
-      console.log('Payload >>>', payload);
-
-      // return await BookingRepository.update(booking_id, payload);
+      return await BookingRepository.update(booking_id, payload);
     } catch (err) {
       throw err;
     }

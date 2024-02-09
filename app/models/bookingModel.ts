@@ -3,7 +3,6 @@ import database from '../config/database';
 
 import User from './userModel';
 import Passenger from './passengerModel';
-import ContactDetails from './contactModel';
 import MapTicket from './mapTicketModel';
 
 Model.knex(database);
@@ -20,6 +19,8 @@ export interface IBooking {
   flight_delay: boolean;
   payment_method: string;
   status: string;
+  external_id: string;
+  payment_id: string;
 }
 
 class Booking extends Model {
@@ -109,6 +110,8 @@ class Booking extends Model {
         flight_delay: { type: 'boolean' },
         payment_method: { type: 'string' },
         status: { type: 'string' },
+        external_id: { type: 'string' },
+        payment_id: { type: 'string' },
       }
     };
   }
