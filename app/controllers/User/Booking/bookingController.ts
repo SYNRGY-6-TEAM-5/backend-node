@@ -117,9 +117,7 @@ class UserBookingController {
 
   async update(req: IRequestWithAuth, res: Response, next: NextFunction) {
     try {
-      const id = req.params?.booking_id;
-
-      const result = await BookingService.update(parseInt(id, 10), req.body as IBooking);
+      const result = await BookingService.update(req.body as IBooking);
 
       return ResponseBuilder.response({
         res,

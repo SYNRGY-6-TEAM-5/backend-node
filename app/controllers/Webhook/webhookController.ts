@@ -32,7 +32,7 @@ class WebhookController {
                     // Extract booking_id from metadata of payment intent
                     const booking_id = parseInt(paymentIntent.metadata.booking_id, 10);
                     // Update booking status to paid in your database
-                    await BookingService.update(booking_id, paymentIntent);
+                    await BookingService.update(paymentIntent);
                     break;
                 // Handle other event types if needed
                 default:
