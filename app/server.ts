@@ -33,6 +33,9 @@ class Server {
   constructor() {
     this.app = express();
     this.app.use(express.static(PUBLIC_DIR));
+
+    this.app.use('/api/webhook', WebhookApi.routes());
+    
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: false }));
     this.app.use(cors());
@@ -47,7 +50,6 @@ class Server {
     this.app.use('/api/benefit', BenefitApi.routes());
     this.app.use('/api/user/booking', UserBookingAPI.routes());
     this.app.use('/api/user/payment', UserPaymentApi.routes());
-    this.app.use('/api/webhook', WebhookApi.routes());
     this.app.use('/api/passenger', PassengerApi.routes());
     this.app.use('/api/ticket', TicketApi.routes());
     this.app.use('/api/travel-docs/admin', TravelDocAdminApi.routes());
