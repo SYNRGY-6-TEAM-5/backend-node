@@ -17,7 +17,9 @@ class PaymentController {
             const userJWTData = await AuthService.validateToken(token);
             const user_id = userJWTData.userId;
 
-            const result = await PaymentService.create(parseInt(booking_id, 10), user_id);
+            const payload = req.body;
+
+            const result = await PaymentService.create(parseInt(booking_id, 10), user_id, payload);
 
             const responseData = ResponseBuilder.response({
                 res,
