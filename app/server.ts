@@ -17,6 +17,8 @@ import FlightApi from './routes/api/flightApi';
 import BenefitApi from './routes/api/benefitApi';
 import TicketApi from './routes/api/ticketApi';
 import UserBookingAPI from './routes/api/userBookingApi';
+import UserPaymentApi from './routes/api/userPaymentApi';
+import WebhookApi from './routes/api/webhookApi';
 import PassengerApi from './routes/api/passengerApi';
 import TravelDocAdminApi from './routes/api/travelDocAdminApi';
 import TravelDocUserApi from './routes/api/travelDocUserApi';
@@ -44,6 +46,8 @@ class Server {
     this.app.use('/api/flight', FlightApi.routes());
     this.app.use('/api/benefit', BenefitApi.routes());
     this.app.use('/api/user/booking', UserBookingAPI.routes());
+    this.app.use('/api/user/payment', UserPaymentApi.routes());
+    this.app.use('/api/webhook', WebhookApi.routes());
     this.app.use('/api/passenger', PassengerApi.routes());
     this.app.use('/api/ticket', TicketApi.routes());
     this.app.use('/api/travel-docs/admin', TravelDocAdminApi.routes());
