@@ -1,5 +1,6 @@
-import { Model } from 'objection';
+import { Model, RelationMappings } from 'objection';
 import database from '../config/database';
+import Role from './roleModel';
 
 Model.knex(database);
 
@@ -20,6 +21,13 @@ class User extends Model {
   last_modified!: string;
   user_id!: string;
   email_address!: string;
+  is_active?: boolean;
+  bitrh_date?: string;
+  phone_num?: string;
+  image_id?: string;
+  role_id?: string;
+  fullname?: string;
+  password?: string;
 
   static get tableName(): string {
     return 'users';
@@ -27,6 +35,19 @@ class User extends Model {
 
   static get idColumn(): string {
     return 'user_id';
+  }
+
+  static get relationMappings(): RelationMappings {
+    return {
+      role: {
+        relation: Model.BelongsToOneRelation,
+        modelClass: Role,
+        join: {
+          from: 'users.role_id',
+          to: 'role.role_id'
+        }
+      }
+    };
   }
 
   $beforeInsert() {
@@ -44,7 +65,7 @@ class User extends Model {
   static get jsonSchema(): object {
     return {
       type: 'object',
-      required: ['user_id', 'email_address', 'password', 'role_id'],
+      required: ['user_id', 'email_address', 'role_id'],
       properties: {
         user_id: { type: 'string', format: 'uuid' },
         bitrh_date: { type: 'string' },
@@ -53,11 +74,10 @@ class User extends Model {
         role_id: { type: 'string', format: 'uuid' },
         email_address: { type: 'string', minLength: 1, maxLength: 255 },
         fullname: { type: 'string', minLength: 1, maxLength: 255 },
-        password: { type: 'string', minLength: 1, maxLength: 255 },
-      },
+        password: { type: 'string', minLength: 1, maxLength: 255 }
+      }
     };
   }
-  
 }
 
 export default User;
