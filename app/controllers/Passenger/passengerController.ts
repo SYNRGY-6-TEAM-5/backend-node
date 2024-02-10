@@ -5,7 +5,7 @@ import ResponseBuilder from '../../utils/ResponseBuilder';
 
 import { type IRequestWithAuth } from '../../middlewares/auth';
 
-import { type IRestController } from '../../interfaces/IRest';
+import AuthService from '../../services/authService';
 
 import { IPassenger } from '../../models/passengerModel';
 
@@ -36,28 +36,63 @@ class PassengerController {
     }
   }
   
-  // async list(req: Request, res: Response) {
-    // try {
-    //   const query = req.query;
-    //   const { data, count } = await PassengerService.list(query);
+  async listSavedPassenger(req: Request, res: Response) {
+    try {
+      const headers = req.headers;
 
-    //   const responseData = ResponseBuilder.response({
-    //     res,
-    //     code: 200,
-    //     data: data,
-    //     message: 'success showing list of all passengers',
-    //     meta: { ...defaultMeta, totalData: count }
-    //   });
+      const bearerToken = `${headers.authorization}`.split('Bearer');
+      const token = bearerToken[1]?.trim();
+      const userJWTData = await AuthService.validateToken(token);
 
-    //   return responseData;
+      const { data } = await PassengerService.listSavedPassenger(userJWTData.userId);
 
-    // } catch (error: any) {
-    //   res.status(500).json({
-    //     status: 'FAIL',
-    //     message: error.message
-    //   });
-    // }
-  // }
+      const responseData = ResponseBuilder.response({
+        res,
+        code: 200,
+        data: data,
+        message: 'success showing list of all passengers',
+        meta: { ...defaultMeta }
+      });
+
+      return responseData;
+
+    } catch (error: any) {
+      res.status(500).json({
+        status: 'FAIL',
+        message: error.message
+      });
+    }
+  }
+  
+  async showSavedPassenger(req: Request, res: Response) {
+    try {
+      const headers = req.headers;
+
+      const bearerToken = `${headers.authorization}`.split('Bearer');
+      const token = bearerToken[1]?.trim();
+      const userJWTData = await AuthService.validateToken(token);
+
+      const { saved_passenger_id } = req.params;
+
+      const { data } = await PassengerService.getOneSavedPassenger(parseInt(saved_passenger_id, 10), userJWTData.userId);
+
+      const responseData = ResponseBuilder.response({
+        res,
+        code: 200,
+        data: data,
+        message: 'success showing passenger details',
+        meta: { ...defaultMeta }
+      });
+
+      return responseData;
+
+    } catch (error: any) {
+      res.status(500).json({
+        status: 'FAIL',
+        message: error.message
+      });
+    }
+  }
 
   // async show(req: Request, res: Response) {
   //   try {

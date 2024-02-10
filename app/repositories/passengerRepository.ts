@@ -1,4 +1,5 @@
-import Passenger, {IPassenger} from '../models/passengerModel';
+import Passenger, { IPassenger } from '../models/passengerModel';
+import SavedPassenger, { ISavedPassenger } from '../models/savedPassengerModel';
 import { IParams } from './flightRepository';
 // import { BookingWithRelations } from './bookingRepository';
 
@@ -12,6 +13,11 @@ class PassengerRepository {
     return Passenger.query().insert(createArgs);
   }
 
+  createSavedPassenger(createArgs: any) {
+    console.log(createArgs);
+    return SavedPassenger.query().insert(createArgs);
+  }
+
   async findAllPassengerWithBookingId(booking_id: number, params?: IParams): Promise<Array<IPassenger>> {
     let passsengersQuery = Passenger.query().where('booking_id', booking_id);
 
@@ -22,6 +28,27 @@ class PassengerRepository {
     const passengers = await passsengersQuery.orderBy('created_at', 'desc');
 
     return passengers as unknown as Array<IPassenger>;
+  }
+
+  async findAllUserSavedPassenger(user_id: string): Promise<Array<IPassenger>> {
+    let passsengersQuery = SavedPassenger.query().where('user_id', user_id);
+
+    const passengers = await passsengersQuery.orderBy('created_at', 'desc');
+
+    return passengers as unknown as Array<IPassenger>;
+  }
+
+  async findOneUserSavedPassenger(saved_passenger_id: number, user_id: string): Promise<Array<ISavedPassenger>> {
+    try {
+      const passengers = await SavedPassenger.query()
+        .where('saved_passenger_id', saved_passenger_id)
+        .andWhere('user_id', user_id)
+        .withGraphFetched('travel_docs'); // Eagerly fetch related travel docs
+
+      return passengers as unknown as Array<ISavedPassenger>;
+    } catch (error) {
+      throw error;
+    }
   }
 
   // async find(passenger_id: number, params?: IParams): Promise<Array<PassengerWithBooking>> {
