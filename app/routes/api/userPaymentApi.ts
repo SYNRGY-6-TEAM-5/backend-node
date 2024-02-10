@@ -4,7 +4,7 @@ import PaymentController from '../../controllers/User/Payment/paymentController'
 
 import AuthMiddleware from '../../middlewares/auth';
 
-class UserBookingApi {
+class UserPaymentApi {
   private readonly router: Router;
 
   constructor() {
@@ -12,10 +12,10 @@ class UserBookingApi {
   }
 
   routes() {
-    this.router.post('/user/payment/:booking_id', AuthMiddleware.authorizeUser, PaymentController.create);
+    this.router.post('/:booking_id', AuthMiddleware.authorizeUser, PaymentController.create);
     
     return this.router;
   }
 }
 
-export default new UserBookingApi();
+export default new UserPaymentApi();

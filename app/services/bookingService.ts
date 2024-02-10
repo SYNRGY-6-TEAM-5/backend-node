@@ -301,39 +301,43 @@ class BookingService {
 
     const updatedData: BookingWithDetails[] = [];
 
-      const tickets = await Promise.all(
-        data.map_ticket.map(async (mapTicket) => {
-          try {
-            const ticket = await TicketService.get(mapTicket.ticket_id);
-            return ticket[0]; // Assuming find always returns an array
-          } catch (error) {
-            return null; // Handle error or missing ticket
-          }
-        })
-      );
+    const tickets = await Promise.all(
+      data.map_ticket.map(async (mapTicket) => {
+        try {
+          const ticket = await TicketService.get(mapTicket.ticket_id);
+          return ticket[0]; // Assuming find always returns an array
+        } catch (error) {
+          return null; // Handle error or missing ticket
+        }
+      })
+    );
 
-      // Filter out null values and ensure type safety
-      const filteredTickets = tickets.filter((ticket) => ticket !== null);
+    // Filter out null values and ensure type safety
+    const filteredTickets = tickets.filter((ticket) => ticket !== null);
 
-      // Append fetched tickets to the booking
-      const bookingWithTickets: BookingWithDetails = {
-        ...data,
-        tickets: filteredTickets,
-      };
+    // Append fetched tickets to the booking
+    const bookingWithTickets: BookingWithDetails = {
+      ...data,
+      tickets: filteredTickets,
+    };
 
-      // Push the updated booking to the new array
-      updatedData.push(bookingWithTickets);
+    // Push the updated booking to the new array
+    updatedData.push(bookingWithTickets);
 
     return {
       updatedData,
       count: 1
     };
   }
-  
+
   async update(booking_id: number, requestBody: any) {
     try {
+      const { payment_method_types, status } = requestBody;
+
+
       const payload = {
-        ...requestBody
+        payment_method_types,
+        status
       };
 
       console.log('Payload >>>', payload);
