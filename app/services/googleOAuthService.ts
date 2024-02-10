@@ -21,7 +21,10 @@ function createToken(user: UserWithRole) {
   };
 
   const expiresIn = 3600000;
-  return jwt.sign(payload, decodedSecretBuffer, { algorithm: 'HS256', expiresIn });
+  return {
+    token: jwt.sign(payload, decodedSecretBuffer, { algorithm: 'HS256', expiresIn }),
+    roles: user?.role?.role_name
+  };
 }
 
 class GoogleOAuthService {
@@ -32,7 +35,6 @@ class GoogleOAuthService {
 
     try {
       const response = await axios.get('https://www.googleapis.com/oauth2/v2/userinfo', options);
-      console.log(response.data);
       const { email, name, picture } = response.data;
 
       let user = await this.findUserByEmail(email);
