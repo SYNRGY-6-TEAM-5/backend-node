@@ -24,7 +24,9 @@ class PassengerApi {
      *       200:
      *         description: App is up and running
      */
-    // this.router.get('/', AuthMiddleware.authorizeUser, PassengerController.list); // /api/books READ
+    this.router.get('/user/saved-passenger', AuthMiddleware.authorizeUser, PassengerController.listSavedPassenger); // /api/books READ
+    
+    this.router.get('/user/saved-passenger/:saved_passenger_id', AuthMiddleware.authorizeUser, PassengerController.showSavedPassenger); // /api/books READ
 
     /**
      * @openapi

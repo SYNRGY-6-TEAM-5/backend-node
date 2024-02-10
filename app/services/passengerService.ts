@@ -22,68 +22,29 @@ class PassengerService {
     }
   }
 
-  async list() {
-    return;
+  async listSavedPassenger(user_id: string) {
+    try {
+      let passengers = await PassengerRepository.findAllUserSavedPassenger(user_id);
+  
+      return {
+        data: passengers,
+      };
+    } catch (err) {
+      throw err;
+    }
   }
-
-  // async list(params?: IParams) {
-  //   try {
-  //     let passengers = await PassengerRepository.findAll(params);
-  //     let count = await PassengerRepository.count(params);
-
-  //     if (params?.booking_id) {
-  //       passengers = passengers.filter((passenger: PassengerWithBooking) =>
-  //         passenger.booking?.booking_id === params.booking_id
-  //       );
-  //       count = passengers.length;
-  //     }
-
-      // if (params?.arrival_airport) {
-      //   tickets = tickets.filter((ticket: TicketWithFlight) =>
-      //     ticket.flight?.arrival?.airport_details.iata_code === params.arrival_airport
-      //   );
-      //   count = tickets.length;
-      // }
-      // if (params?.departure_date) {
-      //   const departureDate = new Date(params.departure_date);
-      //   tickets = tickets.filter((ticket: TicketWithFlight) =>
-      //   ticket.flight?.departure?.scheduled_time?.toISOString().split('T')[0] === departureDate.toISOString().split('T')[0]
-      //   );
-      //   count = tickets.length;
-      // }
   
-  //     return {
-  //       data: passengers,
-  //       count,
-  //     };
-  //   } catch (err) {
-  //     throw err;
-  //   }
-  // }
-
-  // async get(passenger_id: number) {
-  //   try {
-  //     if (!passenger_id) {
-  //       throw new Error('Invalid passenger id');
-  //     }
-      
-  //     let passengers = await PassengerRepository.find(passenger_id);
-  //     return await Promise.all(
-  //       passengers.map(async (passenger: Passenger) => {
-  //         // const bookingDetails = await BookingRepository.find(passenger.booking_id);
-  //         // const benefits = await BenefitRepository.findByFlightId(ticket.flight_id);
+  async getOneSavedPassenger(saved_passenger_id: number, user_id: string) {
+    try {
+      let passenger = await PassengerRepository.findOneUserSavedPassenger(saved_passenger_id, user_id);
   
-  //         return {
-  //           ...passenger,
-  //           // booking: bookingDetails[0],
-  //           // benefits,
-  //         };
-  //       })
-  //     );
-  //   } catch (err) {
-  //     throw err;
-  //   }
-  // }
+      return {
+        data: passenger,
+      };
+    } catch (err) {
+      throw err;
+    }
+  }
 
   // async update(passenger_id: number, requestBody: any) {
   //   try {
