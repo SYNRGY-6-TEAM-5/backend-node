@@ -21,6 +21,7 @@ import PassengerApi from './routes/api/passengerApi';
 import TravelDocAdminApi from './routes/api/travelDocAdminApi';
 import TravelDocUserApi from './routes/api/travelDocUserApi';
 import swaggerDocs from './utils/swagger';
+import googleOAuthApi from './routes/api/googleOAuthApi';
 
 const { PORT = 8060 } = process.env;
 const PUBLIC_DIR = path.join(__dirname, 'public');
@@ -48,6 +49,7 @@ class Server {
     this.app.use('/api/ticket', TicketApi.routes());
     this.app.use('/api/travel-docs/admin', TravelDocAdminApi.routes());
     this.app.use('/api/travel-docs/user', TravelDocUserApi.routes());
+    this.app.use('/api/g-auth', googleOAuthApi.routes());
     
     this.app.use(ErrorHandlerMiddleware.errorHandler);
     

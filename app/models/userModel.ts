@@ -20,6 +20,13 @@ class User extends Model {
   last_modified!: string;
   user_id!: string;
   email_address!: string;
+  is_active?: boolean;
+  bitrh_date?: string;
+  phone_num?: string;
+  image_id?: string;
+  role_id?: string;
+  fullname?: string;
+  password?: string;
 
   static get tableName(): string {
     return 'users';
@@ -44,7 +51,7 @@ class User extends Model {
   static get jsonSchema(): object {
     return {
       type: 'object',
-      required: ['user_id', 'email_address', 'password', 'role_id'],
+      required: ['user_id', 'email_address', 'role_id'],
       properties: {
         user_id: { type: 'string', format: 'uuid' },
         bitrh_date: { type: 'string' },
