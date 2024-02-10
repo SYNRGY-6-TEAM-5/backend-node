@@ -1,5 +1,6 @@
-import { Model } from 'objection';
+import { Model, RelationMappings } from 'objection';
 import database from '../config/database';
+import Role from './roleModel';
 
 Model.knex(database);
 
@@ -36,6 +37,19 @@ class User extends Model {
     return 'user_id';
   }
 
+  static get relationMappings(): RelationMappings {
+    return {
+      role: {
+        relation: Model.BelongsToOneRelation,
+        modelClass: Role,
+        join: {
+          from: 'users.role_id',
+          to: 'role.role_id'
+        }
+      }
+    };
+  }
+
   $beforeInsert() {
     this.created_at = new Date().toISOString();
   }
@@ -60,11 +74,10 @@ class User extends Model {
         role_id: { type: 'string', format: 'uuid' },
         email_address: { type: 'string', minLength: 1, maxLength: 255 },
         fullname: { type: 'string', minLength: 1, maxLength: 255 },
-        password: { type: 'string', minLength: 1, maxLength: 255 },
-      },
+        password: { type: 'string', minLength: 1, maxLength: 255 }
+      }
     };
   }
-  
 }
 
 export default User;

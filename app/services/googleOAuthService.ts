@@ -4,17 +4,24 @@ import jwt from 'jsonwebtoken';
 import Image from '../models/imageModel';
 import { randomUUID } from 'crypto';
 import { Transaction } from 'objection';
+import Role from '../models/roleModel';
 
-const { JWT_SECRET_KEY = 'Rahasia' } = process.env;
+const jwtSecret: string = '357638792F423F4428472B4B6250655368566D597133743677397A2443264629';
+const decodedSecretBuffer: Buffer = Buffer.from(jwtSecret, 'base64');
 
-function createToken(user: any) {
+interface UserWithRole extends User {
+  role?: Role;
+}
+
+function createToken(user: UserWithRole) {
   const payload = {
-    id: user.id,
-    name: user.name,
-    email: user.email
+    sub: user.email_address,
+    role: user.role?.role_name,
+    userId: user.user_id
   };
 
-  return jwt.sign(payload, JWT_SECRET_KEY);
+  const expiresIn = 3600000;
+  return jwt.sign(payload, decodedSecretBuffer, { algorithm: 'HS256', expiresIn });
 }
 
 class GoogleOAuthService {
@@ -24,21 +31,20 @@ class GoogleOAuthService {
     let transaction: Transaction | undefined = undefined;
 
     try {
-      transaction = await User.startTransaction();
-
-      console.log(options);
       const response = await axios.get('https://www.googleapis.com/oauth2/v2/userinfo', options);
       console.log(response.data);
       const { email, name, picture } = response.data;
 
       let user = await this.findUserByEmail(email);
       if (!user) {
+        transaction = await User.startTransaction();
         const profileImage = await this.createProfileImage(transaction, name, picture);
-        user = await this.createUser(transaction, email, name, profileImage);
+        await this.createUser(transaction, email, name, profileImage);
+        await transaction.commit();
+        user = await this.findUserByEmail(email);
       }
 
-      await transaction.commit();
-      const accessToken = createToken(user);
+      const accessToken = createToken(user!);
       return accessToken;
     } catch (error) {
       if (transaction) await transaction.rollback();
@@ -49,7 +55,7 @@ class GoogleOAuthService {
 
   private async findUserByEmail(email: string) {
     try {
-      return await User.query().findOne({ email_address: email });
+      return await User.query().findOne({ email_address: email }).withGraphFetched('role');
     } catch (error) {
       console.error('Error while finding user by email:', error);
       throw error;
@@ -76,12 +82,13 @@ class GoogleOAuthService {
     profileImage: any
   ) {
     try {
+      const role = await Role.query(transaction).findOne({ role_name: 'USER' });
       return await User.query(transaction).insert({
         user_id: randomUUID(),
-        // email_address: email,
-        // fullname: name,
-        image_id: profileImage.image_id
-        // role_id: 'ffd22377-5df3-48de-a089-fa2d62808b52'
+        email_address: email,
+        fullname: name,
+        image_id: profileImage.image_id,
+        role_id: role?.role_id
       });
     } catch (error) {
       console.error('Error while creating user:', error);
