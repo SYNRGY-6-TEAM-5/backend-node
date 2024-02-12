@@ -1,5 +1,5 @@
 {
-  "include": ["*.ts", "*/**.ts", "*/**/***.ts"],
+  "include": ["*.ts", "*/**.ts", "*/**/***.ts", "app/firebaseAdmin.ts"],
   "exclude": ["node_modules"],
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig to read more about this file */

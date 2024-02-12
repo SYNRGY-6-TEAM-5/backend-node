@@ -20,6 +20,8 @@ class UserBookingApi {
     
     this.router.put('/:booking_id', AuthMiddleware.authorizeUser, BookingController.update);
     
+    this.router.put('/check-in/:booking_id', AuthMiddleware.authorizeUser, BookingController.checkIn);
+    
     return this.router;
   }
 }

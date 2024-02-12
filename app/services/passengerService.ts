@@ -4,6 +4,15 @@ import { type IUser } from '../interfaces/IAuth';
 import PassengerRepository, { PassengerWithBooking } from '../repositories/passengerRepository';
 import Passenger from '../models/passengerModel';
 
+const getRandomUpperCaseChar = () => {
+  const charCode = Math.floor(Math.random() * 4) + 65; // Random ASCII code for uppercase A-D (65-68)
+  return String.fromCharCode(charCode);
+};
+
+const getRandomThreeDigitNumber = () => {
+  return Math.floor(Math.random() * 200) + 1; // Random number between 1 to 200
+};
+
 class PassengerService {
   private _user: IUser | undefined;
 
@@ -22,94 +31,43 @@ class PassengerService {
     }
   }
 
-  async list() {
-    return;
+  async listSavedPassenger(user_id: string) {
+    try {
+      let passengers = await PassengerRepository.findAllUserSavedPassenger(user_id);
+  
+      return {
+        data: passengers,
+      };
+    } catch (err) {
+      throw err;
+    }
+  }
+  
+  async getOneSavedPassenger(saved_passenger_id: number, user_id: string) {
+    try {
+      let passenger = await PassengerRepository.findOneUserSavedPassenger(saved_passenger_id, user_id);
+  
+      return {
+        data: passenger,
+      };
+    } catch (err) {
+      throw err;
+    }
   }
 
-  // async list(params?: IParams) {
-  //   try {
-  //     let passengers = await PassengerRepository.findAll(params);
-  //     let count = await PassengerRepository.count(params);
+  async update(passenger_id: number) {
+    try {
+      const seat = `${getRandomUpperCaseChar()}${getRandomThreeDigitNumber().toString().padStart(3, "0")}`;
 
-  //     if (params?.booking_id) {
-  //       passengers = passengers.filter((passenger: PassengerWithBooking) =>
-  //         passenger.booking?.booking_id === params.booking_id
-  //       );
-  //       count = passengers.length;
-  //     }
+      const payload = {
+        seat: seat,
+      };
 
-      // if (params?.arrival_airport) {
-      //   tickets = tickets.filter((ticket: TicketWithFlight) =>
-      //     ticket.flight?.arrival?.airport_details.iata_code === params.arrival_airport
-      //   );
-      //   count = tickets.length;
-      // }
-      // if (params?.departure_date) {
-      //   const departureDate = new Date(params.departure_date);
-      //   tickets = tickets.filter((ticket: TicketWithFlight) =>
-      //   ticket.flight?.departure?.scheduled_time?.toISOString().split('T')[0] === departureDate.toISOString().split('T')[0]
-      //   );
-      //   count = tickets.length;
-      // }
-  
-  //     return {
-  //       data: passengers,
-  //       count,
-  //     };
-  //   } catch (err) {
-  //     throw err;
-  //   }
-  // }
-
-  // async get(passenger_id: number) {
-  //   try {
-  //     if (!passenger_id) {
-  //       throw new Error('Invalid passenger id');
-  //     }
-      
-  //     let passengers = await PassengerRepository.find(passenger_id);
-  //     return await Promise.all(
-  //       passengers.map(async (passenger: Passenger) => {
-  //         // const bookingDetails = await BookingRepository.find(passenger.booking_id);
-  //         // const benefits = await BenefitRepository.findByFlightId(ticket.flight_id);
-  
-  //         return {
-  //           ...passenger,
-  //           // booking: bookingDetails[0],
-  //           // benefits,
-  //         };
-  //       })
-  //     );
-  //   } catch (err) {
-  //     throw err;
-  //   }
-  // }
-
-  // async update(passenger_id: number, requestBody: any) {
-  //   try {
-  //     const payload = {
-  //       ...requestBody
-  //     };
-
-  //     // delete payload.departure;
-  //     // delete payload.arrival;
-  //     // delete payload.airline;
-
-  //     console.log('Payload >>>', payload);
-
-  //     return await PassengerRepository.update(passenger_id, payload);
-  //   } catch (err) {
-  //     throw err;
-  //   }
-  // }
-
-  // async delete(passenger_id: number) {
-  //   try {
-  //     return await PassengerRepository.delete(passenger_id);
-  //   } catch (err) {
-  //     throw err;
-  //   }
-  // }
+      return await PassengerRepository.updateCheckIn(passenger_id, payload);
+    } catch (err) {
+      throw err;
+    }
+  }
 
   set setUser(userData: IUser) {
     this._user = userData;

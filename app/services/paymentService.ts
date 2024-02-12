@@ -16,7 +16,6 @@ class PaymentService {
             const paymentIntent = await stripe.paymentIntents.create({
                 amount: userBooking.total_amount * 100,
                 currency: 'idr',
-                customer: requestBody.contact_details.email,
                 metadata: {
                     user_id: userBooking.user_id,
                     booking_id: userBooking.booking_id,

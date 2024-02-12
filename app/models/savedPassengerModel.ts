@@ -4,12 +4,14 @@ import database from '../config/database';
 import Booking from './bookingModel';
 import TravelDoc from './travelDocModel';
 import PassengerAddon from './addOnsModel';
+import User from './userModel';
+import SavedTravelDoc from './savedTravelDocModel';
 
 Model.knex(database);
 
-export interface IPassenger {
-  passenger_id: number;
-  booking_id: number;
+export interface ISavedPassenger {
+  saved_passenger_id: number;
+  user_id: string;
   id: string;
   nik: string;
   name: string;
@@ -20,40 +22,32 @@ export interface IPassenger {
   updated_at: number;
 }
 
-class Passenger extends Model {
+class SavedPassenger extends Model {
   passenger_id: any;
   static get tableName(): string {
-    return 'passenger_details';
+    return 'saved_passenger_details';
   }
 
   static get idColumn(): string {
-    return 'passenger_id';
+    return 'saved_passenger_id';
   }
 
   static get relationMappings() {
     return {
-      booking: {
+      user: {
         relation: Model.BelongsToOneRelation,
-        modelClass: Booking,
+        modelClass: User,
         join: {
-          from: 'passenger_details.booking_id',
-          to: 'booking.booking_id',
+          from: 'saved_passenger_details.user_id',
+          to: 'users.user_id',
         },
       },
       travel_docs: {
         relation: Model.HasManyRelation,
-        modelClass: TravelDoc,
+        modelClass: SavedTravelDoc,
         join: {
-          from: 'passenger_details.passenger_id',
-          to: 'travel_docs.passenger_id',
-        },
-      },
-      add_ons: {
-        relation: Model.HasManyRelation,
-        modelClass: PassengerAddon,
-        join: {
-          from: 'passenger_details.passenger_id',
-          to: 'passenger_addons.passenger_id',
+          from: 'saved_passenger_details.saved_passenger_id',
+          to: 'saved_travel_docs.saved_passenger_id',
         },
       },
     };
@@ -85,7 +79,7 @@ class Passenger extends Model {
     return {
       type: 'object',
       required: [
-        'booking_id',
+        'user_id',
         'nik',
         'id',
         'name',
@@ -93,15 +87,14 @@ class Passenger extends Model {
         'vaccinated'
       ],
       properties: {
-        passenger_id: { type: 'integer' },
-        booking_id: { type: 'integer' },
-        id: { type: 'string' },
-        nik: { type: 'string' },
-        name: { type: 'string' },
-        date_of_birth: { type: 'string' },
-        courtesy_title: { type: 'string' },
+        saved_passenger_id: { type: 'integer' },
+        user_id: { type: 'string', minLength: 1 },
+        id: { type: 'string', minLength: 1 },
+        nik: { type: 'string', minLength: 1 },
+        name: { type: 'string', minLength: 1 },
+        date_of_birth: { type: 'string', minLength: 1 },
+        courtesy_title: { type: 'string', minLength: 1 },
         vaccinated: { type: 'boolean' },
-        seat: { type: 'string' },
         created_at: { type: 'string' },
         updated_at: { type: 'string' },
       }
@@ -109,4 +102,4 @@ class Passenger extends Model {
   }
 }
 
-export default Passenger;
+export default SavedPassenger;
