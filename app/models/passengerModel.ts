@@ -101,6 +101,7 @@ class Passenger extends Model {
         date_of_birth: { type: 'string' },
         courtesy_title: { type: 'string' },
         vaccinated: { type: 'boolean' },
+        seat: { type: 'string' },
         created_at: { type: 'string' },
         updated_at: { type: 'string' },
       }

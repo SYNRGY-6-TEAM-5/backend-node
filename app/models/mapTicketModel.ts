@@ -10,6 +10,7 @@ export interface IMapTicket {
   map_ticket_id: number;
   booking_id: number;
   ticket_id: number;
+  boarding_code: string;
 }
 
 class MapTicket extends Model {
@@ -53,6 +54,7 @@ class MapTicket extends Model {
         map_ticket_id: { type: 'integer' },
         booking_id: { type: 'integer' },
         ticket_id: { type: 'number' },
+        boarding_code: { type: 'string' },
       }
     };
   }

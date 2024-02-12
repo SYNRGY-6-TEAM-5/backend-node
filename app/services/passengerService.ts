@@ -4,6 +4,15 @@ import { type IUser } from '../interfaces/IAuth';
 import PassengerRepository, { PassengerWithBooking } from '../repositories/passengerRepository';
 import Passenger from '../models/passengerModel';
 
+const getRandomUpperCaseChar = () => {
+  const charCode = Math.floor(Math.random() * 4) + 65; // Random ASCII code for uppercase A-D (65-68)
+  return String.fromCharCode(charCode);
+};
+
+const getRandomThreeDigitNumber = () => {
+  return Math.floor(Math.random() * 200) + 1; // Random number between 1 to 200
+};
+
 class PassengerService {
   private _user: IUser | undefined;
 
@@ -46,31 +55,19 @@ class PassengerService {
     }
   }
 
-  // async update(passenger_id: number, requestBody: any) {
-  //   try {
-  //     const payload = {
-  //       ...requestBody
-  //     };
+  async update(passenger_id: number) {
+    try {
+      const seat = `${getRandomUpperCaseChar()}${getRandomThreeDigitNumber().toString().padStart(3, "0")}`;
 
-  //     // delete payload.departure;
-  //     // delete payload.arrival;
-  //     // delete payload.airline;
+      const payload = {
+        seat: seat,
+      };
 
-  //     console.log('Payload >>>', payload);
-
-  //     return await PassengerRepository.update(passenger_id, payload);
-  //   } catch (err) {
-  //     throw err;
-  //   }
-  // }
-
-  // async delete(passenger_id: number) {
-  //   try {
-  //     return await PassengerRepository.delete(passenger_id);
-  //   } catch (err) {
-  //     throw err;
-  //   }
-  // }
+      return await PassengerRepository.updateCheckIn(passenger_id, payload);
+    } catch (err) {
+      throw err;
+    }
+  }
 
   set setUser(userData: IUser) {
     this._user = userData;
