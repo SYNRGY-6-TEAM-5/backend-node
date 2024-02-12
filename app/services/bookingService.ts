@@ -151,10 +151,15 @@ class BookingService {
         insuranceAvailability[key] = value.type !== "" && value.price !== 0;
       }
 
+      const booking_created_time = new Date(); // Replace this with the actual booking creation time
+
+      // Calculate the expired time
+      const expired_time = new Date(booking_created_time.getTime() + 3 * 60 * 60 * 1000);
+
       const bookingReqBody = {
         booking_code: null,
         total_passenger: passenger_details.length,
-        expired_time: ticket_details.expired_time,
+        expired_time: expired_time,
         total_amount: ticket_details.total_ticket_price,
         full_protection: insuranceAvailability.full_insurance,
         bag_insurance: insuranceAvailability.baggage_insurance,

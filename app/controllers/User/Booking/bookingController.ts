@@ -11,6 +11,8 @@ import FlightService from '../../../services/flightService';
 import { ICompleteBooking } from '../../../types/Booking';
 import AuthService from '../../../services/authService';
 import { IBooking } from '../../../models/bookingModel';
+import mapTicketService from '../../../services/mapTicketService';
+import passengerService from '../../../services/passengerService';
 
 const defaultMeta = {
   page: 1,
@@ -86,7 +88,7 @@ class UserBookingController {
       });
     }
   }
-  
+
   async showBookingWithUserUserIdAndBookingId(req: Request, res: Response) {
     try {
       const { booking_id } = req.params;
@@ -123,6 +125,52 @@ class UserBookingController {
         res,
         code: 201,
         data: result,
+        message: 'success updating booking data'
+      });
+    } catch (error) {
+      next(error);
+    }
+  }
+
+  async checkIn(req: IRequestWithAuth, res: Response, next: NextFunction) {
+    try {
+      const { booking_id } = req.params;
+      const headers = req.headers;
+
+      const bearerToken = `${headers.authorization}`.split('Bearer');
+      const token = bearerToken[1]?.trim();
+      const userJWTData = await AuthService.validateToken(token);
+
+      const booking = await BookingService.GetBookingWithUserIdAndBookingId(userJWTData.userId, parseInt(booking_id, 10));
+
+      const { map_ticket, passengers } = booking.updatedData[0];
+
+      if (map_ticket[0].boarding_code !== null) {
+        return res.status(400).json({
+          status: 'FAIL',
+          message: 'This ticket has already been Checked in before'
+        });
+      } else if (booking.updatedData[0].status !== "SUCCESS") {
+        return res.status(400).json({
+          status: 'FAIL',
+          message: `This ticket payment status is ${booking.updatedData[0].status} check in need to be done on paid ticket`
+        });
+      }
+
+      map_ticket.forEach(async ticket => {
+        const updatedTicket = await mapTicketService.update(ticket.map_ticket_id)
+        console.log(updatedTicket);
+      });
+
+      passengers.forEach(async passenger => {
+        const updatedPassenger = await passengerService.update(passenger.passenger_id)
+        console.log(updatedPassenger);
+      });
+
+      return ResponseBuilder.response({
+        res,
+        code: 201,
+        data: booking,
         message: 'success updating booking data'
       });
     } catch (error) {
