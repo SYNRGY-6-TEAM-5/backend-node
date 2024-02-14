@@ -74,7 +74,7 @@ async function sendPassengerData(passenger: any, booking_id: number) {
           doc_type,
           nationality,
           document_number,
-          expire_date,
+          expired_date,
           image_url
         } = doc;
 
@@ -83,7 +83,7 @@ async function sendPassengerData(passenger: any, booking_id: number) {
           doc_type: doc_type,
           nationality: nationality,
           doc_number: document_number,
-          expired_date: expire_date,
+          expired_date: expired_date,
           file: image_url,
           valid: false,
         };
