@@ -28,6 +28,7 @@ class User extends Model {
   role_id?: string;
   fullname?: string;
   password?: string;
+  fcm_token?: string;
 
   static get tableName(): string {
     return 'users';
@@ -74,7 +75,8 @@ class User extends Model {
         role_id: { type: 'string', format: 'uuid' },
         email_address: { type: 'string', minLength: 1, maxLength: 255 },
         fullname: { type: 'string', minLength: 1, maxLength: 255 },
-        password: { type: 'string', minLength: 1, maxLength: 255 }
+        password: { type: 'string', minLength: 1, maxLength: 255 },
+        fcm_token: { type: 'string', minLength: 1 }
       }
     };
   }

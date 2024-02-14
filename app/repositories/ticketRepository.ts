@@ -1,7 +1,8 @@
-import Ticket from '../models/ticketModel';
+import Ticket, { ITicket } from '../models/ticketModel';
 import { FlightWithRelations } from './flightRepository';
 
 export interface TicketWithFlight extends Ticket {
+  fare_amount: string;
   flight: FlightWithRelations;
 }
 

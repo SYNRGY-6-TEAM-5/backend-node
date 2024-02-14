@@ -25,6 +25,8 @@ class TicketApi {
      *         description: App is up and running
      */
     this.router.get('/', TicketController.list); // /api/books READ
+    
+    this.router.get('/lowest-fare', TicketController.getLowestFare); // /api/books READ
 
     /**
      * @openapi

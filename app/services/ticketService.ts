@@ -5,6 +5,11 @@ import { type IUser } from '../interfaces/IAuth';
 import TicketRepository, { TicketWithFlight } from '../repositories/ticketRepository';
 import Ticket from '../models/ticketModel';
 
+interface LowestFare {
+  scheduled_time: string;
+  lowest_fare: number;
+}
+
 class TicketService {
   private _user: IUser | undefined;
 
@@ -41,6 +46,7 @@ class TicketService {
         );
         count = tickets.length;
       }
+
       if (params?.departure_date) {
         const departureDate = new Date(params.departure_date);
         tickets = tickets.filter((ticket: TicketWithFlight) =>
@@ -56,6 +62,40 @@ class TicketService {
     } catch (err) {
       throw err;
     }
+  }
+
+  async getLowestFareByScheduledTime(params?: IParams): Promise<Array<LowestFare>> {
+    const lowestFares: Record<string, number> = {};
+
+    let tickets = await TicketRepository.findAll();
+
+    if (params?.departure_airport) {
+      tickets = tickets.filter((ticket: TicketWithFlight) =>
+        ticket.flight?.departure?.airport_details.iata_code === params.departure_airport
+      );
+    }
+
+    if (params?.arrival_airport) {
+      tickets = tickets.filter((ticket: TicketWithFlight) =>
+        ticket.flight?.arrival?.airport_details.iata_code === params.arrival_airport
+      );
+    }
+
+    tickets.forEach(ticket => {
+      const scheduledTime = ticket.flight.departure.scheduled_time.toISOString(); // Convert Date to string
+      const fareAmount = parseFloat(ticket.fare_amount);
+
+      if (!(scheduledTime in lowestFares) || fareAmount < lowestFares[scheduledTime]) {
+          lowestFares[scheduledTime] = fareAmount;
+      }
+  });
+
+    const result: LowestFare[] = Object.entries(lowestFares).map(([scheduledTime, lowestFare]) => ({
+      scheduled_time: scheduledTime,
+      lowest_fare: lowestFare
+    }));
+
+    return result;
   }
 
   async get(ticket_id: number) {

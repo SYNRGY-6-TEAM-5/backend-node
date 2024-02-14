@@ -110,6 +110,13 @@ class ErrorHandlerMiddleware {
                 type: 'UnknownDatabaseError',
                 data: {}
             });
+        } else if (err.message === "jwt expired") {
+            res.status(401).send({
+                status: "FAIL",
+                message: err.message,
+                type: 'JWTExpired',
+                data: {}
+            });
         } else {
             res.status(500).send({
                 status: "FAIL",
