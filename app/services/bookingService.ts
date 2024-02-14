@@ -207,7 +207,6 @@ class BookingService {
       };
 
       const payment_notification_schedule_result = await NotificationService.createSchedule(userJWTData.userId, bookingSchedulerPayload);
-      console.log(payment_notification_schedule_result);
 
 
       let mapTicketResult = {};
