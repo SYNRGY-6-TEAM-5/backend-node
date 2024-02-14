@@ -1,0 +1,3490 @@
+{
+	"info": {
+		"_postman_id": "a8f25ffa-ddb8-4287-a74a-c4d3fbd23ec6",
+		"name": "Final Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19430557"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"m.w42035ky@gmail.com\",\r\n    \"password\": \"Strong!3451\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://backend-java-production-ece2.up.railway.app/api/v1/auth/signup",
+							"protocol": "https",
+							"host": [
+								"backend-java-production-ece2",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"signup"
+							],
+							"query": [
+								{
+									"key": "departure_airport",
+									"value": "ABY",
+									"disabled": true
+								},
+								{
+									"key": "arrival_airport",
+									"value": "ADE",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://backend-node-production-df38.up.railway.app/api/flight",
+									"protocol": "https",
+									"host": [
+										"backend-node-production-df38",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"flight"
+									],
+									"query": [
+										{
+											"key": "departure_airport",
+											"value": "ABY",
+											"disabled": true
+										},
+										{
+											"key": "arrival_airport",
+											"value": "ADE",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "signup-otp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"m.w42035ky@gmail.com\",\r\n    \"password\": \"Strong!3451\",\r\n    \"otp\": \"9448\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://backend-java-production-ece2.up.railway.app/api/v1/auth/signup/validate-otp",
+							"protocol": "https",
+							"host": [
+								"backend-java-production-ece2",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"signup",
+								"validate-otp"
+							],
+							"query": [
+								{
+									"key": "departure_airport",
+									"value": "ABY",
+									"disabled": true
+								},
+								{
+									"key": "arrival_airport",
+									"value": "ADE",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://backend-node-production-df38.up.railway.app/api/flight",
+									"protocol": "https",
+									"host": [
+										"backend-node-production-df38",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"flight"
+									],
+									"query": [
+										{
+											"key": "departure_airport",
+											"value": "ABY",
+											"disabled": true
+										},
+										{
+											"key": "arrival_airport",
+											"value": "ADE",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"emailAddress\": \"saifulloh.fadli@gmail.com\",\r\n  \"password\": \"Password!3312\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://backend-java-production-ece2.up.railway.app/api/v1/auth/login",
+							"protocol": "https",
+							"host": [
+								"backend-java-production-ece2",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							],
+							"query": [
+								{
+									"key": "departure_airport",
+									"value": "ABY",
+									"disabled": true
+								},
+								{
+									"key": "arrival_airport",
+									"value": "ADE",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://backend-node-production-df38.up.railway.app/api/flight",
+									"protocol": "https",
+									"host": [
+										"backend-node-production-df38",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"flight"
+									],
+									"query": [
+										{
+											"key": "departure_airport",
+											"value": "ABY",
+											"disabled": true
+										},
+										{
+											"key": "arrival_airport",
+											"value": "ADE",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "airline",
+			"item": [
+				{
+					"name": "Upload",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsInVzZXJJZCI6ImQ2NDE3MGRjLThiYmQtNGQ3MC04Njc1LWYyMTNkMjA3YTAxYSIsImlhdCI6MTcwNzE0NjcwNywiZXhwIjoxNzA3MTUwMzA3fQ.bnSNCqF-X8JRG_TDU8dGRYEYHRtapfzJZBbk_1-gzUE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsImlhdCI6MTcwNTc2MDk5OCwiZXhwIjoxNzA1NzY0NTk4fQ.KZSzf1f9vyNxRAzlI5o-6S-VPRpY5XY_5KmGvFn0Wd4",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Saifulloh/Pictures/Screenshot 2023-11-24 225721.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{PROD_URL}}/api/airline/upload",
+							"host": [
+								"{{PROD_URL}}"
+							],
+							"path": [
+								"api",
+								"airline",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsInVzZXJJZCI6ImQ2NDE3MGRjLThiYmQtNGQ3MC04Njc1LWYyMTNkMjA3YTAxYSIsImlhdCI6MTcwNzMyNDg0NCwiZXhwIjoxNzA3MzI4NDQ0fQ.4fuzJ55tHy8VhQi4ZqyHovPC_pEYGWBuTz1ABGME_Pw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsImlhdCI6MTcwNTc2MDk5OCwiZXhwIjoxNzA1NzY0NTk4fQ.KZSzf1f9vyNxRAzlI5o-6S-VPRpY5XY_5KmGvFn0Wd4",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Zambia Airways\",\r\n    \"iata\": \"QZZ\",\r\n    \"image\": \"https://res.cloudinary.com/ddpriosuk/image/upload/v1707146991/ydfjucuwzeusvvxg1le5.png\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{DEV_URL}}/api/airline/",
+							"host": [
+								"{{DEV_URL}}"
+							],
+							"path": [
+								"api",
+								"airline",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{PROD_URL}}/api/airline/",
+							"host": [
+								"{{PROD_URL}}"
+							],
+							"path": [
+								"api",
+								"airline",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{PROD_URL}}/api/airline/5",
+							"host": [
+								"{{PROD_URL}}"
+							],
+							"path": [
+								"api",
+								"airline",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwNjcxOTE2OSwiZXhwIjoxNzA2NzIyNzY5fQ.LQpGJ4GHB1nWBAoIMZoKH24RYYqdmpfgVa7wBlH6aL0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Qantas\",\r\n    \"iata\": \"QF\",\r\n    \"image\": \"https://res.cloudinary.com/ddpriosuk/image/upload/v1705840236/idkaeuna5h9krdbg1svu.png\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{DEV_URL}}/api/airline/555555",
+							"host": [
+								"{{DEV_URL}}"
+							],
+							"path": [
+								"api",
+								"airline",
+								"555555"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwNjcxOTE2OSwiZXhwIjoxNzA2NzIyNzY5fQ.LQpGJ4GHB1nWBAoIMZoKH24RYYqdmpfgVa7wBlH6aL0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Qantas\",\r\n    \"iata\": \"QF\",\r\n    \"image\": \"https://res.cloudinary.com/ddpriosuk/image/upload/v1705840236/idkaeuna5h9krdbg1svu.png\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{DEV_URL}}/api/airline/555555",
+							"host": [
+								"{{DEV_URL}}"
+							],
+							"path": [
+								"api",
+								"airline",
+								"555555"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "departure",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsInVzZXJJZCI6ImQ2NDE3MGRjLThiYmQtNGQ3MC04Njc1LWYyMTNkMjA3YTAxYSIsImlhdCI6MTcwNzMxNDU1OSwiZXhwIjoxNzA3MzE4MTU5fQ.famAb79TVrKuJoq1o7PbYglwsO09bjjgDeZ1K2sp-Tg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsImlhdCI6MTcwNTc2MDk5OCwiZXhwIjoxNzA1NzY0NTk4fQ.KZSzf1f9vyNxRAzlI5o-6S-VPRpY5XY_5KmGvFn0Wd4",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"airport_id\": 10,\r\n    \"terminal\": \"1\",\r\n    \"scheduled_time\": \"2024-02-15T\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{DEV_URL}}/api/departure/",
+							"host": [
+								"{{DEV_URL}}"
+							],
+							"path": [
+								"api",
+								"departure",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "size",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "departure_airport",
+									"value": "ABY",
+									"disabled": true
+								},
+								{
+									"key": "arrival_airport",
+									"value": "ADE",
+									"disabled": true
+								},
+								{
+									"key": "departure_date",
+									"value": "2024-01-06",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{DEV_URL}}/api/departure/",
+							"host": [
+								"{{DEV_URL}}"
+							],
+							"path": [
+								"api",
+								"departure",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{PROD_URL}}/api/departure/100",
+							"host": [
+								"{{PROD_URL}}"
+							],
+							"path": [
+								"api",
+								"departure",
+								"100"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsInVzZXJJZCI6ImQ2NDE3MGRjLThiYmQtNGQ3MC04Njc1LWYyMTNkMjA3YTAxYSIsImlhdCI6MTcwNzMyMDA1NCwiZXhwIjoxNzA3MzIzNjU0fQ.fG6Wv3cbydkpHk4L0VsvruzcTDz1bO8ojCN0C0-27HY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"airport_id\": null,\r\n    \"terminal\": null,\r\n    \"scheduled_time\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{DEV_URL}}/api/departure/10",
+							"host": [
+								"{{DEV_URL}}"
+							],
+							"path": [
+								"api",
+								"departure",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwNjcxMTgwOSwiZXhwIjoxNzA2NzE1NDA5fQ.ZyyGvq3Zp0z19x_a4c4Sow5TLdg631-JhJ22KKx2HTw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{DEV_URL}}/api/departure/999999",
+							"host": [
+								"{{DEV_URL}}"
+							],
+							"path": [
+								"api",
+								"departure",
+								"999999"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "arrival",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwNjcxNTQ3MSwiZXhwIjoxNzA2NzE5MDcxfQ.-lVZbK7Xew3sibng0RFNuypxzisON8Gkb8P9cOInPKk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsImlhdCI6MTcwNTc2MDk5OCwiZXhwIjoxNzA1NzY0NTk4fQ.KZSzf1f9vyNxRAzlI5o-6S-VPRpY5XY_5KmGvFn0Wd4",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"airport_id\": 0,\r\n    \"terminal\": \"\",\r\n    \"scheduled_time\": \"\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{DEV_URL}}/api/arrival/",
+							"host": [
+								"{{DEV_URL}}"
+							],
+							"path": [
+								"api",
+								"arrival",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "size",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "departure_airport",
+									"value": "ABY",
+									"disabled": true
+								},
+								{
+									"key": "arrival_airport",
+									"value": "ADE",
+									"disabled": true
+								},
+								{
+									"key": "departure_date",
+									"value": "2024-01-06",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{PROD_URL}}/api/arrival/?search=Anaa",
+							"host": [
+								"{{PROD_URL}}"
+							],
+							"path": [
+								"api",
+								"arrival",
+								""
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "Anaa"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{PROD_URL}}/api/arrival/100",
+							"host": [
+								"{{PROD_URL}}"
+							],
+							"path": [
+								"api",
+								"arrival",
+								"100"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwNjcxNTQ3MSwiZXhwIjoxNzA2NzE5MDcxfQ.-lVZbK7Xew3sibng0RFNuypxzisON8Gkb8P9cOInPKk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"airport_id\": 100000,\r\n    \"terminal\": \"1\",\r\n    \"scheduled_time\": \"2024-02-15T01:05:00.000Z\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{DEV_URL}}/api/arrival/10",
+							"host": [
+								"{{DEV_URL}}"
+							],
+							"path": [
+								"api",
+								"arrival",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwNjcxNTQ3MSwiZXhwIjoxNzA2NzE5MDcxfQ.-lVZbK7Xew3sibng0RFNuypxzisON8Gkb8P9cOInPKk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{DEV_URL}}/api/arrival/10",
+							"host": [
+								"{{DEV_URL}}"
+							],
+							"path": [
+								"api",
+								"arrival",
+								"10"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "airport",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsInVzZXJJZCI6ImQ2NDE3MGRjLThiYmQtNGQ3MC04Njc1LWYyMTNkMjA3YTAxYSIsImlhdCI6MTcwNzMyNDIzOSwiZXhwIjoxNzA3MzI3ODM5fQ.cx-t7R3jhgn3s06LnPFf4KY-7MYXi7ftJiw_W9_OZHk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsImlhdCI6MTcwNTc2MDk5OCwiZXhwIjoxNzA1NzY0NTk4fQ.KZSzf1f9vyNxRAzlI5o-6S-VPRpY5XY_5KmGvFn0Wd4",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"airport_name\": null,\r\n    \"iata_code\": null,\r\n    \"gmt\": null,\r\n    \"city_name\": null,\r\n    \"city_iata_code\": null,\r\n    \"country_name\": null,\r\n    \"country_iso_code\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{DEV_URL}}/api/airport/",
+							"host": [
+								"{{DEV_URL}}"
+							],
+							"path": [
+								"api",
+								"airport",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{PROD_URL}}/api/airport/?search=Anaa",
+							"host": [
+								"{{PROD_URL}}"
+							],
+							"path": [
+								"api",
+								"airport",
+								""
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "Anaa"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{PROD_URL}}/api/airport/5",
+							"host": [
+								"{{PROD_URL}}"
+							],
+							"path": [
+								"api",
+								"airport",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwNjcxNTQ3MSwiZXhwIjoxNzA2NzE5MDcxfQ.-lVZbK7Xew3sibng0RFNuypxzisON8Gkb8P9cOInPKk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"airport_name\": \"Bao'an International Airport\",\r\n    \"iata_code\": \"SZX\",\r\n    \"gmt\": \"+8\",\r\n    \"city_name\": \"Shenzhen\",\r\n    \"city_iata_code\": \"SZX\",\r\n    \"country_name\": \"Tiongkok\",\r\n    \"country_iso_code\": \"CHN\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{DEV_URL}}/api/airport/500000",
+							"host": [
+								"{{DEV_URL}}"
+							],
+							"path": [
+								"api",
+								"airport",
+								"500000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwNjcxNTQ3MSwiZXhwIjoxNzA2NzE5MDcxfQ.-lVZbK7Xew3sibng0RFNuypxzisON8Gkb8P9cOInPKk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{DEV_URL}}/api/airport/1000000",
+							"host": [
+								"{{DEV_URL}}"
+							],
+							"path": [
+								"api",
+								"airport",
+								"1000000"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "flight",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwNzAyMjYxMywiZXhwIjoxNzA3MDI2MjEzfQ.8Jmhyr_fTF8_vkYLGPNcU8OWJ-R63FMUjFWk8LY1w3A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsImlhdCI6MTcwNTc2MDk5OCwiZXhwIjoxNzA1NzY0NTk4fQ.KZSzf1f9vyNxRAzlI5o-6S-VPRpY5XY_5KmGvFn0Wd4",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"departure_id\": 1,\r\n  \"arrival_id\": 2,\r\n  \"airline_id\": 3,\r\n  \"transit\": 1,\r\n  \"first_seat\": 50,\r\n  \"business_seat\": 20,\r\n  \"economy_seat\": 100,\r\n  \"flight_status\": \"Scheduled\",\r\n  \"flight_number\": \"ABC123\",\r\n  \"iata\": \"XYZ\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{PROD_URL}}/api/flight/",
+							"host": [
+								"{{PROD_URL}}"
+							],
+							"path": [
+								"api",
+								"flight",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "size",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "departure_airport",
+									"value": "ABY",
+									"disabled": true
+								},
+								{
+									"key": "arrival_airport",
+									"value": "ADE",
+									"disabled": true
+								},
+								{
+									"key": "departure_date",
+									"value": "2024-01-06",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{DEV_URL}}/api/flight/",
+							"host": [
+								"{{DEV_URL}}"
+							],
+							"path": [
+								"api",
+								"flight",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "size",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "arrival_airport",
+									"value": "ADE",
+									"disabled": true
+								},
+								{
+									"key": "departure_date",
+									"value": "2024-01-06",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{PROD_URL}}/api/flight/4",
+							"host": [
+								"{{PROD_URL}}"
+							],
+							"path": [
+								"api",
+								"flight",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT Session Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"departure_id\": 1,\r\n  \"arrival_id\": 2,\r\n  \"airline_id\": 3,\r\n  \"transit\": 1,\r\n  \"first_seat\": 50,\r\n  \"business_seat\": 20,\r\n  \"economy_seat\": 100,\r\n  \"flight_status\": \"On-air\",\r\n  \"flight_number\": \"ABC123\",\r\n  \"iata\": \"GHI\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{PROD_URL}}/api/flight/11",
+							"host": [
+								"{{PROD_URL}}"
+							],
+							"path": [
+								"api",
+								"flight",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT Session Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{PROD_URL}}/api/flight/11",
+							"host": [
+								"{{PROD_URL}}"
+							],
+							"path": [
+								"api",
+								"flight",
+								"11"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "benefit",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwNjcyMDE4OCwiZXhwIjoxNzA2NzIzNzg4fQ.9NsRvOfVxWw4gsITIcCom-uJWFsXwfS138vXHRGR1_U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsImlhdCI6MTcwNTc2MDk5OCwiZXhwIjoxNzA1NzY0NTk4fQ.KZSzf1f9vyNxRAzlI5o-6S-VPRpY5XY_5KmGvFn0Wd4",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"flight_id\":100000,\r\n    \"name\": \"Baggage\",\r\n    \"detail\": \"Extra Baggage for a price\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{DEV_URL}}/api/benefit/",
+							"host": [
+								"{{DEV_URL}}"
+							],
+							"path": [
+								"api",
+								"benefit",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "size",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "departure_airport",
+									"value": "ABY",
+									"disabled": true
+								},
+								{
+									"key": "arrival_airport",
+									"value": "ADE",
+									"disabled": true
+								},
+								{
+									"key": "departure_date",
+									"value": "2024-01-06",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsImlhdCI6MTcwNTkxMjg5MCwiZXhwIjoxNzA1OTE2NDkwfQ.d4QeF0oLkFEg80CrVvLJXmLBKGbk0cT_FgX7SHfga4o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsImlhdCI6MTcwNTc2MDk5OCwiZXhwIjoxNzA1NzY0NTk4fQ.KZSzf1f9vyNxRAzlI5o-6S-VPRpY5XY_5KmGvFn0Wd4",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"flight_id\": 4,\r\n    \"name\": \"Foods And Beverages\",\r\n    \"detail\": \"Passenger can have aditional foods and beverages during the flight\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{PROD_URL}}/api/benefit/",
+							"host": [
+								"{{PROD_URL}}"
+							],
+							"path": [
+								"api",
+								"benefit",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "size",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "departure_airport",
+									"value": "ABY",
+									"disabled": true
+								},
+								{
+									"key": "arrival_airport",
+									"value": "ADE",
+									"disabled": true
+								},
+								{
+									"key": "departure_date",
+									"value": "2024-01-06",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsImlhdCI6MTcwNTkxMjg5MCwiZXhwIjoxNzA1OTE2NDkwfQ.d4QeF0oLkFEg80CrVvLJXmLBKGbk0cT_FgX7SHfga4o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsImlhdCI6MTcwNTc2MDk5OCwiZXhwIjoxNzA1NzY0NTk4fQ.KZSzf1f9vyNxRAzlI5o-6S-VPRpY5XY_5KmGvFn0Wd4",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"flight_id\": 4,\r\n    \"name\": \"Foods And Beverages\",\r\n    \"detail\": \"Passenger can have aditional foods and beverages during the flight\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{PROD_URL}}/api/benefit/3",
+							"host": [
+								"{{PROD_URL}}"
+							],
+							"path": [
+								"api",
+								"benefit",
+								"3"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "size",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "departure_airport",
+									"value": "ABY",
+									"disabled": true
+								},
+								{
+									"key": "arrival_airport",
+									"value": "ADE",
+									"disabled": true
+								},
+								{
+									"key": "departure_date",
+									"value": "2024-01-06",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwNjcyMDE4OCwiZXhwIjoxNzA2NzIzNzg4fQ.9NsRvOfVxWw4gsITIcCom-uJWFsXwfS138vXHRGR1_U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsImlhdCI6MTcwNTc2MDk5OCwiZXhwIjoxNzA1NzY0NTk4fQ.KZSzf1f9vyNxRAzlI5o-6S-VPRpY5XY_5KmGvFn0Wd4",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"flight_id\": 1,\r\n    \"name\": \"Meals\",\r\n    \"detail\": \"We provide meals during the trip\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{DEV_URL}}/api/benefit/300000",
+							"host": [
+								"{{DEV_URL}}"
+							],
+							"path": [
+								"api",
+								"benefit",
+								"300000"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "size",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "departure_airport",
+									"value": "ABY",
+									"disabled": true
+								},
+								{
+									"key": "arrival_airport",
+									"value": "ADE",
+									"disabled": true
+								},
+								{
+									"key": "departure_date",
+									"value": "2024-01-06",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwNjcyMDE4OCwiZXhwIjoxNzA2NzIzNzg4fQ.9NsRvOfVxWw4gsITIcCom-uJWFsXwfS138vXHRGR1_U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsImlhdCI6MTcwNTc2MDk5OCwiZXhwIjoxNzA1NzY0NTk4fQ.KZSzf1f9vyNxRAzlI5o-6S-VPRpY5XY_5KmGvFn0Wd4",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"flight_id\": 4,\r\n    \"name\": \"Extra\",\r\n    \"detail\": \"Passenger can have aditional something for the flight\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{DEV_URL}}/api/benefit/5000000",
+							"host": [
+								"{{DEV_URL}}"
+							],
+							"path": [
+								"api",
+								"benefit",
+								"5000000"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "size",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "departure_airport",
+									"value": "ABY",
+									"disabled": true
+								},
+								{
+									"key": "arrival_airport",
+									"value": "ADE",
+									"disabled": true
+								},
+								{
+									"key": "departure_date",
+									"value": "2024-01-06",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ticket",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwNjcyMTI4MSwiZXhwIjoxNzA2NzI0ODgxfQ.SvYE-YmPaktTeMpCQXiRnrqDh0HZyUgv-bSgZjh4Tbc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsImlhdCI6MTcwNTc2MDk5OCwiZXhwIjoxNzA1NzY0NTk4fQ.KZSzf1f9vyNxRAzlI5o-6S-VPRpY5XY_5KmGvFn0Wd4",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"flight_id\": 1000000000,\r\n  \"ticket_type\": \"economy\",\r\n  \"ticket_amount\": 20,\r\n  \"fare_amount\": \"922000\",\r\n  \"valid_until\": \"2024-02-05T00:00:00.000Z\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{DEV_URL}}/api/ticket/",
+							"host": [
+								"{{DEV_URL}}"
+							],
+							"path": [
+								"api",
+								"ticket",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "size",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "departure_airport",
+									"value": "ABY",
+									"disabled": true
+								},
+								{
+									"key": "arrival_airport",
+									"value": "ADE",
+									"disabled": true
+								},
+								{
+									"key": "departure_date",
+									"value": "2024-01-06",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{DEV_URL}}/api/ticket/",
+							"host": [
+								"{{DEV_URL}}"
+							],
+							"path": [
+								"api",
+								"ticket",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "size",
+									"value": "10",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{DEV_URL}}/api/ticket/lowest-fare",
+							"host": [
+								"{{DEV_URL}}"
+							],
+							"path": [
+								"api",
+								"ticket",
+								"lowest-fare"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "size",
+									"value": "10",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{PROD_URL}}/api/ticket/3",
+							"host": [
+								"{{PROD_URL}}"
+							],
+							"path": [
+								"api",
+								"ticket",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwNjcyMTI4MSwiZXhwIjoxNzA2NzI0ODgxfQ.SvYE-YmPaktTeMpCQXiRnrqDh0HZyUgv-bSgZjh4Tbc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"flight_id\": 6,\r\n  \"ticket_type\": null,\r\n  \"ticket_amount\": null,\r\n  \"fare_amount\": null,\r\n  \"valid_until\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{DEV_URL}}/api/ticket/3",
+							"host": [
+								"{{DEV_URL}}"
+							],
+							"path": [
+								"api",
+								"ticket",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwNjcyMTI4MSwiZXhwIjoxNzA2NzI0ODgxfQ.SvYE-YmPaktTeMpCQXiRnrqDh0HZyUgv-bSgZjh4Tbc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{PROD_URL}}/api/ticket/100000",
+							"host": [
+								"{{PROD_URL}}"
+							],
+							"path": [
+								"api",
+								"ticket",
+								"100000"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "travel doc",
+			"item": [
+				{
+					"name": "admin",
+					"item": [
+						{
+							"name": "Upload",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsImlhdCI6MTcwNTg0MDE1MiwiZXhwIjoxNzA1ODQzNzUyfQ.0PXt1YwxKO7YMwxosuQxqpukilCo-_Q4diNoizHnrSE",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsImlhdCI6MTcwNTc2MDk5OCwiZXhwIjoxNzA1NzY0NTk4fQ.KZSzf1f9vyNxRAzlI5o-6S-VPRpY5XY_5KmGvFn0Wd4",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/Saifulloh/Pictures/Screenshot 2023-11-24 225721.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{PROD_URL}}/api/travel-docs/admin/upload",
+									"host": [
+										"{{PROD_URL}}"
+									],
+									"path": [
+										"api",
+										"travel-docs",
+										"admin",
+										"upload"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwNjA3MDY1MywiZXhwIjoxNzA2MDc0MjUzfQ.mpwaDoVuO74_1ZgejYmE74-pnRmnFuqGp0b7p5kK4Mw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsImlhdCI6MTcwNTc2MDk5OCwiZXhwIjoxNzA1NzY0NTk4fQ.KZSzf1f9vyNxRAzlI5o-6S-VPRpY5XY_5KmGvFn0Wd4",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"flight_id\": 6,\r\n  \"ticket_type\": \"economy\",\r\n  \"ticket_amount\": 100,\r\n  \"fare_amount\": \"900000\",\r\n  \"valid_until\": \"2024-01-27T14:14:21.000Z\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{PROD_URL}}/api/travel-docs/admin/",
+									"host": [
+										"{{PROD_URL}}"
+									],
+									"path": [
+										"api",
+										"travel-docs",
+										"admin",
+										""
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "size",
+											"value": "10",
+											"disabled": true
+										},
+										{
+											"key": "departure_airport",
+											"value": "ABY",
+											"disabled": true
+										},
+										{
+											"key": "arrival_airport",
+											"value": "ADE",
+											"disabled": true
+										},
+										{
+											"key": "departure_date",
+											"value": "2024-01-06",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{PROD_URL}}/api/travel-docs/admin/",
+									"host": [
+										"{{PROD_URL}}"
+									],
+									"path": [
+										"api",
+										"travel-docs",
+										"admin",
+										""
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "size",
+											"value": "10",
+											"disabled": true
+										},
+										{
+											"key": "departure_airport",
+											"value": "ABY",
+											"disabled": true
+										},
+										{
+											"key": "arrival_airport",
+											"value": "ADE",
+											"disabled": true
+										},
+										{
+											"key": "departure_date",
+											"value": "2024-01-06",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Show",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{PROD_URL}}/api/travel-docs/admin/3",
+									"host": [
+										"{{PROD_URL}}"
+									],
+									"path": [
+										"api",
+										"travel-docs",
+										"admin",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwNjA3MDY1MywiZXhwIjoxNzA2MDc0MjUzfQ.mpwaDoVuO74_1ZgejYmE74-pnRmnFuqGp0b7p5kK4Mw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"flight_id\": 6,\r\n  \"ticket_type\": \"business\",\r\n  \"ticket_amount\": 100,\r\n  \"fare_amount\": \"1500000\",\r\n  \"valid_until\": \"2024-01-27T14:14:21.000Z\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{PROD_URL}}/api/travel-docs/admin/3",
+									"host": [
+										"{{PROD_URL}}"
+									],
+									"path": [
+										"api",
+										"travel-docs",
+										"admin",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwNjA3MDY1MywiZXhwIjoxNzA2MDc0MjUzfQ.mpwaDoVuO74_1ZgejYmE74-pnRmnFuqGp0b7p5kK4Mw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{PROD_URL}}/api/travel-docs/admin/1",
+									"host": [
+										"{{PROD_URL}}"
+									],
+									"path": [
+										"api",
+										"travel-docs",
+										"admin",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "user",
+					"item": [
+						{
+							"name": "Upload",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzYWlmdWxsb2guZmFkbGlAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJpYXQiOjE3MDY3NzE4MTMsImV4cCI6MTcwNjc3NTQxM30.FZr1XkfMKureCfJe9NyQMqdqHm8gOsb9UCnlOX3Wc2Q",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsImlhdCI6MTcwNTc2MDk5OCwiZXhwIjoxNzA1NzY0NTk4fQ.KZSzf1f9vyNxRAzlI5o-6S-VPRpY5XY_5KmGvFn0Wd4",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/Saifulloh/Downloads/carousel-1.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{DEV_URL}}/api/travel-docs/user/upload",
+									"host": [
+										"{{DEV_URL}}"
+									],
+									"path": [
+										"api",
+										"travel-docs",
+										"user",
+										"upload"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzYWlmdWxsb2guZmFkbGlAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJpYXQiOjE3MDYxNjM4ODIsImV4cCI6MTcwNjE2NzQ4Mn0.CjU2VbcH0TPZZyc2IRXYZkqXcVsMDwqt-QlFxqQnqe4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsImlhdCI6MTcwNTc2MDk5OCwiZXhwIjoxNzA1NzY0NTk4fQ.KZSzf1f9vyNxRAzlI5o-6S-VPRpY5XY_5KmGvFn0Wd4",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"passanger_id\": 1,\r\n  \"doc_type\": \"passport\",\r\n  \"nationality\": \"Indonesia\",\r\n  \"doc_number\": \"123456\",\r\n  \"expired_date\": \"2024-01-06T06:05:00.000Z\",\r\n  \"file\": \"https://res.cloudinary.com/ddpriosuk/image/upload/v1706164135/jhvnjxr5vszcmk1rd72x.png\",\r\n  \"valid\": false\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{DEV_URL}}/api/travel-docs/user/",
+									"host": [
+										"{{DEV_URL}}"
+									],
+									"path": [
+										"api",
+										"travel-docs",
+										"user",
+										""
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "size",
+											"value": "10",
+											"disabled": true
+										},
+										{
+											"key": "departure_airport",
+											"value": "ABY",
+											"disabled": true
+										},
+										{
+											"key": "arrival_airport",
+											"value": "ADE",
+											"disabled": true
+										},
+										{
+											"key": "departure_date",
+											"value": "2024-01-06",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{PROD_URL}}/api/travel-docs/user/",
+									"host": [
+										"{{PROD_URL}}"
+									],
+									"path": [
+										"api",
+										"travel-docs",
+										"user",
+										""
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "size",
+											"value": "10",
+											"disabled": true
+										},
+										{
+											"key": "departure_airport",
+											"value": "ABY",
+											"disabled": true
+										},
+										{
+											"key": "arrival_airport",
+											"value": "ADE",
+											"disabled": true
+										},
+										{
+											"key": "departure_date",
+											"value": "2024-01-06",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Show",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{PROD_URL}}/api/travel-docs/user/3",
+									"host": [
+										"{{PROD_URL}}"
+									],
+									"path": [
+										"api",
+										"travel-docs",
+										"user",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwNjA3MDY1MywiZXhwIjoxNzA2MDc0MjUzfQ.mpwaDoVuO74_1ZgejYmE74-pnRmnFuqGp0b7p5kK4Mw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"flight_id\": 6,\r\n  \"ticket_type\": \"business\",\r\n  \"ticket_amount\": 100,\r\n  \"fare_amount\": \"1500000\",\r\n  \"valid_until\": \"2024-01-27T14:14:21.000Z\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{PROD_URL}}/api/travel-docs/user/3",
+									"host": [
+										"{{PROD_URL}}"
+									],
+									"path": [
+										"api",
+										"travel-docs",
+										"user",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwNjA3MDY1MywiZXhwIjoxNzA2MDc0MjUzfQ.mpwaDoVuO74_1ZgejYmE74-pnRmnFuqGp0b7p5kK4Mw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{PROD_URL}}/api/travel-docs/user/1",
+									"host": [
+										"{{PROD_URL}}"
+									],
+									"path": [
+										"api",
+										"travel-docs",
+										"user",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "passenger details",
+			"item": [
+				{
+					"name": "admin",
+					"item": [
+						{
+							"name": "Upload",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsImlhdCI6MTcwNTg0MDE1MiwiZXhwIjoxNzA1ODQzNzUyfQ.0PXt1YwxKO7YMwxosuQxqpukilCo-_Q4diNoizHnrSE",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsImlhdCI6MTcwNTc2MDk5OCwiZXhwIjoxNzA1NzY0NTk4fQ.KZSzf1f9vyNxRAzlI5o-6S-VPRpY5XY_5KmGvFn0Wd4",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/Saifulloh/Pictures/Screenshot 2023-11-24 225721.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{PROD_URL}}/api/travel-docs/admin/upload",
+									"host": [
+										"{{PROD_URL}}"
+									],
+									"path": [
+										"api",
+										"travel-docs",
+										"admin",
+										"upload"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwNjA3MDY1MywiZXhwIjoxNzA2MDc0MjUzfQ.mpwaDoVuO74_1ZgejYmE74-pnRmnFuqGp0b7p5kK4Mw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsImlhdCI6MTcwNTc2MDk5OCwiZXhwIjoxNzA1NzY0NTk4fQ.KZSzf1f9vyNxRAzlI5o-6S-VPRpY5XY_5KmGvFn0Wd4",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"flight_id\": 6,\r\n  \"ticket_type\": \"economy\",\r\n  \"ticket_amount\": 100,\r\n  \"fare_amount\": \"900000\",\r\n  \"valid_until\": \"2024-01-27T14:14:21.000Z\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{PROD_URL}}/api/travel-docs/admin/",
+									"host": [
+										"{{PROD_URL}}"
+									],
+									"path": [
+										"api",
+										"travel-docs",
+										"admin",
+										""
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "size",
+											"value": "10",
+											"disabled": true
+										},
+										{
+											"key": "departure_airport",
+											"value": "ABY",
+											"disabled": true
+										},
+										{
+											"key": "arrival_airport",
+											"value": "ADE",
+											"disabled": true
+										},
+										{
+											"key": "departure_date",
+											"value": "2024-01-06",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{PROD_URL}}/api/travel-docs/admin/",
+									"host": [
+										"{{PROD_URL}}"
+									],
+									"path": [
+										"api",
+										"travel-docs",
+										"admin",
+										""
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "size",
+											"value": "10",
+											"disabled": true
+										},
+										{
+											"key": "departure_airport",
+											"value": "ABY",
+											"disabled": true
+										},
+										{
+											"key": "arrival_airport",
+											"value": "ADE",
+											"disabled": true
+										},
+										{
+											"key": "departure_date",
+											"value": "2024-01-06",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Show",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{PROD_URL}}/api/travel-docs/admin/3",
+									"host": [
+										"{{PROD_URL}}"
+									],
+									"path": [
+										"api",
+										"travel-docs",
+										"admin",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwNjA3MDY1MywiZXhwIjoxNzA2MDc0MjUzfQ.mpwaDoVuO74_1ZgejYmE74-pnRmnFuqGp0b7p5kK4Mw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"flight_id\": 6,\r\n  \"ticket_type\": \"business\",\r\n  \"ticket_amount\": 100,\r\n  \"fare_amount\": \"1500000\",\r\n  \"valid_until\": \"2024-01-27T14:14:21.000Z\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{PROD_URL}}/api/travel-docs/admin/3",
+									"host": [
+										"{{PROD_URL}}"
+									],
+									"path": [
+										"api",
+										"travel-docs",
+										"admin",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwNjA3MDY1MywiZXhwIjoxNzA2MDc0MjUzfQ.mpwaDoVuO74_1ZgejYmE74-pnRmnFuqGp0b7p5kK4Mw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{PROD_URL}}/api/travel-docs/admin/1",
+									"host": [
+										"{{PROD_URL}}"
+									],
+									"path": [
+										"api",
+										"travel-docs",
+										"admin",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "user",
+					"item": [
+						{
+							"name": "Create",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzYWlmdWxsb2guZmFkbGlAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJpYXQiOjE3MDcwMjQ5NzQsImV4cCI6MTcwNzAyODU3NH0.FXQ8obbVP_slVjm0Cb-Vll0UNrKw5CwF13S1MebYZRM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsImlhdCI6MTcwNTc2MDk5OCwiZXhwIjoxNzA1NzY0NTk4fQ.KZSzf1f9vyNxRAzlI5o-6S-VPRpY5XY_5KmGvFn0Wd4",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"booking_id\": 1,\r\n  \"NIK\": \"24556775425\",\r\n  \"name\": \"Saifulloh Fadli\",\r\n  \"date_of_birth\": \"2024-01-06T06:05:00.000Z\",\r\n  \"courtesy_title\": \"Mr\",\r\n  \"vaccinated\": true\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{DEV_URL}}/api/passenger/",
+									"host": [
+										"{{DEV_URL}}"
+									],
+									"path": [
+										"api",
+										"passenger",
+										""
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "size",
+											"value": "10",
+											"disabled": true
+										},
+										{
+											"key": "departure_airport",
+											"value": "ABY",
+											"disabled": true
+										},
+										{
+											"key": "arrival_airport",
+											"value": "ADE",
+											"disabled": true
+										},
+										{
+											"key": "departure_date",
+											"value": "2024-01-06",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{PROD_URL}}/api/travel-docs/user/",
+									"host": [
+										"{{PROD_URL}}"
+									],
+									"path": [
+										"api",
+										"travel-docs",
+										"user",
+										""
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "size",
+											"value": "10",
+											"disabled": true
+										},
+										{
+											"key": "departure_airport",
+											"value": "ABY",
+											"disabled": true
+										},
+										{
+											"key": "arrival_airport",
+											"value": "ADE",
+											"disabled": true
+										},
+										{
+											"key": "departure_date",
+											"value": "2024-01-06",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Show",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{PROD_URL}}/api/travel-docs/user/3",
+									"host": [
+										"{{PROD_URL}}"
+									],
+									"path": [
+										"api",
+										"travel-docs",
+										"user",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwNjA3MDY1MywiZXhwIjoxNzA2MDc0MjUzfQ.mpwaDoVuO74_1ZgejYmE74-pnRmnFuqGp0b7p5kK4Mw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"flight_id\": 6,\r\n  \"ticket_type\": \"business\",\r\n  \"ticket_amount\": 100,\r\n  \"fare_amount\": \"1500000\",\r\n  \"valid_until\": \"2024-01-27T14:14:21.000Z\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{PROD_URL}}/api/travel-docs/user/3",
+									"host": [
+										"{{PROD_URL}}"
+									],
+									"path": [
+										"api",
+										"travel-docs",
+										"user",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwNjA3MDY1MywiZXhwIjoxNzA2MDc0MjUzfQ.mpwaDoVuO74_1ZgejYmE74-pnRmnFuqGp0b7p5kK4Mw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{PROD_URL}}/api/travel-docs/user/1",
+									"host": [
+										"{{PROD_URL}}"
+									],
+									"path": [
+										"api",
+										"travel-docs",
+										"user",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "booking",
+			"item": [
+				{
+					"name": "user",
+					"item": [
+						{
+							"name": "Create",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzYWlmdWxsb2guZmFkbGlAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJpYXQiOjE3MDcwMjQ5NzQsImV4cCI6MTcwNzAyODU3NH0.FXQ8obbVP_slVjm0Cb-Vll0UNrKw5CwF13S1MebYZRM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsImlhdCI6MTcwNTc2MDk5OCwiZXhwIjoxNzA1NzY0NTk4fQ.KZSzf1f9vyNxRAzlI5o-6S-VPRpY5XY_5KmGvFn0Wd4",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"booking_id\": 19,\r\n  \"NIK\": \"24556775425\",\r\n  \"name\": \"Saifulloh Fadli\",\r\n  \"date_of_birth\": \"2024-01-06T06:05:00.000Z\",\r\n  \"courtesy_title\": \"Mr\",\r\n  \"vaccinated\": true\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{DEV_URL}}/api/passenger/",
+									"host": [
+										"{{DEV_URL}}"
+									],
+									"path": [
+										"api",
+										"passenger",
+										""
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "size",
+											"value": "10",
+											"disabled": true
+										},
+										{
+											"key": "departure_airport",
+											"value": "ABY",
+											"disabled": true
+										},
+										{
+											"key": "arrival_airport",
+											"value": "ADE",
+											"disabled": true
+										},
+										{
+											"key": "departure_date",
+											"value": "2024-01-06",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzYWlmdWxsb2guZmFkbGlAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJ1c2VySWQiOiIwNmI5ZDRhMy0wOWNkLTQ0MGYtYWIxOC0yNDIzZjYyZmFkYjUiLCJpYXQiOjE3MDc1NDM1MjYsImV4cCI6MTcwNzU0NzEyNn0.nfLTQDHXCf9Rf8rHlFuKL7vdk07lmPQIsOjA2CYcivs",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{DEV_URL}}/api/passenger/user/saved-passenger",
+									"host": [
+										"{{DEV_URL}}"
+									],
+									"path": [
+										"api",
+										"passenger",
+										"user",
+										"saved-passenger"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "size",
+											"value": "10",
+											"disabled": true
+										},
+										{
+											"key": "departure_airport",
+											"value": "ABY",
+											"disabled": true
+										},
+										{
+											"key": "arrival_airport",
+											"value": "ADE",
+											"disabled": true
+										},
+										{
+											"key": "departure_date",
+											"value": "2024-01-06",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Show",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzYWlmdWxsb2guZmFkbGlAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJ1c2VySWQiOiIwNmI5ZDRhMy0wOWNkLTQ0MGYtYWIxOC0yNDIzZjYyZmFkYjUiLCJpYXQiOjE3MDc4MjIzMzIsImV4cCI6MTcwNzgyNTkzMn0.UapgsHQenw22QA7zEMCANWd6SHKKPSc10PYGsmPCrbI",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{DEV_URL}}/api/user/booking/19",
+									"host": [
+										"{{DEV_URL}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"booking",
+										"19"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Check In",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzYWlmdWxsb2guZmFkbGlAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJ1c2VySWQiOiIwNmI5ZDRhMy0wOWNkLTQ0MGYtYWIxOC0yNDIzZjYyZmFkYjUiLCJpYXQiOjE3MDcyNDg5OTAsImV4cCI6MTcwNzI1MjU5MH0.l2oeThaAoHrPwhBkHhF77CRoNITqZB9s5r2CF4RiJR0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{DEV_URL}}/api/user/booking/check-in//19",
+									"host": [
+										"{{DEV_URL}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"booking",
+										"check-in",
+										"",
+										"19"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwNjA3MDY1MywiZXhwIjoxNzA2MDc0MjUzfQ.mpwaDoVuO74_1ZgejYmE74-pnRmnFuqGp0b7p5kK4Mw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"flight_id\": 6,\r\n  \"ticket_type\": \"business\",\r\n  \"ticket_amount\": 100,\r\n  \"fare_amount\": \"1500000\",\r\n  \"valid_until\": \"2024-01-27T14:14:21.000Z\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{PROD_URL}}/api/travel-docs/user/3",
+									"host": [
+										"{{PROD_URL}}"
+									],
+									"path": [
+										"api",
+										"travel-docs",
+										"user",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwNjA3MDY1MywiZXhwIjoxNzA2MDc0MjUzfQ.mpwaDoVuO74_1ZgejYmE74-pnRmnFuqGp0b7p5kK4Mw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{PROD_URL}}/api/travel-docs/user/1",
+									"host": [
+										"{{PROD_URL}}"
+									],
+									"path": [
+										"api",
+										"travel-docs",
+										"user",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "notification",
+			"item": [
+				{
+					"name": "user",
+					"item": [
+						{
+							"name": "Create",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzYWlmdWxsb2guZmFkbGlAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJ1c2VySWQiOiIwNmI5ZDRhMy0wOWNkLTQ0MGYtYWIxOC0yNDIzZjYyZmFkYjUiLCJpYXQiOjE3MDc4OTg5NjYsImV4cCI6MTcwNzkwMjU2Nn0.1tXefdckAaF1fKz2dhLhj-CajcH5IgSL4xJk90-6Wlw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsImlhdCI6MTcwNTc2MDk5OCwiZXhwIjoxNzA1NzY0NTk4fQ.KZSzf1f9vyNxRAzlI5o-6S-VPRpY5XY_5KmGvFn0Wd4",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"days\": [3],\r\n  \"time\": \"15:01\",\r\n  \"title\": \"Test Title From Scheduler API\",\r\n  \"body\": \"Test body from Scheduler API\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{DEV_URL}}/api/user/notification/create-schedule",
+									"host": [
+										"{{DEV_URL}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"notification",
+										"create-schedule"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "size",
+											"value": "10",
+											"disabled": true
+										},
+										{
+											"key": "departure_airport",
+											"value": "ABY",
+											"disabled": true
+										},
+										{
+											"key": "arrival_airport",
+											"value": "ADE",
+											"disabled": true
+										},
+										{
+											"key": "departure_date",
+											"value": "2024-01-06",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzYWlmdWxsb2guZmFkbGlAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJ1c2VySWQiOiIwNmI5ZDRhMy0wOWNkLTQ0MGYtYWIxOC0yNDIzZjYyZmFkYjUiLCJpYXQiOjE3MDc1NDM1MjYsImV4cCI6MTcwNzU0NzEyNn0.nfLTQDHXCf9Rf8rHlFuKL7vdk07lmPQIsOjA2CYcivs",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{DEV_URL}}/api/passenger/user/saved-passenger",
+									"host": [
+										"{{DEV_URL}}"
+									],
+									"path": [
+										"api",
+										"passenger",
+										"user",
+										"saved-passenger"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "size",
+											"value": "10",
+											"disabled": true
+										},
+										{
+											"key": "departure_airport",
+											"value": "ABY",
+											"disabled": true
+										},
+										{
+											"key": "arrival_airport",
+											"value": "ADE",
+											"disabled": true
+										},
+										{
+											"key": "departure_date",
+											"value": "2024-01-06",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Show",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzYWlmdWxsb2guZmFkbGlAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJ1c2VySWQiOiIwNmI5ZDRhMy0wOWNkLTQ0MGYtYWIxOC0yNDIzZjYyZmFkYjUiLCJpYXQiOjE3MDcyNDg5OTAsImV4cCI6MTcwNzI1MjU5MH0.l2oeThaAoHrPwhBkHhF77CRoNITqZB9s5r2CF4RiJR0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{DEV_URL}}/api/user/booking/14",
+									"host": [
+										"{{DEV_URL}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"booking",
+										"14"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Check In",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzYWlmdWxsb2guZmFkbGlAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJ1c2VySWQiOiIwNmI5ZDRhMy0wOWNkLTQ0MGYtYWIxOC0yNDIzZjYyZmFkYjUiLCJpYXQiOjE3MDcyNDg5OTAsImV4cCI6MTcwNzI1MjU5MH0.l2oeThaAoHrPwhBkHhF77CRoNITqZB9s5r2CF4RiJR0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{DEV_URL}}/api/user/booking/check-in//19",
+									"host": [
+										"{{DEV_URL}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"booking",
+										"check-in",
+										"",
+										"19"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwNjA3MDY1MywiZXhwIjoxNzA2MDc0MjUzfQ.mpwaDoVuO74_1ZgejYmE74-pnRmnFuqGp0b7p5kK4Mw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"flight_id\": 6,\r\n  \"ticket_type\": \"business\",\r\n  \"ticket_amount\": 100,\r\n  \"fare_amount\": \"1500000\",\r\n  \"valid_until\": \"2024-01-27T14:14:21.000Z\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{PROD_URL}}/api/travel-docs/user/3",
+									"host": [
+										"{{PROD_URL}}"
+									],
+									"path": [
+										"api",
+										"travel-docs",
+										"user",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwNjA3MDY1MywiZXhwIjoxNzA2MDc0MjUzfQ.mpwaDoVuO74_1ZgejYmE74-pnRmnFuqGp0b7p5kK4Mw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{PROD_URL}}/api/travel-docs/user/1",
+									"host": [
+										"{{PROD_URL}}"
+									],
+									"path": [
+										"api",
+										"travel-docs",
+										"user",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "JWT Session Token",
+			"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtLnc0MjAzNWt5QGdtYWlsLmNvbSIsImlhdCI6MTcwNTg5NjA3MSwiZXhwIjoxNzA1ODk5NjcxfQ.MwHGng8pWpCKwDMdSsbPobunrEE2k7_iUJh87bS_yY0"
+		},
+		{
+			"key": "PROD_URL",
+			"value": "https://backend-node-production-a54c.up.railway.app"
+		},
+		{
+			"key": "DEV_URL",
+			"value": "http://localhost:8060"
+		}
+	]
+}
