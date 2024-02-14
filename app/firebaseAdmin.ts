@@ -25,6 +25,12 @@ interface FirebaseAdmin {
         tokens: string[];
         data?: { [key: string]: string };
     }): Promise<firebase.messaging.BatchResponse>;
+    sendUnicastNotification(payload: {
+        title: string;
+        body: string;
+        token: string;
+        data?: { [key: string]: string };
+    }): Promise<firebase.messaging.MessagingDevicesResponse>;
 }
 
 const firebaseAdmin: FirebaseAdmin = {
@@ -37,7 +43,18 @@ const firebaseAdmin: FirebaseAdmin = {
             tokens: payload.tokens,
             data: payload.data || {}
         };
-        return firebase.messaging().sendMulticast(message);
+        return firebase.messaging().sendEachForMulticast(message);
+    },
+    sendUnicastNotification: async function (payload) {
+        const message = {
+            notification: {
+                title: payload.title,
+                body: payload.body
+            },
+            token: payload.token,
+            data: payload.data || {}
+        };
+        return firebase.messaging().send(message) as unknown as firebase.messaging.MessagingDevicesResponse;
     }
 };
 

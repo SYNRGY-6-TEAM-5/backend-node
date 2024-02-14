@@ -65,65 +65,67 @@ async function sendPassengerData(passenger: any, booking_id: number) {
     const passenger_result = await PassengerService.create(payload);
     resultData.passenger = passenger_result as unknown as IPassenger;
 
-    for (const doc of passenger.travel_docs) {
-      const {
-        doc_type,
-        nationality,
-        document_number,
-        expire_date,
-        image_url
-      } = doc;
+    if (passenger.travel_docs.length !== 0) {
+      for (const doc of passenger.travel_docs) {
+        const {
+          doc_type,
+          nationality,
+          document_number,
+          expire_date,
+          image_url
+        } = doc;
 
-      const travelPayload = {
-        passenger_id: passenger_result.passenger_id,
-        doc_type: doc_type,
-        nationality: nationality,
-        doc_number: document_number,
-        expired_date: expire_date,
-        file: image_url,
-        valid: false,
-      };
+        const travelPayload = {
+          passenger_id: passenger_result.passenger_id,
+          doc_type: doc_type,
+          nationality: nationality,
+          doc_number: document_number,
+          expired_date: expire_date,
+          file: image_url,
+          valid: false,
+        };
 
-      const travelDocsResult = await TravleDocService.create(travelPayload);
+        const travelDocsResult = await TravleDocService.create(travelPayload);
 
-      resultData.travelDocs.push(travelDocsResult as unknown as ITravelDoc);
+        resultData.travelDocs.push(travelDocsResult as unknown as ITravelDoc);
+      }
     }
 
-    for (const mealsAddOn of passenger.add_ons.departure.meals) {
+    if (passenger.add_ons && passenger.add_ons.departure && passenger.add_ons.departure.meals.length !== 0) {
+      for (const mealsAddOn of passenger.add_ons.departure.meals) {
+        const departurePayload = {
+          passenger_id: passenger_result.passenger_id,
+          trip_type: 'departure',
+          meal_name: mealsAddOn.meal_name,
+          meal_price: parseFloat(mealsAddOn.meal_price),
+          meal_img: mealsAddOn.meal_img,
+          meal_count: mealsAddOn.count,
+          baggage_weight: passenger.add_ons.departure.baggage ? passenger.add_ons.departure.baggage.baggage_weight : null,
+          baggage_price: passenger.add_ons.departure.baggage ? parseFloat(passenger.add_ons.departure.baggage.baggage_price) : null
+        };
 
-
-      const departurePayload = {
-        passenger_id: passenger_result.passenger_id,
-        trip_type: 'departure',
-        meal_name: mealsAddOn.meal_name,
-        meal_price: parseFloat(mealsAddOn.meal_price),
-        meal_img: mealsAddOn.meal_img,
-        meal_count: mealsAddOn.count,
-        baggage_weight: passenger.add_ons.departure.baggage.baggage_weight,
-        baggage_price: parseFloat(passenger.add_ons.departure.baggage.baggage_price)
-      };
-
-      const departureResult = await AddOnsService.create(departurePayload);
-      resultData.departureAddOns.push(departureResult as unknown as IPassengerAddon);
+        const departureResult = await AddOnsService.create(departurePayload);
+        resultData.departureAddOns.push(departureResult as unknown as IPassengerAddon);
+      }
     }
 
-    for (const mealsAddOn of passenger.add_ons.return.meals) {
+    if (passenger.add_ons && passenger.add_ons.return && passenger.add_ons.return.meals.length !== 0) {
+      for (const mealsAddOn of passenger.add_ons.return.meals) {
+        const returnPayload = {
+          passenger_id: passenger_result.passenger_id,
+          trip_type: 'departure',
+          meal_name: mealsAddOn.meal_name,
+          meal_price: parseFloat(mealsAddOn.meal_price),
+          meal_img: mealsAddOn.meal_img,
+          meal_count: mealsAddOn.count,
+          baggage_weight: passenger.add_ons.return.baggage ? passenger.add_ons.return.baggage.baggage_weight : null,
+          baggage_price: passenger.add_ons.return.baggage ? parseFloat(passenger.add_ons.return.baggage.baggage_price) : null
+        };
 
-
-      const returnPayload = {
-        passenger_id: passenger_result.passenger_id,
-        trip_type: 'return',
-        meal_name: mealsAddOn.meal_name,
-        meal_price: parseFloat(mealsAddOn.meal_price),
-        meal_img: mealsAddOn.meal_img,
-        meal_count: mealsAddOn.count,
-        baggage_weight: passenger.add_ons.return.baggage.baggage_weight,
-        baggage_price: parseFloat(passenger.add_ons.return.baggage.baggage_price)
-      };
-
-      const returnResult = await AddOnsService.create(returnPayload);
-      resultData.returnAddOns.push(returnResult as unknown as IPassengerAddon);
-    };
+        const returnResult = await AddOnsService.create(returnPayload);
+        resultData.returnAddOns.push(returnResult as unknown as IPassengerAddon);
+      }
+    }
 
     return resultData;
 

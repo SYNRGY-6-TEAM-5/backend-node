@@ -60,6 +60,29 @@ class TicketController implements IRestController {
       });
     }
   }
+  
+  async getLowestFare(req: Request, res: Response) {
+    try {
+      const query = req.query;
+      const lowest_fare = await TicketService.getLowestFareByScheduledTime(query);
+
+      const responseData = ResponseBuilder.response({
+        res,
+        code: 200,
+        data: lowest_fare,
+        message: 'success showing list of all tickets',
+        meta: { ...defaultMeta }
+      });
+
+      return responseData;
+
+    } catch (error: any) {
+      res.status(500).json({
+        status: 'FAIL',
+        message: error.message
+      });
+    }
+  }
 
   async show(req: Request, res: Response) {
     try {
