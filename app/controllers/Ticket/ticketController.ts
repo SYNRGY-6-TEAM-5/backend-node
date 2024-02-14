@@ -5,9 +5,7 @@ import ResponseBuilder from '../../utils/ResponseBuilder';
 import { type IRequestWithAuth } from '../../middlewares/auth';
 
 import { type IRestController } from '../../interfaces/IRest';
-import { type IFlight } from '../../models/flightModel';
 import { ITicket } from '../../models/ticketModel';
-import { ForeignKeyViolationError } from 'objection';
 import FlightService from '../../services/flightService';
 
 const defaultMeta = {

@@ -14,6 +14,9 @@ import BookingRepository, { BookingWithDetails } from '../repositories/bookingRe
 import { IParams } from '../repositories/airportRepository';
 import TicketService from './ticketService';
 import { generateBookingCode } from '../utils/generator';
+import NotificationService from './notificationService';
+
+import AuthService from './authService';
 
 interface IResultData {
   passenger: IPassenger;
@@ -182,9 +185,26 @@ class BookingService {
 
       const resBookingData = response.data;
       const resBookingId = parseInt(response.data.bookingId, 10);
+      
+      const userJWTData = await AuthService.validateToken(token);
 
-      console.log(resBookingData);
+      // booking payment expiration notification scheduler
+      const dayOfWeek = expired_time.getUTCDay();
+      const adjustedDayOfWeek = (dayOfWeek === 0) ? 7 : dayOfWeek;
 
+      const time = expired_time.toLocaleTimeString('en-US', { hour12: false, timeZone: 'Asia/Jakarta' });
+
+      const [hours, minutes] = time.split(':').slice(0, 2);
+
+      const bookingSchedulerPayload = {
+        days: [adjustedDayOfWeek],
+        time: `${hours}:${minutes}`,
+        title: "Booking Payment",
+        body: "Dont forget to complete your booking payment"
+      };
+
+      const payment_notification_schedule_result = await NotificationService.createSchedule(userJWTData.userId, bookingSchedulerPayload);
+      console.log(payment_notification_schedule_result);
       let mapTicketResult = {};
 
       for (const ticket_id of ticket_details.booked_ticket) {
