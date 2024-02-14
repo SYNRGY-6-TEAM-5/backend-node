@@ -185,8 +185,11 @@ class BookingService {
 
       const resBookingData = response.data;
       const resBookingId = parseInt(response.data.bookingId, 10);
+
+      const bearerToken = `${token}`.split('Bearer');
+      const trimmed_token = bearerToken[1]?.trim();
       
-      const userJWTData = await AuthService.validateToken(token);
+      const userJWTData = await AuthService.validateToken(trimmed_token);
 
       // booking payment expiration notification scheduler
       const dayOfWeek = expired_time.getUTCDay();
@@ -199,12 +202,14 @@ class BookingService {
       const bookingSchedulerPayload = {
         days: [adjustedDayOfWeek],
         time: `${hours}:${minutes}`,
-        title: "Booking Payment",
-        body: "Dont forget to complete your booking payment"
+        title: "Payment Expired",
+        body: "We don't recieve any payment during certain period. your booking has been cancelled"
       };
 
       const payment_notification_schedule_result = await NotificationService.createSchedule(userJWTData.userId, bookingSchedulerPayload);
       console.log(payment_notification_schedule_result);
+
+
       let mapTicketResult = {};
 
       for (const ticket_id of ticket_details.booked_ticket) {
