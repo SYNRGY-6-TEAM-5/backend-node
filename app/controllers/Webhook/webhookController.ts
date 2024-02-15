@@ -1,17 +1,14 @@
 import { Request, Response, NextFunction } from 'express';
 import stripe from 'stripe';
-import ResponseBuilder from '../../utils/ResponseBuilder';
-import paymentService from '../../services/paymentService';
 import BookingService from '../../services/bookingService';
+import NotificationService from '../../services/notificationService';
 
 const stripeWebhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
 
 class WebhookController {
     constructor() { }
-
     async handleStripeEvent(req: Request, res: Response, next: NextFunction) {
         let event = req.body;
-
         if (stripeWebhookSecret) {
             const signature = req.headers['stripe-signature'] as string;
             try {
@@ -29,12 +26,17 @@ class WebhookController {
             switch (event.type) {
                 case 'payment_intent.succeeded':
                     const paymentIntent = event.data.object;
-                    // Extract booking_id from metadata of payment intent
-                    const booking_id = parseInt(paymentIntent.metadata.booking_id, 10);
-                    // Update booking status to paid in your database
+
+                    const userId = event.data.object.metadata.user_id;
+
+                    const notificationPayload = {
+                        title: event.data.object.status,
+                        body: `Your ${event.data.object.payment_method_types[0]} payment is Successful`,
+                    };
+
+                    await NotificationService.sendDirectNotification(userId, notificationPayload);
                     await BookingService.update(paymentIntent);
                     break;
-                // Handle other event types if needed
                 default:
                     console.log(`Unhandled event type: ${event.type}`);
             }

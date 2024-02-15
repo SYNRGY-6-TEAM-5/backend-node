@@ -47,6 +47,27 @@ class ScheduleService {
             throw error;
         }
     }
+    async sendDirectNotification(user_id: string, data: any) {
+        try {
+            const user = await UserRepository.findById(user_id);
+            const userFcmToken = user?.fcm_token;
+
+            if (!userFcmToken) {
+                throw new Error("User FCM token not found");
+            }
+
+            const payload = {
+                token: userFcmToken,
+                title: data.title,
+                body: data.body,
+            };
+
+            await firebaseAdmin.sendUnicastNotification(payload);
+        } catch (error) {
+            console.error("Error sending direct notification:", error);
+            throw error;
+        }
+    }
 }
 
 export default new ScheduleService();
