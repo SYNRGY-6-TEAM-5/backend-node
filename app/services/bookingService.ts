@@ -175,7 +175,7 @@ class BookingService {
         payment_id: "",
       }
 
-      const response: AxiosResponse = await axios.post('https://backend-java-production-ece2.up.railway.app/api/v1/booking', bookingReqBody,
+      const response: AxiosResponse = await axios.post('https://backend-java-production-defa.up.railway.app/api/v1/booking', bookingReqBody,
         {
           headers: {
             'Authorization': `${token}`
