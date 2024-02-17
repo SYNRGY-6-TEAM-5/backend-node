@@ -369,7 +369,7 @@ class BookingService {
       const payload = {
         booking_code: generateBookingCode(metadata),
         payment_method: payment_method_types[0],
-        status: status === "succeeded" ? "PAID" : "PENDING",
+        status: status === "succeeded" ? "SUCCESS" : "PENDING",
         external_id: client_secret,
         payment_id: id
       };
