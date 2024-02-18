@@ -69,6 +69,16 @@ class PassengerService {
     }
   }
 
+  async updateSeat(passenger_id: number, seatNum: string) {
+    const seat = seatNum;
+
+    const payload = {
+      seat: seat,
+    };
+
+    return await PassengerRepository.updateCheckIn(passenger_id, payload);
+  }
+
   set setUser(userData: IUser) {
     this._user = userData;
   }

@@ -177,6 +177,56 @@ class UserBookingController {
       next(error);
     }
   }
+
+  async checkInSelectSeat(req: IRequestWithAuth, res: Response, next: NextFunction) {
+    try {
+      const { booking_id } = req.params;
+      const headers = req.headers;
+      const { dataSeat } = req.body;
+
+      const bearerToken = `${headers.authorization}`.split('Bearer');
+      const token = bearerToken[1]?.trim();
+      const userJWTData = await AuthService.validateToken(token);
+
+      const booking = await BookingService.GetBookingWithUserIdAndBookingId(
+        userJWTData.userId,
+        parseInt(booking_id, 10)
+      );
+
+      const { map_ticket } = booking.updatedData[0];
+
+      if (map_ticket[0].boarding_code !== null) {
+        return res.status(400).json({
+          status: 'FAIL',
+          message: 'This ticket has already been Checked in before'
+        });
+      } else if (booking.updatedData[0].status !== 'SUCCESS') {
+        return res.status(400).json({
+          status: 'FAIL',
+          message: `This ticket payment status is ${booking.updatedData[0].status} check in need to be done on paid ticket`
+        });
+      }
+
+      map_ticket.forEach(async (ticket) => {
+        const updatedTicket = await mapTicketService.update(ticket.map_ticket_id);
+        console.log(updatedTicket);
+      });
+
+      dataSeat.forEach(async (data: {id:number, seat:string}) => {
+        const updatedPassenger = await passengerService.updateSeat(data.id, data.seat);
+        console.log(updatedPassenger);
+      });
+
+      return ResponseBuilder.response({
+        res,
+        code: 201,
+        data: booking,
+        message: 'success updating booking data'
+      });
+    } catch (error) {
+      next(error);
+    }
+  }
 }
 
 export default new UserBookingController();

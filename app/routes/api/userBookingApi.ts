@@ -21,6 +21,8 @@ class UserBookingApi {
     this.router.put('/:booking_id', AuthMiddleware.authorizeUser, BookingController.update);
     
     this.router.put('/check-in/:booking_id', AuthMiddleware.authorizeUser, BookingController.checkIn);
+
+    this.router.put('/check-in-seat/:booking_id', AuthMiddleware.authorizeUser, BookingController.checkInSelectSeat);
     
     return this.router;
   }
